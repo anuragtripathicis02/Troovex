@@ -1,0 +1,69 @@
+.role-sec  .nav-tabs {
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+
+.role-sec .nav-tabs .nav-item {
+    width: calc(33.33% - 16px);
+    margin: 0 8px;
+}
+
+.role-sec .nav-tabs .nav-item a {
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--dark-1);
+    color: var(--dark-12);
+    border: 2px solid var(--dark-1);
+    height: 100%;
+    display: block;
+}
+
+.role-sec .nav-tabs .nav-item a.active {
+    border-color: var(--primary-500);
+}
+
+
+.role-sec .nav-box .icons {
+    margin-bottom: 12px;
+}
+
+.role-sec .nav-box  h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0;
+    margin-bottom: 4px;
+}
+
+.role-sec .nav-box  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: 0;
+    color: var(--dark-11);
+}
+
+.role-sec .container {
+    max-width: 990px;
+}
+
+.circle {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 2px solid var(--dark-1);
+    top: 0;
+    right: 0;
+    border-radius: 100px;
+    box-shadow: 0 0px 0px 1px var( --dark-8);
+}
+
+.active .circle {
+    background: var(--primary-500);
+    box-shadow: 0 0px 0px 2px var(--primary-500);
+}
