@@ -27,12 +27,7 @@ const Login = () => {
       <div className='d-flex auth-wrapper' style={{
         backgroundImage: `url(${BgImg.src})`,
       }}>
-        <div className='auth-container'>
-          <div className='auth-info text-center'>
-            <div className='auth-bg'>
-              <Image src={Banner} alt='' />
-            </div>
-          </div>
+        <div className='auth-container auth-card-small'>
           <div className='auth-form text-center'>
             <div className='max-card my-auto'>
               <div className='auth-logo'>

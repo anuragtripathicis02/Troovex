@@ -1,0 +1,107 @@
+:root {
+  /* Primary */
+  --primary-50: #ece6ff;
+  --primary-100: #c5b0ff;
+  --primary-200: #a98aff;
+  --primary-300: #8154ff;
+  --primary-400: #6933ff;
+  --primary-500: #4300ff;
+  --primary-600: #3d00e8;
+  --primary-700: #3000b5;
+  --primary-800: #25008c;
+  --primary-900: #1c006b;
+
+  /* Secondary */
+  --secondary-50: #e9ecf3;
+  --secondary-100: #bbc3db;
+  --secondary-200: #9aa6ca;
+  --secondary-300: #6c7eb1;
+  --secondary-400: #4f65a2;
+  --secondary-500: #233e8b;
+  --secondary-600: #20387e;
+  --secondary-700: #192c63;
+  --secondary-800: #13224c;
+  --secondary-900: #0f1a3a;
+
+  /* Dark */
+  --dark-1: #ffffff;
+  --dark-2: #fdfdfd;
+  --dark-3: #f6f6f6;
+  --dark-4: #f1f1f2;
+  --dark-5: #dcdcdf;
+  --dark-6: #c5c5c9;
+  --dark-7: #97979e;
+  --dark-8: #696873;
+  --dark-9: #565662;
+  --dark-10: #3b3a48;
+  --dark-11: #343342;
+  --dark-12: #2a2a39;
+  --dark-13: #181728;
+
+  /* Orange */
+  --orange-50: #feede6;
+  --orange-100: #fac6b2;
+  --orange-200: #f8ab8c;
+  --orange-300: #f58458;
+  --orange-400: #f36d38;
+  --orange-500: #f04806;
+  --orange-600: #da4205;
+  --orange-700: #aa3304;
+  --orange-800: #842803;
+  --orange-900: #651e03;
+
+  /* Yellow */
+  --yellow-50: #fff7e9;
+  --yellow-100: #ffe7ba;
+  --yellow-200: #ffdb98;
+  --yellow-300: #ffca6a;
+  --yellow-400: #ffc04d;
+  --yellow-500: #ffb020;
+  --yellow-600: #e8a01d;
+  --yellow-700: #b57d17;
+  --yellow-800: #8c6112;
+  --yellow-900: #6b4a0d;
+
+  /* Blue */
+  --blue-50: #e7effb;
+  --blue-100: #b3cdf3;
+  --blue-200: #8fb5ed;
+  --blue-300: #5c94e4;
+  --blue-400: #3c7fdf;
+  --blue-500: #0b5fd7;
+  --blue-600: #0a56c4;
+  --blue-700: #084399;
+  --blue-800: #063476;
+  --blue-900: #05285a;
+
+  /* Green */
+  --green-50: #e6f6ef;
+  --green-100: #b0e3cc;
+  --green-200: #8ad6b3;
+  --green-300: #54c390;
+  --green-400: #33b87b;
+  --green-500: #00a65a;
+  --green-600: #009752;
+  --green-700: #007640;
+  --green-800: #005b32;
+  --green-900: #004626;
+
+  /* Red */
+  --red-50: #fce9e9;
+  --red-100: #f5bbbb;
+  --red-200: #f19a9a;
+  --red-300: #ea6c6c;
+  --red-400: #e65050;
+  --red-500: #e02424;
+  --red-600: #cc2121;
+  --red-700: #9f1a1a;
+  --red-800: #7b1414;
+  --red-900: #5e0f0f;
+
+  /* Gradients */
+  --blue-gradient: linear-gradient(270deg, var(--primary-600) 0%, var(--primary-400) 100%);
+  --orange-gradient: linear-gradient(270deg, var(--orange-700) 0%, var(--orange-400) 100%);
+  --yellow-gradient: linear-gradient(270deg, var(--yellow-600) 0%, var(--yellow-400) 100%);
+  --dark-gradient: linear-gradient(270deg, var(--dark-10) 0%, var(--dark-8) 100%);
+  --dark-lighter-gradient: linear-gradient(270deg, var(--dark-6) 0%, var(--dark-3) 100%);
+}
