@@ -1,9 +1,10 @@
 import React from 'react'
+import Login from './Login'
 
 const Home = () => {
   return (
     <>
-      sign in sign up
+      <Login/>
     </>
   )
 }
