@@ -141,19 +141,10 @@ a:hover {
     max-width: 1380px;
 }
 
-
 img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-.p-12 {
-	padding: 12px;
-}
-
-.p-20 {
-    padding: 20px;
 }
 
 .btn-lighter-blue {
@@ -180,3 +171,78 @@ img {
     text-align: center;
 }
 
+
+@media only screen and (max-width: 1199px) {
+    
+    
+/* body {
+    font-size: 16px;
+    line-height: 1.5;
+} */
+
+/* ---------- HEADINGS ---------- */
+
+
+h1 {
+    font-size: 28px; 
+}
+
+h2 { 
+    font-size: 28px; 
+}
+
+h3 { 
+    font-size: 24px; 
+}
+
+h4 {  
+    font-size: 20px; 
+}
+
+h5 {  
+    font-size: 18px;
+}
+
+h6 {  
+    font-size: 18px; 
+}
+
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    
+    
+body {
+    font-size: 14px;
+    line-height: 140%;
+} 
+
+
+h1 {
+    font-size: 24px; 
+}
+
+h2 { 
+    font-size: 24px; 
+}
+
+h3 { 
+    font-size: 21px; 
+}
+
+h4 {  
+    font-size: 18px; 
+}
+
+h5 {  
+    font-size: 16px;
+}
+
+h6 {  
+    font-size: 16px; 
+}
+
+}

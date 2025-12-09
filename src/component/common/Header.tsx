@@ -6,7 +6,7 @@ import HeaderLogo from '../../../src/app/images/header-logo.svg'
 
 const Header = () => {
   return (
-    <div className="header-sec">
+    <div className="header-sec w-100 position-fixed z-1 top-0">
         <div className="container-fluid">
             <div className="inner-header d-flex align-items-center justify-content-between gap-3">
                 <Link href="">
