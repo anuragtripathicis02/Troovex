@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fontFamily/OpenSauceSans-Light.eot');
+    src: url('../fontFamily/OpenSauceSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fontFamily/OpenSauceSans-Light.woff2') format('woff2'),
+        url('../fontFamily/OpenSauceSans-Light.woff') format('woff'),
+        url('../fontFamily/OpenSauceSans-Light.ttf') format('truetype'),
+        url('../fontFamily/OpenSauceSans-Light.svg#OpenSauceSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fontFamily/OpenSauceSans-Regular.eot');
+    src: url('../fontFamily/OpenSauceSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fontFamily/OpenSauceSans-Regular.woff2') format('woff2'),
+        url('../fontFamily/OpenSauceSans-Regular.woff') format('woff'),
+        url('../fontFamily/OpenSauceSans-Regular.ttf') format('truetype'),
+        url('../fontFamily/OpenSauceSans-Regular.svg#OpenSauceSans-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fontFamily/OpenSauceSans-Medium.eot');
+    src: url('../fontFamily/OpenSauceSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fontFamily/OpenSauceSans-Medium.woff2') format('woff2'),
+        url('../fontFamily/OpenSauceSans-Medium.woff') format('woff'),
+        url('../fontFamily/OpenSauceSans-Medium.ttf') format('truetype'),
+        url('../fontFamily/OpenSauceSans-Medium.svg#OpenSauceSans-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fontFamily/OpenSauceSans-SemiBold.eot');
+    src: url('../fontFamily/OpenSauceSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fontFamily/OpenSauceSans-SemiBold.woff2') format('woff2'),
+        url('../fontFamily/OpenSauceSans-SemiBold.woff') format('woff'),
+        url('../fontFamily/OpenSauceSans-SemiBold.ttf') format('truetype'),
+        url('../fontFamily/OpenSauceSans-SemiBold.svg#OpenSauceSans-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fontFamily/OpenSauceSans-Bold.eot');
+    src: url('../fontFamily/OpenSauceSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fontFamily/OpenSauceSans-Bold.woff2') format('woff2'),
+        url('../fontFamily/OpenSauceSans-Bold.woff') format('woff'),
+        url('../fontFamily/OpenSauceSans-Bold.ttf') format('truetype'),
+        url('../fontFamily/OpenSauceSans-Bold.svg#OpenSauceSans-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fontFamily/OpenSauceSans-ExtraBold.eot');
+    src: url('../fontFamily/OpenSauceSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fontFamily/OpenSauceSans-ExtraBold.woff2') format('woff2'),
+        url('../fontFamily/OpenSauceSans-ExtraBold.woff') format('woff'),
+        url('../fontFamily/OpenSauceSans-ExtraBold.ttf') format('truetype'),
+        url('../fontFamily/OpenSauceSans-ExtraBold.svg#OpenSauceSans-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    src: url('../fontFamily/OpenSauceSans-Black.eot');
+    src: url('../fontFamily/OpenSauceSans-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fontFamily/OpenSauceSans-Black.woff2') format('woff2'),
+        url('../fontFamily/OpenSauceSans-Black.woff') format('woff'),
+        url('../fontFamily/OpenSauceSans-Black.ttf') format('truetype'),
+        url('../fontFamily/OpenSauceSans-Black.svg#OpenSauceSans-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/******font family name *********/
+
+$font-primary: 'Open Sauce Sans';
