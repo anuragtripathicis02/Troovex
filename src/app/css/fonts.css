@@ -50,7 +50,6 @@
     font-display: swap;
 }
 
-
 @font-face {
     font-family: 'Open Sauce Sans';
     src: url('../fontFamily/OpenSauceSans-Bold.eot');
@@ -90,6 +89,6 @@
     font-display: swap;
 }
 
-/******font family name *********/
-
-$font-primary: 'Open Sauce Sans';
+:root {
+  --font-primary: 'Open Sauce Sans';
+}

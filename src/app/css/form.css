@@ -2,39 +2,39 @@
     box-shadow: none !important;
     padding: 17px 12px;
     border-radius: 10px;
-    background-color: $dark-1;
-    border: 1px solid $dark-5 !important;
+    background-color: var(--dark-1);
+    border: 1px solid var(--dark-5) !important;
     font-weight: 400;
     font-size: 16px;
     line-height: 140% !important;
     letter-spacing: 0;
-    color: $dark-12;
-    font-family: $font-primary;
+    color: var(--dark-12);
+    font-family: var(--font-primary);
 }
-
+ 
 .form-control::placeholder, .calendar-box input::placeholder {
-    color: $dark-7;
-    font-family: $font-primary;
+    color: var(--dark-7);
+    font-family: var(--font-primary);
 }
-
+ 
 .form-floating > .form-select {
     padding: 17px 12px;
 }
-
+ 
 .form-control:focus, .form-select:focus{
-    background-color: $dark-1;
-    border-color: $primary-500 !important;
+    background-color: var(--dark-1);
+    border-color: var(--primary-500) !important;
 }
-
-.form-floating > .form-control:focus ~ label, 
+ 
+.form-floating > .form-control:focus ~ label,
 .form-floating > .form-select:focus ~ label,
 .form-group:has(.form-control:focus) label,
 .form-group:has(.form-select:focus) label {
-    color: $primary-500;
+    color: var(--primary-500);
 }
-
-.form-floating > label, label{ 
-    color:$dark-7;
+ 
+.form-floating > label, label{
+    color: var(--dark-7);
     opacity: 1;
     font-size: 16px;
     left: 14px;
@@ -42,172 +42,164 @@
     line-height: 140%;
     font-weight: 400;
     letter-spacing: 0;
-    font-family: $font-primary;
+    font-family: var(--font-primary);
 }
-
-.form-floating > .form-control-plaintext ~ label, 
-.form-floating > .form-control:focus ~ label, 
-.form-floating > .form-control:not(:placeholder-shown) ~ label, 
+ 
+.form-floating > .form-control-plaintext ~ label,
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
 .form-floating > .form-select ~ label {
     height: auto;
-    background: $dark-1;
+    background: var(--dark-1);
     padding: 2px;
     transform: scale(.85) translateY(-11px) translateX(.15rem);
     line-height: 100%;
-    font-family: $font-primary;
+    font-family: var(--font-primary);
 }
-
+ 
 .form-floating > textarea:focus ~ label:after,
 .form-floating > textarea:not(:placeholder-shown) ~ label:after{
     opacity: 0;
 }
-
-.form-floating > .form-control, 
+ 
+.form-floating > .form-control,
 .form-floating > .form-control-plaintext {
     padding: 17px 12px !important;
-    font-family: $font-primary;
+    font-family: var(--font-primary);
 }
-
-/***********buttton css*******/
-
 .btn-outline {
-    border: 1px solid $primary-500;
+    border: 1px solid var(--primary-500);
     padding: 12px 24px;
     border-radius: 12px;
     background: transparent;
-    font-family: $font-primary;
+    font-family: var(--font-primary);
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0;
     text-align: center;
     vertical-align: middle;
-    color: $primary-500;
+    color: var(--primary-500);
     text-decoration: none;
     display: inline-block;
     position: relative;
     overflow: hidden;
-
-    &:hover {
-        border-color: $primary-500;
-        background-color: $primary-500;
-    }
 }
-
+.btn-outline:hover {
+    border-color: var(--primary-500);
+    background-color: var(--primary-500);
+}
 .btn-outline.fill-btn {
-    background: $primary-500;
-    color: $dark-1;
-    &:hover {
-        border-color: $primary-500;
-        background-color: transparent;
-        color: $primary-500;
-    }
+    background: var(--primary-500);
+    color: var(--dark-1);
 }
-
-
-
+.btn-outline.fill-btn:hover {
+    border-color: var(--primary-500);
+    background-color: transparent;
+    color: var(--primary-500);
+}
 .btn-outline.grey-btn {
-    background: $dark-3;
-    border-color: $dark-3;
-    color: $dark-8;
-    &:hover {
-        background: $dark-1;
-    }
+    background: var(--dark-3);
+    border-color: var(--dark-3);
+    color: var(--dark-8);
 }
-
-
+.btn-outline.grey-btn:hover {
+    background: var(--dark-1);
+}
+ 
+ 
 /**********checkbox radio swich btn design***************/
-
+ 
 .form-check-input[type="checkbox"] {
-    border: 1px solid $dark-8;
+    border: 1px solid var(--dark-8);
     width: 24px;
     height: 24px;
     border-radius: 6px;
     box-shadow: none;
     cursor: pointer;
 }
-
+ 
 .form-check-input:checked[type="checkbox"] {
-    background: $primary-500 url(../images/check-box.svg);
-    border: 2px solid $dark-1 !important;
-    box-shadow: 0 0 0 1px $primary-500;    
+    background: var(--primary-500) url(../images/check-box.svg);
+    border: 2px solid var(--dark-1) !important;
+    box-shadow: 0 0 0 1px var(--primary-500);    
     background-repeat: no-repeat;
     background-position: center;
 }
-
+ 
 .form-check-input:checked[type="checkbox"]:disabled {
-    background: $dark-8 url(../images/check-box.svg);
-    border: 2px solid $dark-1 !important;
-    box-shadow: 0 0 0 1px $dark-8;
-    opacity: 1;   
+    background: var(--dark-8) url(../images/check-box.svg);
+    border: 2px solid var(--dark-1) !important;
+    box-shadow: 0 0 0 1px var(--dark-8);
+    opacity: 1;  
     background-repeat: no-repeat;
     background-position: center;
 }
-
+ 
 /*************radio*************/
-
+ 
 .form-check-input[type="radio"] {
-    border: 1px solid $dark-8;
+    border: 1px solid var(--dark-8);
     width: 24px;
     height: 24px;
     border-radius: 100px;
     box-shadow: none;
     cursor: pointer;
 }
-
+ 
 .form-check-input:checked[type="radio"] {
-    border: 2px solid $dark-1 !important;
-    box-shadow: 0 0 0 1px $primary-500;
-    background: $primary-500;
+    border: 2px solid var(--dark-1) !important;
+    box-shadow: 0 0 0 1px var(--primary-500);
+    background: var(--primary-500);
 }
-
+ 
 .form-check-input:checked[type="radio"]:disabled {
-    border: 2px solid $dark-1 !important;
-    box-shadow: 0 0 0 1px $dark-8;
-    background: $dark-8;
+    border: 2px solid var(--dark-1) !important;
+    box-shadow: 0 0 0 1px var(--dark-8);
+    background: var(--dark-8);
     opacity: 1;
 }
-
+ 
 /*****switch*********/
-
+ 
 .form-switch {
     padding-left: 44px;
     margin: 0;
     min-height: 30px;
     cursor: pointer;
 }
-
+ 
 .form-switch .form-check-input[type="checkbox"] {
     width: 44px;
     border-radius: 100px;
     border: none;
-    background: $dark-6 url(../images/switch-btn.svg);
+    background: var(--dark-6) url(../images/switch-btn.svg);
     box-shadow: none;
-    background-size: 16px;   
+    background-size: 16px;  
     background-repeat: no-repeat;
     background-position: 14%;
 }
-
+ 
 .form-switch .form-check-input:checked[type="checkbox"] {
-    background: $primary-500 url(../images/switch-btn.svg);
-    box-shadow: none;   
+    background: var(--primary-500) url(../images/switch-btn.svg);
+    box-shadow: none;  
     background-repeat: no-repeat;  
      border: none !important;
     background-position: 87%;
     background-size: 16px;
 }
-
-
+ 
+ 
 /*************password css*********/
-
-
+ 
+ 
 .password-eye {
     cursor: pointer;
     position: absolute;
     right: 16px;
     top: 15px;
 }
-
+ 
 .simple-password-wrapper .password-eye {
     cursor: pointer;
     position: absolute;
@@ -215,7 +207,7 @@
     bottom: 17px;
     top: auto;
 }
-
+ 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -225,61 +217,61 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: $dark-13 !important;
-  -webkit-box-shadow: 0 0 0px 1000px $dark-1 inset !important;
+    -webkit-text-fill-color: var(--dark-13) !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--dark-1) inset !important;
   transition: background-color 9999s ease-in-out 0s;
 }
-
+ 
 input:-internal-autofill-selected {
   appearance: menulist-button;
   background-image: none !important;
-  background-color: $dark-1 !important;
+    background-color: var(--dark-1) !important;
   color: fieldtext !important;
 }
-
+ 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px $dark-1 inset !important;
+    -webkit-box-shadow: 0 0 0 30px var(--dark-1) inset !important;
 }
-
+ 
 .floating-password-wrapper:has(input:focus) .password-eye svg path {
-  fill: $primary-500;
+    fill: var(--primary-500);
 }
-
+ 
 .simple-password-wrapper .form-control:focus + .password-eye svg path{
- fill: $primary-500;
+ fill: var(--primary-500);
 }
-
+ 
 /**************calendar css whiout floting whiout floting**************/
-
+ 
 .calendar-box input {
     letter-spacing: 0;
-    color: $dark-12;
-    background-color: $dark-1;
+    color: var(--dark-12);
+    background-color: var(--dark-1);
     border-radius: 10px !important;
     padding: 17px 12px !important;
     font-size: 16px;
     font-weight: 400;
     box-shadow: none !important;
-    border: 1px solid $dark-5 !important;
+    border: 1px solid var(--dark-5) !important;
     line-height: 140% !important;
     height: auto !important;
     width: 100% !important;
 }
-
-
-
+ 
+ 
+ 
 .rs-input-group:focus-within {
     box-shadow: none !important;
     outline: none !important;
 }
-
+ 
 .calendar-box input:focus, .calendar-box input:focus-within{
-    background-color: $dark-1;
-    border-color: $primary-500 !important;
+    background-color: var(--dark-1);
+    border-color: var(--primary-500) !important;
     box-shadow: none !important;
     outline: none !important;
 }
-
+ 
 .calendar-box  .rs-input-group-addon {
     position: absolute;
     right: 0;
@@ -289,29 +281,29 @@ input:-webkit-autofill {
     padding: 0;
     background-repeat: no-repeat !important;
 }
-
-
+ 
+ 
 .calendar-box  input:focus + .rs-input-group-addon {
     background: url(../images/calendarFocus.svg) !important;
     background-repeat: no-repeat !important;
-} 
-
-
+}
+ 
+ 
 .calendar-box .rs-picker-input-group {
     border: none;
 }
-
+ 
 .calendar-box .rs-input-group-addon svg {
     display: none;
 }
-
-
+ 
+ 
 .calendar-box:has(.rs-picker-input-group[data-focus="true"]) label {
-  color:  $primary-500;
+    color:  var(--primary-500);
 }
-
+ 
 .calendar-box.floating-calendar-box label {
-    background: $dark-1;
+    background: var(--dark-1);
     height: auto;
     padding: 2px;
     line-height: 100%;
@@ -320,38 +312,38 @@ input:-webkit-autofill {
     transform: scale(.85) translateY(-11px) translateX(-.15rem);
     margin: 0;
 }
-
-
-
+ 
+ 
+ 
 /**************Time picker css whiout floting whiout floting**************/
-
+ 
 .timepicker-box input {
     letter-spacing: 0;
-    color: $dark-12;
-    background-color: $dark-1;
+    color: var(--dark-12);
+    background-color: var(--dark-1);
     border-radius: 10px !important;
     padding: 17px 12px !important;
     font-size: 16px;
     font-weight: 400;
     box-shadow: none !important;
-    border: 1px solid $dark-5 !important;
+    border: 1px solid var(--dark-5) !important;
     line-height: 140% !important;
     height: auto !important;
     width: 100% !important;
 }
-
+ 
 .rs-input-group:focus-within {
     box-shadow: none !important;
     outline: none !important;
 }
-
+ 
 .timepicker-box input:focus, .timepicker-box input:focus-within{
-    background-color: $dark-1;
-    border-color: $primary-500 !important;
+    background-color: var(--dark-1);
+    border-color: var(--primary-500) !important;
     box-shadow: none !important;
     outline: none !important;
 }
-
+ 
 .timepicker-box .rs-input-group-addon {
     position: absolute;
     right: 0;
@@ -361,28 +353,28 @@ input:-webkit-autofill {
     padding: 0;
     background-repeat: no-repeat !important;
 }
-
+ 
 .timepicker-box input:focus + .rs-input-group-addon {
     background: url(../images/timePickerFocus.svg) !important;
     background-repeat: no-repeat !important;
-} 
-
-
+}
+ 
+ 
 .timepicker-box .rs-picker-input-group {
     border: none;
 }
-
+ 
 .timepicker-box .rs-input-group-addon svg {
     display: none;
 }
-
-
+ 
+ 
 .timepicker-box:has(.rs-picker-input-group[data-focus="true"]) label {
-  color:  $primary-500;
+    color:  var(--primary-500);
 }
-
+ 
 .timepicker-box.floating-timepicker-box label {
-    background: $dark-1;
+    background: var(--dark-1);
     height: auto;
     padding: 2px;
     line-height: 100%;
@@ -391,45 +383,45 @@ input:-webkit-autofill {
     transform: scale(.85) translateY(-11px) translateX(-.15rem);
     margin: 0;
 }
-
-
+ 
+ 
 /**************file upload***********/
-
+ 
 .upload-input-box input[type="file"] {
   cursor: pointer;
 }
-
+ 
 .upload-input-box .link-icon {
   position: absolute;
   right: 10px;
   bottom: 17px;
   pointer-events: none;
 }
-
+ 
 .upload-input-box {
   position: relative;
 }
-
+ 
 .upload-input-box input[type="file"]::-webkit-file-upload-button {
   visibility: hidden;
   width: 0;
   padding: 0;
   margin: 0;
 }
-
+ 
 .upload-input-box input[type="file"]::file-selector-button {
   visibility: hidden;
   width: 0;
   padding: 0;
   margin: 0;
 }
-
+ 
 .upload-input-box input[type="file"]:focus + .link-icon svg path {
-    fill: $primary-500;
+    fill: var(--primary-500);
 }
-
+ 
 .upload-input-box.floating-upload-input-box label {
-    background: $dark-1;
+    background: var(--dark-1);
     height: auto;
     padding: 2px;
     line-height: 100%;
@@ -438,30 +430,30 @@ input:-webkit-autofill {
     transform: scale(.85) translateY(-11px) translateX(-.15rem);
     margin: 0;
 }
-
+ 
 .upload-input-box  .form-control[type="file"] {
-    color: $dark-7;
+    color: var(--dark-7);
 }
-
+ 
 .upload-input-box  .form-control[type="file"].file-selected {
-    color: $dark-12;
+    color: var(--dark-12);
 }
-
+ 
 
 /**********cuntry code *************/
 
 
-// .flag-phone-sec .form-control input {
-//     padding: 0;
-//     margin: 0;
-//     border: none;
-//     height: auto;
-//     width: 100%;
-//     font-family: Open Sauce Sans;
-//     font-size: 16px;
-//     font-weight: 400;
-//     line-height: 140% !important;
-// }
+/* .flag-phone-sec .form-control input {
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: auto;
+    width: 100%;
+    font-family: Open Sauce Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140% !important;
+} */
 
 
 .flag-phone-sec .react-international-phone-input-container .react-international-phone-input {
@@ -469,32 +461,32 @@ input:-webkit-autofill {
     box-shadow: none !important;
     padding: 17px 12px 17px 86px !important;
     border-radius: 10px;
-    background-color: $dark-1;
-    border: 1px solid $dark-5 !important;
+    background-color: var(--dark-1);
+    border: 1px solid var(--dark-5) !important;
     font-weight: 400;
     font-size: 16px;
     line-height: 140% !important;
     letter-spacing: 0;
-    color: $dark-12;
-    font-family: $font-primary;
+    color: var(--dark-12);
+    font-family: var(--font-primary);
     height: auto;
 }
 
 .flag-phone-sec .react-international-phone-input-container .react-international-phone-input:focus {
-    background-color: $dark-1;
-    border-color: $primary-500 !important;
+    background-color: var(--dark-1);
+    border-color: var(--primary-500) !important;
 }
 
 .flag-phone-sec:has(input:focus) label {
-    color: $primary-500 !important;
+    color: var(--primary-500) !important;
 }
-
+ 
 .flag-phone-sec .react-international-phone-country-selector {
     position: absolute;
     left: 0;
     top: 0;
 }
-
+ 
 .flag-phone-sec button {
     padding: 17px 12px;
     margin: 0;
@@ -503,7 +495,7 @@ input:-webkit-autofill {
     min-height: auto;
     background: transparent !important;
 }
-
+ 
 .flag-phone-sec button .react-international-phone-country-selector-button__dropdown-arrow {
     background: transparent url(../images/downArrow.svg);    
     border: none;
@@ -516,35 +508,35 @@ input:-webkit-autofill {
     margin: 0 7px;
     background-position: center;
 }
-
+ 
 .flag-phone-sec ul {
-    border: 1px solid $dark-5 ;    
+    border: 1px solid var(--dark-5) ;    
     border-radius: 0;
     outline: none;
     padding: 10px;
     box-shadow: none !important;
     margin-top: 18px;
 }
-
+ 
 .flag-phone-sec ul li {
     padding: 6px 0;
 }
-
-
-
-
-///cuntry name and flag css/// 
-
+ 
+ 
+ 
+ 
+.flag-name-sec { }
+/* cuntry name and flag css */
 .flag-name-sec button {
     letter-spacing: 0;
-    color: $dark-12;
+    color: var(--dark-12);
     border-radius: 10px;
     padding: 13px 12px;
     font-family: Open Sauce Sans;
     font-size: 16px !important;
     font-weight: 400;
     box-shadow: none !important;
-    border: 1px solid $dark-5 !important;
+    border: 1px solid var(--dark-5) !important;
     line-height: 140% !important;
     height: auto;
     min-height: auto;
@@ -554,56 +546,56 @@ input:-webkit-autofill {
     background-position: 99% 25px;
     transition: none;
 }
-
+ 
 .flag-name-sec button:after {
     display: none !important;
 }
-
+ 
 .flag-name-sec ul {
     box-shadow: none !important;
     outline: none;
-    border: 1px solid $dark-5;
+    border: 1px solid var(--dark-5);
     padding: 10px;
     border-radius: 0px;
 }
-
+ 
 .flag-name-sec ul div {
-    background: $dark-1;
+    background: var(--dark-1);
     top: -11px;
 }
-
+ 
 .flag-name-sec ul li {
     padding: 4px 0;
 }
-
+ 
 .flag-name-sec ul div input[type="text"] {
     width: 100%;
     margin: 0;
-    background-color: $dark-1;
+    background-color: var(--dark-1);
     border-radius: 6px;
     padding: 12px 12px;
     font-family: Open Sauce Sans;
     font-size: 14px;
     font-weight: 400;
     box-shadow: none !important;
-    border: 1px solid $dark-5 !important;
+    border: 1px solid var(--dark-5) !important;
     line-height: 140% !important;
 }
-
-
+ 
+ 
 .flag-name-sec button span[data-testid="rfs-selected-flag"] {
     font-size: 25px;
 }
-
+ 
 .flag-name-sec button span {
     padding: 0 10px 0 0;
 }
-
+ 
 .flag-name-sec button:focus {
-    background-color: $dark-1;
-    border-color: $primary-500 !important;
+    background-color: var(--dark-1);
+    border-color: var(--primary-500) !important;
 }
 
 .flag-name-sec:has(button:focus) label {
-    color: $primary-500 !important;
+    color: var(--primary-500) !important;
 }
