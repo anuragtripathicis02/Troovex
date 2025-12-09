@@ -17,15 +17,29 @@
     text-underline-offset: 3px;
 }
 
-.create-account a {
-    font-weight: 500;
-}
+.create-account a {font-weight: 500;}
 
 .demo{ display: flex;}
 .auth-container.auth-card-small {
     max-width: 495px;
     width: 100%;
 }
+
+/* Resetting Password css start */
+
+.card-800 {max-width: 800px; margin: 0 auto;}
+.icon-back{ width: 24px; height: 24px; background-color: var(--bs-white); border-radius: 12px;}
+.icon-back {
+    background-color: var(--bs-white);
+    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-back:hover{ background-color: var(--blue-500); color: var(--bs-white);}
+
 
 @media screen and (max-width:1199px) {
 .auth-info {width: 50%;}
