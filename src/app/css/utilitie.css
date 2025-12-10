@@ -1,5 +1,5 @@
 .header-clc-height {
-    height: calc(100vh - 82px);
+    min-height: calc(100vh - 82px);
 }
 
 .text-blue {

@@ -75,6 +75,18 @@
 }
 
 
+
+@media only screen and (min-width:767px) {
+
+    .back-link {
+        position: absolute;
+        top: 0;
+        left: 15px;
+}
+
+}
+
+
 @media only screen and (max-width:992px) {
 
     .role-sec .nav-tabs .nav-item a {

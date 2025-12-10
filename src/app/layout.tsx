@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-// import 'rsuite/dist/rsuite-no-reset.min.css';
-// import "react-international-phone/style.css";
+import 'rsuite/dist/rsuite-no-reset.min.css';
+import "react-international-phone/style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import "../app/css/globals.scss";
 import "./globals.css";

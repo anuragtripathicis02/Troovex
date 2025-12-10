@@ -23,7 +23,7 @@ const Header = () => {
   };
 
   return (
-    <div className="header-sec w-100 position-fixed z-1 top-0">
+    <div className="header-sec w-100 position-fixed z-3 top-0">
       <div className="container-fluid">
         <div className="inner-header d-flex align-items-center justify-content-between gap-md-3 gap-2">
 

@@ -1,5 +1,6 @@
 import Header from '@/component/common/Header'
 import React from 'react'
+import CompanyBothScreen from './CompanyBothScreen'
 
 
 const Home = () => {
@@ -7,8 +8,7 @@ const Home = () => {
     <div>
       <Header />
       <div className='mt-82'>
-        {/* <RoleSelection /> */}
-        anurag t
+        <CompanyBothScreen />
       </div>
     </div>
   )
