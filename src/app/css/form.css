@@ -602,6 +602,12 @@ input:-webkit-autofill {
     color: var(--primary-500) !important;
 }
 
+.form-floating.label-gray > .form-control-plaintext ~ label, 
+.form-floating.label-gray > .form-control:focus ~ label, 
+.form-floating.label-gray > .form-control:not(:placeholder-shown) ~ label, 
+.form-floating.label-gray > .form-select ~ label{
+    background-color: var(--dark-3);
+}
 .floting-box label {
     background: var(--dark-1);
     z-index: 1;

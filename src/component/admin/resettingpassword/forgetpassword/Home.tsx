@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import ForgetPassword from './ForgetPassword'
 import Header from '@/component/common/Header'
