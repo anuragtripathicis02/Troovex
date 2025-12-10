@@ -1,3 +1,11 @@
+.header-clc-height {
+    height: calc(100vh - 82px);
+}
+
+.text-blue {
+    color: var(--primary-500);
+}
+
 .p-12 {
 	padding: 12px;
 }
@@ -16,4 +24,28 @@
 
 .mt-82 {
     margin-top: 82px;
+}
+
+.mb-32 {
+    margin-bottom: 32px;
+} 
+
+@media only screen  and (max-width:767px) {
+       
+    .mt-32 {
+        margin-top: 20px;
+    }
+
+    .mb-48 {
+        margin-bottom: 30px;
+    }
+
+    .mt-82 {
+        margin-top: 70px;
+    }
+
+    .mb-32 {
+        margin-bottom: 20px;
+    } 
+
 }
