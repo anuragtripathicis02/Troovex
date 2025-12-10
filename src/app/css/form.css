@@ -21,6 +21,13 @@
     padding: 17px 12px;
 }
  
+.form-select {
+    background: var(--dark-1) url(../images/downArrow.svg);
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    transition: none; 
+}
+
 .form-control:focus, .form-select:focus{
     background-color: var(--dark-1);
     border-color: var(--primary-500) !important;
@@ -522,11 +529,6 @@ input:-webkit-autofill {
     padding: 6px 0;
 }
  
- 
- 
- 
-.flag-name-sec { }
-/* cuntry name and flag css */
 .flag-name-sec button {
     letter-spacing: 0;
     color: var(--dark-12);
@@ -541,9 +543,9 @@ input:-webkit-autofill {
     height: auto;
     min-height: auto;
     max-height: initial !important;
-    background: transparent url(../images/downArrow.svg);
+    background: var(--dark-1) url(../images/downArrow.svg);
     background-repeat: no-repeat;
-    background-position: 99% 25px;
+    background-position: right 15px center;
     transition: none;
 }
  
@@ -605,4 +607,75 @@ input:-webkit-autofill {
 .form-floating.label-gray > .form-control:not(:placeholder-shown) ~ label, 
 .form-floating.label-gray > .form-select ~ label{
     background-color: var(--dark-3);
+}
+.floting-box label {
+    background: var(--dark-1);
+    z-index: 1;
+    height: auto;
+    margin: 0;
+    padding: 2px;
+    line-height: 100%;
+    position: absolute;
+    transform: scale(.85) translateY(-11px) translateX(-.15rem);
+}
+
+.flag-code-sec  .ReactFlagsSelect-module_flagsSelect__2pfa2 {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/******css for multiselect*********/
+
+
+.multipal-select-sec .rs-picker {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: max-content !important;
+    overflow: initial !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.multipal-select-sec .rs-picker  .rs-picker-tag-list {
+    padding: 16px !important;   
+    margin: 0;
+}
+
+.multipal-select-sec .rs-picker .rs-btn {
+    background-color: var(--dark-1);
+    letter-spacing: 0;
+    color: var(--dark-12);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-primary);
+    border-radius: 10px;
+    padding: 17px 12px;
+    box-shadow: none !important;
+    border: 1px solid var(--dark-5) !important;
+    line-height: 140% !important;
+    outline: none !important;
+    min-height: 58px;
+}
+
+
+.multipal-select-sec .rs-picker [data-focus="true"] .rs-btn {
+    background-color: var(--dark-1) !important;
+    border-color: var(--primary-500) !important;
+}
+
+
+
+
+.multipal-select-sec .rs-picker-toggle-textbox {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.multipal-select-sec .rs-picker[data-picker="tag"] .rs-picker-search-input > input {
+    outline: none;
+    border: none;
+    padding: 0 !important;
+    margin: 0 !important;
 }

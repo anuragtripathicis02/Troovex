@@ -10,7 +10,7 @@ import DefaultLGModal from "@/component/admin/modalComponent/DefaultLGModal";
 import DefaultMDModal from "@/component/admin/modalComponent/DefaultMDModal";
 import DefaultSMModal from "@/component/admin/modalComponent/DefaultSMModal";
 
-import { DatePicker } from 'rsuite';
+import { DatePicker, TagInput } from 'rsuite';
 import OnlyFlagPhoneInput from "@/component/common/OnlyFlagPhoneInput";
 import CountryName from "@/component/common/CountryName";
 
@@ -278,10 +278,37 @@ export default function Home() {
       <OnlyFlagPhoneInput />
     </div>
 
+    
+    {/* floting cuntry code with flag */}
+    
+    <div className="fleg-box mb-3 mt-4 position-relative floting-box">
+      <OnlyFlagPhoneInput />
+    </div>
+
     {/* cuntry with fleag only */}
 
     <div className="flag-code-sec mb-3 mt-4 position-relative">
       <CountryName />
+    </div>
+
+    {/* Floting cuntry with fleag only */}
+    
+    <div className="flag-code-sec mb-3 mt-4 position-relative floting-box">
+      <CountryName />
+    </div>
+
+    {/* multipal tags select  */}
+ 
+    <div className="multipal-select-sec mb-3 mt-4 position-relative">
+        <Form.Label>Company Domain</Form.Label>
+        <TagInput trigger={['Enter', 'Space', 'Comma']} placeholder="Company Domain" onCreate={(value, item) => { console.log(value, item); }} className="w-100 form-group"/>
+    </div>
+    
+    {/* floting multipal tags select  */}
+ 
+    <div className="multipal-select-sec mb-3 mt-4 position-relative floting-box">
+        <Form.Label>Company Domain</Form.Label>
+        <TagInput trigger={['Enter', 'Space', 'Comma']} placeholder="Company Domain" onCreate={(value, item) => { console.log(value, item); }} className="w-100 form-group"/>
     </div>
 
     {/* card common box */}

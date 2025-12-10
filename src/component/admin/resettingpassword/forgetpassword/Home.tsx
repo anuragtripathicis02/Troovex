@@ -7,7 +7,9 @@ const Home = () => {
     return (
         <>
             <Header />
-            <ForgetPassword />
+            <div className='mt-82'>
+                <ForgetPassword />
+            </div>
         </>
     )
 }

@@ -67,3 +67,60 @@
     background: var(--primary-500);
     box-shadow: 0 0px 0px 2px var(--primary-500);
 }
+
+
+
+.role-text a {
+    font-weight: 500;
+}
+
+
+
+@media only screen and (min-width:767px) {
+
+    .back-link {
+        position: absolute;
+        top: 0;
+        left: 15px;
+}
+
+}
+
+
+@media only screen and (max-width:992px) {
+
+    .role-sec .nav-tabs .nav-item a {
+        padding: 14px;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width:767px) {
+
+.role-sec .nav-tabs {
+    margin: 0;
+}
+
+.role-sec .nav-tabs .nav-item {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.role-sec .nav-box .icons {
+    margin: 0;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    top: 3px;
+}
+
+.role-sec .nav-box h5 {
+    padding-right: 18px;
+}
+
+}
