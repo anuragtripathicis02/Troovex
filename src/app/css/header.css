@@ -13,3 +13,127 @@
         padding: 0 15px;
     }
 }
+
+
+
+
+/***********mew ofcanvas*******/
+
+.mobile-nav {
+    z-index: 1;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    position: relative;
+}
+
+
+
+.bar1, .bar2, .bar3 {
+  background-color: var(--dark-12);
+  cursor: pointer;
+  height: 2px;
+  margin: 7px 0;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  width: 30px;
+  display: block;
+  position: absolute;
+  }
+
+.bar1{top: 0px;}
+.bar2{top: 8px;}
+.bar3{top: 16px;}
+
+.menu-open .bar1 {
+    top: 6px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(45deg);
+}
+.menu-open .bar2{ display: none;}
+.menu-open .bar3 {
+  top: 6px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-45deg);
+}
+
+.menu-open .bar1, 
+.menu-open .bar2, 
+.menu-open .bar3{ background-color: var(--dark-1);}
+
+
+.overlay {
+    opacity: 0.6;
+    background-color: var(--dark-12);
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.menu-open .overlay{ display: block;}
+
+body.menu-open{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+
+.overlay.show {
+  visibility: visible;
+}
+
+
+
+@media only screen and (max-width: 767px){
+
+    .header-sec .header-right {
+        background: var(--dark-1);
+        visibility: hidden;
+        z-index: 1;
+        width: 260px;
+        padding: 15px;
+        transition: transform .3s ease-in-out;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+        -webkit-transition: 0.25s ease-in-out;
+        -moz-transition: 0.25s ease-in-out;
+        -o-transition: 0.25s ease-in-out;
+        transition: 0.25s ease-in-out;
+    }
+
+    .menu-open .header-sec .header-right {
+        visibility: visible;
+        transform: none;
+    }
+
+    .header-sec .header-right ul li {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+}

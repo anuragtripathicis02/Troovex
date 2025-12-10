@@ -1,0 +1,116 @@
+"use client";
+import { useState } from "react";
+import Image from "next/image";
+import styles from "./page.module.css";
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Form from 'react-bootstrap/Form';
+
+// import 'rsuite/dist/rsuite-no-reset.min.css';
+// import "react-international-phone/style.css";
+
+import OnlyFlagPhoneInput from "@/component/common/OnlyFlagPhoneInput";
+import CountryName from "@/component/common/CountryName";
+
+
+import BackArrow from "@/component/common/BackArrow";
+import Link from "next/link";
+import { TagInput } from "rsuite";
+
+
+const CompanyBothScreen = () => {
+    //paswaord 
+    const [showPass, setShowPass] = useState(false);
+    const [showCPass, setShowCPass] = useState(false);
+    // SVG Icons for password show hide
+    const EyeOpen = (
+        <svg width="23" height="15" viewBox="0 0 23 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.4353 7.19625C22.4025 7.12219 21.6084 5.36062 19.8431 3.59531C17.4909 1.24312 14.52 0 11.25 0C7.97999 0 5.00905 1.24312 2.65687 3.59531C0.891554 5.36062 0.093741 7.125 0.0646785 7.19625C0.0220346 7.29217 0 7.39597 0 7.50094C0 7.60591 0.0220346 7.70971 0.0646785 7.80562C0.097491 7.87969 0.891554 9.64031 2.65687 11.4056C5.00905 13.7569 7.97999 15 11.25 15C14.52 15 17.4909 13.7569 19.8431 11.4056C21.6084 9.64031 22.4025 7.87969 22.4353 7.80562C22.4779 7.70971 22.5 7.60591 22.5 7.50094C22.5 7.39597 22.4779 7.29217 22.4353 7.19625ZM11.25 13.5C8.36437 13.5 5.84343 12.4509 3.75655 10.3828C2.90028 9.53128 2.17179 8.56027 1.59374 7.5C2.17164 6.43963 2.90014 5.4686 3.75655 4.61719C5.84343 2.54906 8.36437 1.5 11.25 1.5C14.1356 1.5 16.6566 2.54906 18.7434 4.61719C19.6014 5.4684 20.3315 6.43942 20.9109 7.5C20.235 8.76188 17.2903 13.5 11.25 13.5ZM11.25 3C10.36 3 9.48995 3.26392 8.74993 3.75839C8.0099 4.25285 7.43313 4.95566 7.09253 5.77792C6.75194 6.60019 6.66282 7.50499 6.83646 8.37791C7.01009 9.25082 7.43867 10.0526 8.06801 10.682C8.69735 11.3113 9.49917 11.7399 10.3721 11.9135C11.245 12.0872 12.1498 11.9981 12.9721 11.6575C13.7943 11.3169 14.4971 10.7401 14.9916 10.0001C15.4861 9.26005 15.75 8.39002 15.75 7.5C15.7488 6.30691 15.2742 5.16303 14.4306 4.31939C13.587 3.47575 12.4431 3.00124 11.25 3ZM11.25 10.5C10.6566 10.5 10.0766 10.3241 9.58328 9.99441C9.08993 9.66476 8.70542 9.19623 8.47835 8.64805C8.25129 8.09987 8.19188 7.49667 8.30764 6.91473C8.42339 6.33279 8.70911 5.79824 9.12867 5.37868C9.54823 4.95912 10.0828 4.6734 10.6647 4.55764C11.2467 4.44189 11.8499 4.5013 12.398 4.72836C12.9462 4.95542 13.4148 5.33994 13.7444 5.83329C14.074 6.32664 14.25 6.90666 14.25 7.5C14.25 8.29565 13.9339 9.05871 13.3713 9.62132C12.8087 10.1839 12.0456 10.5 11.25 10.5Z" fill="#97979E"/></svg>
+    );
+  
+    const EyeClose = (
+      <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.30499 0.25228C4.23913 0.178036 4.15918 0.117603 4.06979 0.0744831C3.9804 0.0313634 3.88334 0.00641467 3.78423 0.00108303C3.68513 -0.00424861 3.58595 0.0101427 3.49245 0.0434231C3.39895 0.0767035 3.31298 0.128211 3.23953 0.19496C3.16608 0.261709 3.10661 0.342373 3.06457 0.432275C3.02252 0.522177 2.99874 0.61953 2.9946 0.718692C2.99045 0.817853 3.00603 0.916851 3.04043 1.00995C3.07483 1.10304 3.12737 1.18839 3.19499 1.26103L4.99874 3.24572C1.59374 5.33541 0.129366 8.55665 0.0646785 8.7029C0.0220346 8.79882 0 8.90262 0 9.00759C0 9.11256 0.0220346 9.21636 0.0646785 9.31228C0.097491 9.38634 0.891554 11.147 2.65687 12.9123C5.00905 15.2635 7.97999 16.5067 11.25 16.5067C12.9306 16.5162 14.5942 16.1702 16.1316 15.4913L18.1941 17.761C18.2599 17.8353 18.3399 17.8957 18.4293 17.9388C18.5186 17.9819 18.6157 18.0069 18.7148 18.0122C18.8139 18.0176 18.9131 18.0032 19.0066 17.9699C19.1001 17.9366 19.1861 17.8851 19.2595 17.8183C19.333 17.7516 19.3924 17.6709 19.4345 17.581C19.4765 17.4911 19.5003 17.3938 19.5044 17.2946C19.5086 17.1955 19.493 17.0965 19.4586 17.0034C19.4242 16.9103 19.3717 16.8249 19.3041 16.7523L4.30499 0.25228ZM8.74218 7.36228L12.6487 11.6607C12.0605 11.9702 11.386 12.0755 10.7314 11.9602C10.0768 11.8448 9.47896 11.5153 9.03188 11.0234C8.58481 10.5315 8.31377 9.90501 8.26134 9.24236C8.2089 8.5797 8.37804 7.91839 8.74218 7.36228ZM11.25 15.0067C8.36437 15.0067 5.84343 13.9576 3.75655 11.8895C2.89997 11.0382 2.17145 10.0671 1.59374 9.00665C2.03343 8.18259 3.43687 5.87634 6.0328 4.37728L7.7203 6.22884C7.06699 7.06557 6.73052 8.10631 6.77036 9.16713C6.81021 10.2279 7.22379 11.2405 7.93802 12.0259C8.65225 12.8112 9.62114 13.3188 10.6734 13.4589C11.7257 13.599 12.7936 13.3625 13.6884 12.7913L15.0694 14.3101C13.8506 14.7777 12.5553 15.0139 11.25 15.0067ZM11.8125 6.06009C11.6171 6.0228 11.4444 5.90939 11.3326 5.74483C11.2208 5.58027 11.1789 5.37802 11.2162 5.18259C11.2535 4.98716 11.3669 4.81455 11.5315 4.70273C11.6961 4.59091 11.8983 4.54905 12.0937 4.58634C13.0496 4.77166 13.92 5.26101 14.575 5.98142C15.23 6.70183 15.6346 7.61469 15.7284 8.58384C15.7469 8.78188 15.686 8.97917 15.5591 9.1323C15.4322 9.28544 15.2496 9.38188 15.0516 9.4004C15.0281 9.40178 15.0047 9.40178 14.9812 9.4004C14.7938 9.40121 14.6128 9.33178 14.474 9.20581C14.3352 9.07983 14.2486 8.90643 14.2312 8.71978C14.1681 8.07515 13.8986 7.46811 13.4628 6.98891C13.0271 6.50972 12.4482 6.18397 11.8125 6.06009ZM22.4325 9.31228C22.3931 9.4004 21.4434 11.5032 19.305 13.4185C19.2319 13.4861 19.1461 13.5384 19.0527 13.5724C18.9592 13.6065 18.8599 13.6216 18.7605 13.6169C18.6611 13.6122 18.5636 13.5878 18.4738 13.545C18.3839 13.5023 18.3035 13.4421 18.2371 13.368C18.1708 13.2938 18.1198 13.2072 18.0873 13.1132C18.0547 13.0192 18.0412 12.9196 18.0475 12.8203C18.0537 12.721 18.0797 12.624 18.1239 12.5348C18.168 12.4457 18.2295 12.3662 18.3047 12.301C19.3538 11.3585 20.2351 10.2445 20.9109 9.00665C20.3319 7.94519 19.6018 6.97348 18.7434 6.12197C16.6566 4.05572 14.1356 3.00665 11.25 3.00665C10.642 3.00591 10.0349 3.05514 9.43499 3.15384C9.33743 3.1711 9.23741 3.16885 9.14073 3.14723C9.04404 3.12561 8.95259 3.08505 8.87167 3.02788C8.79074 2.97072 8.72195 2.89809 8.66925 2.81419C8.61656 2.73029 8.58101 2.63678 8.56466 2.53906C8.54832 2.44134 8.55149 2.34135 8.57401 2.24487C8.59652 2.14838 8.63793 2.05731 8.69584 1.97692C8.75375 1.89653 8.82702 1.82842 8.9114 1.7765C8.99579 1.72459 9.08963 1.68991 9.18749 1.67447C9.86921 1.56191 10.559 1.50578 11.25 1.50665C14.52 1.50665 17.4909 2.74978 19.8431 5.10197C21.6084 6.86728 22.4025 8.62884 22.4353 8.7029C22.4779 8.79882 22.5 8.90262 22.5 9.00759C22.5 9.11256 22.4779 9.21636 22.4353 9.31228H22.4325Z" fill="#97979E"/></svg>
+    );
+  
+
+  return (
+    <div className="both-screen-sec ">
+      <div className="container position-relative">
+        <Link href="" className="back-link">
+          <BackArrow />
+        </Link>
+
+        <div className="card-800 ">
+          <div className="role-sec d-flex flex-column header-clc-height">
+            <div className="top-box-role">
+              <div className="mb-48 text-center">
+                <h2>Register as Supplier</h2>
+                <p className="mb-0">Let’s getting you started by creating your account in throovex</p>
+              </div>
+              <Form>
+                <div className="row">
+                  <div className="col-lg-6 mb-4">
+                    <FloatingLabel controlId="floatingInput" label="Company Name" className="label-gray">
+                      <Form.Control type="text" placeholder="Algeria Infra & Argo Co." />
+                    </FloatingLabel>
+                  </div>
+                  <div className="col-lg-6 mb-4">
+                    <FloatingLabel controlId="floatingInput" label="Email Address" className="label-gray">
+                      <Form.Control type="email" placeholder="Johnsmith1001@gmail.com" />
+                    </FloatingLabel>
+                  </div>
+                  <div className="col-lg-6 mb-4">
+                     <div className="fleg-box position-relative text-start floting-box label-gray" >
+                        <OnlyFlagPhoneInput />
+                      </div>
+                  </div>
+                  <div className="col-lg-6 mb-4">
+                    <div className="flag-code-sec position-relative text-start floting-box label-gray">
+                      <CountryName />
+                    </div>
+                  </div>
+                  <div className="col-lg-12 mb-4"> 
+                    <div className="multipal-select-sec position-relative floting-box label-gray">
+                        <Form.Label>Company Domain</Form.Label>
+                        <TagInput trigger={['Enter', 'Space', 'Comma']} placeholder="Company Domain" onCreate={(value, item) => { console.log(value, item); }} className="w-100 form-group"/>
+                    </div>
+                  </div>
+                  <div className="col-lg-6 mb-4">
+                      <div className="floating-password-wrapper position-relative">
+                        <FloatingLabel controlId="password" label="Password" className="label-gray">
+                          <Form.Control type={showPass ? "text" : "password"} placeholder="Enter your password" />
+                        </FloatingLabel>
+
+                        <span className="password-eye" onClick={() => setShowPass(!showPass)}>
+                          {showPass ? EyeClose : EyeOpen}
+                        </span>
+                      </div>
+                  </div>
+                  <div className="col-lg-6 mb-4">
+                    <div className="floating-password-wrapper position-relative">
+                      <FloatingLabel controlId="cpassword" label="Confirm Password" className="label-gray">
+                        <Form.Control type={showCPass ? "text" : "password"} placeholder="Re-enter password" />
+                      </FloatingLabel>
+
+                      <span className="password-eye" onClick={() => setShowCPass(!showCPass)}>
+                        {showCPass ? EyeClose : EyeOpen}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Form>
+            </div>
+
+            <div className="bottom-box-role mt-auto pb-4">
+              <div className="container text-center">
+                <Link href="" className="btn-outline fill-btn gap-2 mb-32 ">Sign me up as Company</Link>
+                <div className="role-text"> By continuing further you are agreed to our <Link href="" className="text-bold"> Terms and Condition </Link> and <Link href="" className="text-bold">Privacy Policy.</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CompanyBothScreen;
