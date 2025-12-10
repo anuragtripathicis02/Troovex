@@ -1,0 +1,24 @@
+.app-sidebar {
+    background-color: var(--bs-white);
+    width: 270px;
+    height: calc(100vh - 64px);
+    padding: 40px 0;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    overflow: auto;
+    border-right: 1px solid var(--dark-5);
+}
+.sidebar-nav {padding: 0; margin: 0px;}
+.sidebar-nav li{ padding: 0px 15px; margin-bottom: 8px;}
+.sidebar-nav .sidebar-link {
+    color: var(--dark-8);
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    display: flex;
+    border-radius: 8px;
+}
+.sidebar-nav .sidebar-link:hover{ color: var(--primary-500);}
+.sidebar-nav li.active .sidebar-link{background-color: var(--primary-500); color: var(--bs-white);}
+.sidebar-nav .icon{ flex: 0 0 auto; width: 24px;}

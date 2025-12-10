@@ -84,7 +84,7 @@ a {
     transition: 0.5s ease-in-out;
 }
 
-button {
+button, .icon-back, .icon-bordred {
     transition: 0.5s ease-in-out;
     cursor: pointer;
 }

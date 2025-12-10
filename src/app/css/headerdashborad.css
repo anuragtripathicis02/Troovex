@@ -1,0 +1,46 @@
+.header-dashboard {
+    border-bottom: 1px solid var(--dark-5);
+    background: var(--bs-white);
+}
+.header-dashboard .flex-grow-1 { padding: 12px 24px;}
+.logo {
+    border-right: 1px solid var(--dark-5);
+    flex: none;
+    width: 270px;
+    padding: 12px 24px;
+    text-align: center;
+}
+
+.icon-bordred {
+    border: 1px solid;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    color: var(--dark-5);
+    align-items: center;
+    justify-content: center;
+}
+.icon-bordred:hover{
+    background-color: var(--primary-500);
+    border-color: var(--primary-500);
+    color: var(--bs-white);
+}
+.user-pic .btn-primary {
+    border: 0 !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    display: block;
+}
+
+.user-pic .btn-primary img {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.user-pic .dropdown-toggle:after {
+    display: none;
+}
