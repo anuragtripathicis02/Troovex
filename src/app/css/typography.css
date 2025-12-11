@@ -82,11 +82,13 @@ a {
     color: var(--dark-12);
     text-decoration: none;
     transition: 0.5s ease-in-out;
+    outline: none !important;
 }
 
 button, .icon-back, .icon-bordred {
     transition: 0.5s ease-in-out;
     cursor: pointer;
+    outline: none !important;
 }
 
 a:hover {
