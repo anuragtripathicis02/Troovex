@@ -523,6 +523,7 @@ input:-webkit-autofill {
     padding: 10px;
     box-shadow: none !important;
     margin-top: 18px;
+    z-index: 3;
 }
  
 .flag-phone-sec ul li {
@@ -602,12 +603,15 @@ input:-webkit-autofill {
     color: var(--primary-500) !important;
 }
 
-.form-floating.label-gray > .form-control-plaintext ~ label, 
-.form-floating.label-gray > .form-control:focus ~ label, 
-.form-floating.label-gray > .form-control:not(:placeholder-shown) ~ label, 
-.form-floating.label-gray > .form-select ~ label{
-    background-color: var(--dark-3);
+.label-gray > .form-control-plaintext ~ label, 
+.label-gray > .form-control:focus ~ label, 
+.label-gray > .form-control:not(:placeholder-shown) ~ label, 
+.label-gray > .form-select ~ label{
+    background: linear-gradient(to top, var(--dark-1), var(--dark-3));
 }
+
+.floting-box.label-gray label{ background: linear-gradient(to top, var(--dark-1), var(--dark-3));}
+
 .floting-box label {
     background: var(--dark-1);
     z-index: 1;
@@ -678,4 +682,14 @@ input:-webkit-autofill {
     border: none;
     padding: 0 !important;
     margin: 0 !important;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+
+    .btn-outline {
+        padding: 9px 13px;
+        font-size: 14px;
+    }
 }
