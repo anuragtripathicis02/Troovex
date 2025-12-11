@@ -1,0 +1,5 @@
+.content-wrapper {
+    width: calc(100% - 270px);
+    margin-left: 270px;
+    padding: 30px;
+}
