@@ -22,3 +22,5 @@
 .sidebar-nav .sidebar-link:hover{ color: var(--primary-500);}
 .sidebar-nav li.active .sidebar-link{background-color: var(--primary-500); color: var(--bs-white);}
 .sidebar-nav .icon{ flex: 0 0 auto; width: 24px;}
+.sidebar-nav ol li:last-child{ margin-bottom: 0;}
+.sidebar-nav ol li a{ font-size: 14px;}
