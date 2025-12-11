@@ -11,7 +11,7 @@ import Logo from "../../app/images/logo-dashboard.svg";
 
 const DashboardHeader = () => {
     return (
-        <div className='header-dashboard'>
+        <div className='header-dashboard position-fixed top-0 w-100 z-3'>
             <div className='header-container'>
                 <div className='d-flex'>
                     <div className='logo me-auto'>

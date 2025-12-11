@@ -314,7 +314,7 @@ export default function Home() {
     {/* card common box */}
     <div className="row">
       <div className="col-lg-3 mb-4">
-        <div className="card-simple p-12 ">
+        <div className="card-simple p-12 hover-card">
           <div className="img-box position-relative">
             <Image src={CardImgDemo} alt=""></Image>
             <ul className="card-top-box position-absolute list-unstyled m-0 d-flex align-items-center justify-content-between gap-2">

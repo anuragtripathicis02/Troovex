@@ -1,0 +1,14 @@
+
+
+.details-box p {
+    color: var(--dark-8);
+}
+
+.card-person-details .img-box img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var( --dark-5);
+}
+
