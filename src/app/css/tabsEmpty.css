@@ -1,0 +1,10 @@
+.empty-default-box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.empty-default-box h4 {
+    color: var(--dark-6);
+    font-weight: 400;
+}

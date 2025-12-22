@@ -1,6 +1,15 @@
 .header-clc-height {
-    min-height: calc(100vh - 82px);
+    min-height: calc(100svh - 82px);
 }
+
+.header-clc-height-64 {
+    min-height: calc(100svh - 64px);
+}
+
+.height-empty-tabs {
+    height: calc(100vh - 210px);
+}
+
 
 .text-blue {
     color: var(--primary-500);
@@ -61,6 +70,36 @@
     color: #696873;
 }
 
+.mt-64 {
+    margin-top: 64px;
+}
+
+.width-max {
+    width: max-content;
+}
+
+.ps-30 {
+    padding-left: 30px;
+} 
+
+.pe-30 {
+    padding-right: 30px;
+}
+
+
+
+@media only screen  and (max-width:991px) {
+
+.ps-30 {
+    padding-left: 12px;
+} 
+
+.pe-30 {
+    padding-right: 12px;
+}
+
+}
+
 @media only screen  and (max-width:767px) {
        
     .mt-32 {
@@ -78,5 +117,9 @@
     .mb-32 {
         margin-bottom: 20px;
     } 
+
+    .p-20 {
+        padding: 12px;
+    }
 
 }

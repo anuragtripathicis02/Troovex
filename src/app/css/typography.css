@@ -161,7 +161,8 @@ img {
     line-height: 16px;
     text-align: center;
     color: var(--blue-600);
-}
+} 
+
 .card-btn {
     background: var(--dark-3);
     border: 1px solid var(--dark-1);

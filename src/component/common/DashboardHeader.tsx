@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Help from './Help'
 import Bell from './Bell'
 import Link from 'next/link'
@@ -10,6 +10,23 @@ import UserPic from "../../app/images/user-auth.png";
 import Logo from "../../app/images/logo-dashboard.svg";
 
 const DashboardHeader = () => {
+     const [menuOpen, setMenuOpen] = useState(false);
+      useEffect(() => {
+        if (menuOpen) {
+          document.body.classList.add("menu-open");
+        } else {
+          document.body.classList.remove("menu-open");
+        }
+      }, [menuOpen]);
+    
+      const handleMenuToggle = () => {
+        setMenuOpen(!menuOpen);
+      };
+    
+      const handleOverlayClick = () => {
+        setMenuOpen(false); 
+      };
+      
     return (
         <div className='header-dashboard position-fixed top-0 w-100 z-3'>
             <div className='header-container'>
@@ -39,11 +56,20 @@ const DashboardHeader = () => {
                                             </Dropdown.Menu>
                                         </Dropdown>
                                     </div>
+                                    <button className={`btn d-xl-none bg-transparent border-0 p-0 ${ menuOpen ? "active" : "" }`} onClick={handleMenuToggle} aria-label="Toggle Menu">
+                                        <span className="mobile-nav">
+                                        <span className="bar1"></span>
+                                        <span className="bar2"></span>
+                                        <span className="bar3"></span>
+                                        </span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <div className={`overlay ${menuOpen ? "show" : ""}`} onClick={handleOverlayClick}></div>
             </div>
         </div>
     )
