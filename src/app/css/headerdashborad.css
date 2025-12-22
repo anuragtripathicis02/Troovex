@@ -44,3 +44,42 @@
 .user-pic .dropdown-toggle:after {
     display: none;
 }
+
+
+@media only screen and (max-width: 991px) {
+
+    .logo {
+        padding: 12px 0px 12px 15px;
+        width: 200px;
+        border-right: none
+    }
+
+    .header-dashboard .flex-grow-1 {
+        padding: 12px 15px 12px 0;
+    }
+    
+
+} 
+
+
+
+
+@media only screen and (max-width: 767px) {
+
+    .logo {
+        width: 150px;
+    }
+
+    .user-pic .btn-primary img {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+    }
+
+    .icon-bordred {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+    }
+
+}

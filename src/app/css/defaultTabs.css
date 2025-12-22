@@ -1,0 +1,24 @@
+ul.tabs-default-box {
+    border-bottom: 2px solid var(--dark-4);
+    padding-left: 15px;
+}
+
+ul.tabs-default-box li button {
+    padding: 16px 20px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--dark-8) !important;
+    border-bottom: 3px solid transparent;
+    border: none !important;
+}
+
+ul.tabs-default-box li button.active {
+    background-color: transparent !important;
+    border: none;
+    box-shadow: none;
+    border-bottom: 3px solid var(--primary-500) !important;
+    color: #2A2A39 !important;
+    font-weight: 500!important;
+}

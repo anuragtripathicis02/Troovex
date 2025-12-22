@@ -3,3 +3,28 @@
     margin-left: 270px;
     padding: 30px;
 }
+
+
+@media only screen and (max-width:1199px){
+    
+    .content-wrapper {
+        width: 100%;
+        margin: 0;
+        margin-top: 70px;
+    }
+
+}
+
+
+
+@media only screen and (max-width:991px){
+
+.content-wrapper {
+    padding: 20px 12px;
+}
+
+.content-wrapper .container {
+    padding: 0;
+}
+
+}
