@@ -19,6 +19,6 @@ ul.tabs-default-box li button.active {
     border: none;
     box-shadow: none;
     border-bottom: 3px solid var(--primary-500) !important;
-    color: #2A2A39 !important;
+    color: var(--dark-12) !important;
     font-weight: 500!important;
 }

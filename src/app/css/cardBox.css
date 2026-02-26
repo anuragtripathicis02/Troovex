@@ -25,7 +25,7 @@
   font-weight: 400;
   font-size: 13px;
   line-height: 100%;
-  text-shadow: 0px 0px 8px #000000;
+  text-shadow: 0px 0px 8px var(--black);
   color: var(--dark-1);
 }
 .card-simple .text-box {

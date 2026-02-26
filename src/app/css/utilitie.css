@@ -67,7 +67,7 @@
 }
 
 .text-grey {
-    color: #696873;
+    color: var(--dark-8);
 }
 
 .mt-64 {

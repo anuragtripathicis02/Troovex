@@ -26,6 +26,15 @@
   display: block;
 }
 
+button.btn-close-btn:active:focus-visible, button.btn-close-btn:focus-visible, button.btn-close-btn:active  {
+    outline: none !important;
+    box-shadow: none !important;
+    background: rgb(255 255 255 / 30%) !important;
+    color: var(--dark-1) !important;
+}
+
+
+
 @media screen and (max-width: 1199px) {
   .common-modal .btn-close-btn {
     right: 0;
@@ -48,6 +57,7 @@
 .common-modal .modal-content .common-modal-body {
   padding: 24px 24px;
 }
+
 @media screen and (max-width: 767px) {
-.common-modal .modal-content .modal-header {padding: 15px;}
+  .common-modal .modal-content .modal-header {padding: 15px;}
 }

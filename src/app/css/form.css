@@ -102,6 +102,7 @@
 .btn-outline:hover {
     border-color: var(--primary-500);
     background-color: var(--primary-500);
+    color: var(--dark-1);
 }
 .btn-outline.fill-btn {
     background: var(--primary-500);
@@ -134,11 +135,11 @@
 }
 
 .fill-light-purple {
-    background: #ECE6FF;
-    border-color: #ECE6FF;
+    background: var(--primary-50);
+    border-color: var(--primary-50);
 }
 .fill-light-purple:hover {
-    color: #fff;
+    color: var(--dark-1);
 }
 
 .fill-light-purple svg {
@@ -175,6 +176,11 @@
     background-position: center;
 }
  
+.form-switch label {
+    padding-left: 12px;
+    line-height: 30px;
+}
+
 /*************radio*************/
  
 .form-check-input[type="radio"] {
@@ -731,6 +737,46 @@ input:-webkit-autofill {
 
 
 
+/* grey bg use  css  */
+
+
+
+.form-floating.floating-grey-color > .form-control-plaintext ~ label,
+.form-floating.floating-grey-color > .form-control:focus ~ label,
+.form-floating.floating-grey-color > .form-control:not(:placeholder-shown) ~ label,
+.form-floating.floating-grey-color > .form-select ~ label, 
+.calendar-box.floating-calendar-box.floating-grey-color label,
+.timepicker-box.floating-timepicker-box.floating-grey-color label,
+.upload-input-box.floating-upload-input-box.floating-grey-color label, 
+.floting-box.floating-grey-color label {
+    background: linear-gradient(to bottom, var(--dark-3) 50%, var(--dark-1) 50%);
+    border: none;
+    box-shadow: none;
+}
+
+
+/***********multi-tag**********/
+
+
+.multipal-select-sec.floting-box span.rs-picker-toggle-placeholder {
+    display: none;
+}
+
+.multipal-select-sec.floting-box:has(input:focus) label {
+    color: var(--primary-500);
+}
+
+.multipal-select-sec.floting-box:has(input:focus) .rs-btn {
+    border-color: var(--primary-500) !important;
+}
+
+
+.multipal-select-sec .rs-tag-text {
+    font-size: 14px;
+}
+
+
+
 @media only screen and (max-width: 1400px) {
 
 .form-control, .form-select{
@@ -775,3 +821,4 @@ input:-webkit-autofill {
         font-size: 14px;
     }
 }
+

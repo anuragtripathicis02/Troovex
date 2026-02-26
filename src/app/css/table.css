@@ -1,0 +1,119 @@
+.table-default table tr th {
+    background: var(--primary-50);
+    border-top: 1px solid var(--primary-100);
+    border-bottom: 1px solid var(--primary-100);
+    padding: 15px 10px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0;
+    color: var(--dark-12);
+}
+
+.table-default table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-default table thead {
+    border: 1px solid var(--primary-100);
+}
+
+.table-default table thead tr th:first-child {
+    border-left: 1px solid var(--primary-100);
+    border-top-left-radius: 16px;
+}
+
+.table-default table thead tr th:last-child {
+    border-right: 1px solid var(--primary-100);
+    border-top-right-radius: 16px;
+}
+
+.table-default table tr td {
+    padding: 14px 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0;
+    color: var(--dark-12);
+    border-bottom: 1px solid var(--dark-4);
+}
+
+.table-profile-box .img-box {
+    width: 36px;
+}
+
+.table-profile-box .img-box img {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    display: block;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.table-profile-box .details-box h6 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0;
+    margin: 0;
+    color: var(--dark-12);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    width: 116px;
+}
+
+.table-profile-box .details-box p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    width: 115px;
+}
+
+.active-btn {
+    color: var(--green-600);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0;
+    background: var(--green-50);
+    padding: 3px 8px;
+    border-radius: 4px;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.active-btn svg {
+    display: block;
+}
+
+.checkbox-20 .form-check-input[type="checkbox"] {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    background-size: 11px;
+    background-position: 3px 4px;
+}
+
+
+.min-w-1000 table {
+    min-width: 1000px;
+}
+
+.table-default table tr:last-child td:first-child {
+    border-bottom-left-radius: 16px;
+}
+
+.table-default table tr:last-child td:last-child {
+    border-bottom-right-radius: 16px;
+}
