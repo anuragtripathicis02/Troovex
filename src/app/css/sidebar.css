@@ -1,5 +1,7 @@
 .app-sidebar {
     background-color: var(--bs-white);
+    border-right: 1px solid var(--dark-5);
+    z-index: 3;
     width: 270px;
     height: calc(100vh - 64px);
     padding: 40px 0;
@@ -7,25 +9,88 @@
     top: 65px;
     left: 0;
     overflow: auto;
-    border-right: 1px solid var(--dark-5);
-    z-index: 3;
+    display: flex;
+    flex-direction: column;
 }
 .sidebar-nav {padding: 0; margin: 0px;}
 .sidebar-nav li{ padding: 0px 15px; margin-bottom: 8px;}
 .sidebar-nav .sidebar-link {
     color: var(--dark-8);
     align-items: center;
-    gap: 10px;
-    padding: 12px;
+    gap: 7px;
+    padding: 12px 10px;
     display: flex;
+    font-size: 14px;
     border-radius: 8px;
 }
 .sidebar-nav .sidebar-link:hover{ color: var(--primary-500);}
-.sidebar-nav li.active .sidebar-link{background-color: var(--primary-500); color: var(--bs-white);}
+.sidebar-nav li.active .sidebar-link{ 
+background: linear-gradient(270deg, #3D00E8 0%, #6933FF 100%);
+color: var(--bs-white);
+}
 .sidebar-nav .icon{ flex: 0 0 auto; width: 24px;}
 .sidebar-nav ol li:last-child{ margin-bottom: 0;}
 .sidebar-nav ol li a{ font-size: 14px;}
 
+.sidebar-cta {padding: 0px 15px; margin-top: auto;}
+.sidebar-cta a{ border-radius: 8px; align-items: center;gap: 10px;padding: 12px;display: flex; color: var(--red-500);
+}
+
+.profile-info .sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-info .sidebar-link img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.profile-info .sidebar-link .user-name {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 100%;
+    margin-bottom: 5px;
+}
+
+.profile-info {
+    padding: 0px 16px;
+}
+.profile-info .sidebar-link .user-detail {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.profile-info ol li {
+    padding: 6px 0px;
+}
+.profile-info ol li a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    color: var(--dark-9);
+}
+.profile-info ol li a:hover{ color: var(--primary-500);}
+
+.app-sidebar .down-arrow {
+    transition: transform 0.3s ease;
+}
+.app-sidebar [aria-expanded="true"] .down-arrow {
+    transform: rotate(180deg);
+}
+
+.app-sidebar .list-unstyled.py-2 {
+    background: #f6f6f6;
+    border-radius: 5px;
+}
 
 
 @media only screen and (max-width: 1199px){
