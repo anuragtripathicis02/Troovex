@@ -2,7 +2,7 @@
     border-bottom: 1px solid var(--dark-5);
     background: var(--bs-white);
 }
-.header-dashboard .flex-grow-1 { padding: 12px 24px;}
+.header-dashboard .flex-grow-1 { padding: 5px 24px;}
 .logo {
     border-right: 1px solid var(--dark-5);
     flex: none;

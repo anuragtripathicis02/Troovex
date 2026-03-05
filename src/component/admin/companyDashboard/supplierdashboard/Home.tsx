@@ -7,6 +7,11 @@ const Home = () => {
     <>
         <DashboardHeader/>
         <Sidebar/>
+        <div className='content-wrapper'>
+            <div className='container'>
+                anurag
+            </div>
+        </div>
     </>
   )
 }
