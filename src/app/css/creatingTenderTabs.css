@@ -1,10 +1,13 @@
-.tabs-com-box ul.tabs-main-box {
+
+.tabs-com-box .tabs-left-box {
+    background: var(--secondary-50);
+    border-radius: 16px;
     width: 323px;
-    margin-top: 124px;
-    border: none;
-    height: max-content;
+    height: auto;
+    padding: 16px;
     position: sticky;
-    top: 82px;
+    max-height: max-content;
+    top: 110px;
 }
 
 .tabs-com-box .tab-content {
@@ -13,13 +16,10 @@
 }
 
 .progress-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-bottom: 40px;
     background: var(--dark-1);
-    padding: 12px 25px;
-    border-radius: 99px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    padding: 12px;
 }
 
 .progress-wrapper h5 {
@@ -43,7 +43,7 @@
     background: transparent !important;
     text-align: left;
     border: none !important;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .tabs-com-box .tabs-main-box .tab-custom-title {
@@ -125,8 +125,6 @@
     color: var(--green-600) !important;
 }
 
-
-
 .line-border {
     display: block;
     height: 88%;
@@ -158,6 +156,15 @@
 
 .tabs-com-box .tabs-main-box button.active .tab-custom-title.completed  .main-title {
     color: var(--dark-10);
+}
+
+.tabs-side-menu-bg {
+    background-color: #E9ECF3;
+    border-radius: 16px;
+}
+
+.see-toggle {
+    display: block;
 }
 
 
