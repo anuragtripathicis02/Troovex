@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { Tab, Nav } from "react-bootstrap";
 import { Link } from "rsuite";
-import CreateTenderOne from "./CreateTenderOne";
 
 interface TabTitleProps {
   number: string | number;
@@ -39,9 +38,8 @@ interface TabStatus {
   sixth: StatusType;
 }
 
-const CreatingTenderTabs = () => {
+const CompanyProfileTabs = () => { 
   const [activeKey, setActiveKey] = useState<string>("First");
-
   const [status, setStatus] = useState<TabStatus>({
     First: null,
     second: null,
@@ -132,8 +130,8 @@ const handleConfirm = () => {
                     </span>
                   </div>
                   <div className="text-cer-box">
-                    <h5 className="m-0">Creating Tender</h5>
-                    <small className="text-muted">Progress Tracker</small>
+                    <h5 className="m-0">Organization Profile</h5>
+                    <small className="text-muted">Completing Profile</small>
                   </div>
                 </div>
               </div>
@@ -143,7 +141,7 @@ const handleConfirm = () => {
                   <Nav.Link eventKey="First">
                     <TabTitle
                       number="1"
-                      title="Required Information"
+                      title="Legal & Corporate Identity"
                       sub="Provide basic details to create the tender."
                       status={status.First}
                     />
@@ -228,7 +226,7 @@ const handleConfirm = () => {
               </div>
               <Tab.Pane eventKey="First">
                 <div className="tabs-content-box">
-                  <CreateTenderOne />
+                    first
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="second">
@@ -260,7 +258,7 @@ const handleConfirm = () => {
         </Tab.Container>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CreatingTenderTabs;
+export default CompanyProfileTabs
