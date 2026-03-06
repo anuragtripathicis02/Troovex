@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
+import PdfUpload from "@/component/common/PdfUpload";
 
 const OrganizationIdentificationDetails = () => {
     return (
@@ -67,13 +68,19 @@ const OrganizationIdentificationDetails = () => {
                     </div>
                 </div>
                 <div className="col-md-4">
-                    Upload File
+                    <PdfUpload title="Upload Trade Licence" />
                 </div>
-                 <div className='col-md-12'>
-                            <FloatingLabel controlId="floatingInput" label="Trade License Number" className="mb-4">
-                                <Form.Control type="text" placeholder="Holding Organization Name (if applicable)" />
-                            </FloatingLabel>
-                        </div>
+                <div className='col-md-12'>
+                    <FloatingLabel controlId="floatingInput" label="Trade License Number" className="mb-4">
+                        <Form.Control type="text" placeholder="Holding Organization Name (if applicable)" />
+                    </FloatingLabel>
+                </div>
+            </div>
+            <hr></hr>
+            <div className="card-foot">
+                <div className="d-flex align-items-center justify-content-end">
+                    <button className="btn-outline fill-btn rs-link">Save</button>
+                </div>
             </div>
         </>
     )

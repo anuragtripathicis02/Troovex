@@ -22,6 +22,7 @@ import UserPic from "../../src/app/images/user-auth.png";
 
 import Table from 'react-bootstrap/Table';
 import Arrowaccordion from "@/component/common/Arrowaccordion";
+import PdfUpload from "@/component/common/PdfUpload";
 
 export default function Home() {
 
@@ -506,6 +507,24 @@ export default function Home() {
           </Accordion.Item>
         </Accordion>
       </div>
+
+      <div className="row">
+        
+          <div className="col-md-4">
+            <PdfUpload title="Upload NIF Document" />
+          </div>
+          <div className="col-md-4">
+            <PdfUpload title="Upload Tax Roll" />
+          </div>
+          <div className="col-md-4">
+            <PdfUpload title="Upload NIS Document" />
+          </div>
+
+          
+
+      </div>
+        
+        
 
 
     </div>

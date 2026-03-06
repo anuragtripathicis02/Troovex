@@ -9,7 +9,7 @@ const CountryName = () => {
 
   return (
     <div className="form-group flag-name-sec">
-      <Form.Label>Country</Form.Label>
+      <Form.Label>Country of Incorporation <span className="text-danger">*</span></Form.Label>
       <ReactFlagsSelect selected={selected} onSelect={(code) => setSelected(code)} searchable fullWidth={true} placeholder="Select Country" showSelectedLabel={true}  showOptionLabel={true} />
     </div>
   );
