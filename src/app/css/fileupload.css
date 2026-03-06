@@ -1,0 +1,137 @@
+.upload-wrapper{width: 100%;}
+
+.upload-card{border: dashed 1px var(--dark-6);border-radius:14px;padding:16px;background: var(--dark-2);text-align: center;min-height: 220px;display: flex;flex-direction: column;justify-content: center; position: relative;}
+
+.upload-card .title{font-weight: 400;font-size: 14px;line-height: 130%;margin-bottom: 2px;}
+
+.upload-card .sub{font-size:13px;color: var(--dark-7);margin-bottom: 16px;}
+
+.upload-card .upload-btn {
+    background: var(--dark-3);
+    cursor: pointer;
+    color: var(--dark-8);
+    border: 0;
+    border-radius: 8px;
+    width: max-content;
+    margin: 0 auto;
+    padding: 8px 14px;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.pdf-icon {
+    color: var(--red-500);
+    background: var(--red-50);
+    border-radius: 50%;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-weight: 600;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.small {
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+    margin: 0;
+}
+
+.progress-bar{
+height:6px;
+background:var(--dark-4);
+border-radius:6px;
+margin:10px 0;
+}
+
+.progress{
+height:6px;
+background:var(--green-500);
+border-radius:6px;
+}
+
+.uploaded{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.file-info{
+flex:1;
+}
+
+.file-name {
+    margin: 0;
+    font-weight: 500;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 100%;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
+.file-size{
+font-size:12px;
+color:#777;
+margin:0;
+}
+
+.menu-wrapper{
+position:relative;
+}
+
+.menu{
+background:none;
+border:none;
+font-size:20px;
+cursor:pointer;
+}
+
+.menu-wrapper .dropdown-menu {
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+.menu-wrapper .dropdown-menu button {
+    cursor: pointer;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 6px 14px;
+    font-size: 13px;
+}
+
+.menu-wrapper .dropdown-menu button:hover{
+background:var(--dark-3);
+}
+
+
+.upload-card .b-block {
+    color: var(--dark-7);
+    margin-bottom: 15px;
+}
+
+.progress-text{ font-size: 14px;}
+.delete{ color:var(--red-500);}
+
+
+.menu-wrapper {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+}
+
+.menu-wrapper .menu {
+    width: 36px;
+    height: 36px;
+    background: #F6F6F6;
+    border-radius: 10px;
+}
