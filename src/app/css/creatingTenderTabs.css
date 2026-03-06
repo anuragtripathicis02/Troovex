@@ -37,14 +37,13 @@
     color: var(--dark-8);
 }
 
-.tabs-com-box .tabs-main-box button {
+/* .tabs-com-box .tabs-main-box button {
     padding: 0;
     margin: 0;
     background: transparent !important;
     text-align: left;
     border: none !important;
-    /* pointer-events: none; */
-}
+} */
 
 .tabs-com-box .tabs-main-box .tab-custom-title {
     position: relative;
