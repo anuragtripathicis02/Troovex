@@ -2,9 +2,8 @@
 import { useState } from "react";
 import { Tab, Nav } from "react-bootstrap";
 import { Link } from "rsuite";
-import Collapse from 'react-bootstrap/Collapse';
+import Collapse from "react-bootstrap/Collapse";
 import LegalandcorPorateidentity from "./LegalandcorPorateidentity";
-
 
 interface TabTitleProps {
   number: string | number;
@@ -13,7 +12,7 @@ interface TabTitleProps {
 }
 const TabTitle = ({ number, title, status }: TabTitleProps) => (
   <div
-    className={`tab-custom-title d-flex align-items-start gap-2 
+    className={`tab-custom-title d-flex align-items-center gap-2 
     ${status === "completed" ? "completed" : ""}`}
   >
     <span
@@ -48,7 +47,23 @@ const CompanyProfileTabs = () => {
     "4.3": null,
   });
   const [activeSubStep, setActiveSubStep] = useState<string>("4.1");
+
+  const sub4Steps = ["4.1", "4.2", "4.3"];
+  const goToSubStep4 = (step: string) => {
+    const currentIndex = sub4Steps.indexOf(activeSubStep);
+    const newIndex = sub4Steps.indexOf(step);
+    if (newIndex > currentIndex) {
+      // moving forward, mark previous as completed
+      setSubStatus4((prev) => ({
+        ...prev,
+        [activeSubStep]: "completed",
+      }));
+    }
+    setActiveSubStep(step);
+  };
+
   const handleSubNext = () => {
+    // mark current substep as completed before moving ahead
     setSubStatus4((prev) => ({
       ...prev,
       [activeSubStep]: "completed",
@@ -59,7 +74,13 @@ const CompanyProfileTabs = () => {
     } else if (activeSubStep === "4.2") {
       setActiveSubStep("4.3");
     } else if (activeSubStep === "4.3") {
-      goNext("fourth", "fifth");
+      // finished all substeps of section 4, mark whole tab as completed
+      setStatus((prev) => ({
+        ...prev,
+        fourth: "completed",
+      }));
+
+      setActiveKey("fifth");
     }
   };
 
@@ -73,7 +94,22 @@ const CompanyProfileTabs = () => {
     "6.7": null,
   });
   const [activeSubStep6, setActiveSubStep6] = useState<string>("6.1");
+
+  const sub6Steps = ["6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7"];
+  const goToSubStep6 = (step: string) => {
+    const currentIndex = sub6Steps.indexOf(activeSubStep6);
+    const newIndex = sub6Steps.indexOf(step);
+    if (newIndex > currentIndex) {
+      setSubStatus6((prev) => ({
+        ...prev,
+        [activeSubStep6]: "completed",
+      }));
+    }
+    setActiveSubStep6(step);
+  };
+
   const handleSubNext6 = () => {
+    // mark current substep as completed before advancing
     setSubStatus6((prev) => ({
       ...prev,
       [activeSubStep6]: "completed",
@@ -163,7 +199,6 @@ const CompanyProfileTabs = () => {
 
   const currentStep = stepMap[activeKey] || 1;
 
-
   const handleConfirm = () => {
     setStatus({
       First: "completed",
@@ -175,9 +210,45 @@ const CompanyProfileTabs = () => {
     });
   };
 
-  
   const [open, setOpen] = useState(false);
-  
+
+  interface SubStepTitleProps {
+    number: string;
+    title: string;
+    active: boolean;
+    status: string | null;
+    onClick: () => void;
+  }
+
+  const SubStepTitle = ({
+    number,
+    title,
+    active,
+    status,
+    onClick,
+  }: SubStepTitleProps) => (
+    <Nav.Link
+      className={`sub-step-link ${active ? "active" : ""} ${
+        status === "completed" ? "completed" : ""
+      }`}
+      onClick={onClick}
+    >
+      <span className="sub-step-number">{number}</span>
+      <span className="sub-step-title">{title}</span>
+    </Nav.Link>
+  );
+
+  const stepColors: Record<number, string> = {
+    1: "#FFB020",
+    2: "#FFB020",
+    3: "#FFB020",
+    4: "#0B5FD7",
+    5: "#6933FF",
+    6: "#00A65A",
+  };
+
+  const progressColor = stepColors[currentStep] || "#f9a825";
+
   return (
     <div className="tabs-com-box ">
       <div className="tabs-main-box position-relative d-flex flex-wrap">
@@ -187,7 +258,6 @@ const CompanyProfileTabs = () => {
               <div className="progress-wrapper d-flex align-items-center gap-3">
                 <div className="circle-progress position-relative">
                   <svg width="60" height="60">
-                    {" "}
                     <circle
                       cx="30"
                       cy="30"
@@ -195,12 +265,12 @@ const CompanyProfileTabs = () => {
                       stroke="#eee"
                       strokeWidth="6"
                       fill="none"
-                    />{" "}
+                    />
                     <circle
                       cx="30"
                       cy="30"
                       r="26"
-                      stroke="#f9a825"
+                      stroke={progressColor}
                       strokeWidth="6"
                       fill="none"
                       strokeDasharray={2 * Math.PI * 26}
@@ -225,164 +295,194 @@ const CompanyProfileTabs = () => {
               </div>
             </div>
             <Collapse in={open}>
-                      <div>
-                <Nav
-                className="flex-column tab-nav-wrapper tabs-menu-hide-show" >
-                <Nav.Item>
+              <div>
+                <Nav className="flex-column tab-nav-wrapper tabs-menu-hide-show">
+                  <Nav.Item>
                     <Nav.Link eventKey="First">
-                    <TabTitle
+                      <TabTitle
                         number="1"
                         title="Legal & Corporate Identity"
                         status={status.First}
-                    />
+                      />
                     </Nav.Link>
-                </Nav.Item>
+                  </Nav.Item>
 
-                <Nav.Item>
+                  <Nav.Item>
                     <Nav.Link eventKey="second">
-                    <TabTitle
+                      <TabTitle
                         number="2"
                         title="Business Profile & Strategy"
                         status={status.second}
-                    />
+                      />
                     </Nav.Link>
-                </Nav.Item>
+                  </Nav.Item>
 
-                <Nav.Item>
+                  <Nav.Item>
                     <Nav.Link eventKey="third">
-                    <TabTitle
+                      <TabTitle
                         number="3"
                         title="Ownership & Governance"
                         status={status.third}
-                    />
+                      />
                     </Nav.Link>
-                </Nav.Item>
+                  </Nav.Item>
 
-                <Nav.Item>
+                  <Nav.Item>
                     <Nav.Link eventKey="fourth">
-                    <TabTitle
+                      <TabTitle
                         number="4"
                         title="Procurement Organization, Human  Resources capabilities & Contacts"
                         status={status.fourth}
-                    />
+                      />
                     </Nav.Link>
 
                     {/* Sub Tabs */}
                     {activeKey === "fourth" && (
-                    <Nav className="flex-column sub-steps">
+                      <Nav className="flex-column sub-steps">
                         <Nav.Link
-                        className={`${activeSubStep === "4.1" ? "active" : ""} ${subStatus4["4.1"] === "completed" ? "completed" : ""}`}
-                        onClick={() => setActiveSubStep("4.1")}
+                          className={`tab-custom-title d-flex align-items-center gap-2 ${activeSubStep === "4.1" ? "active" : ""} 
+                          ${subStatus4["4.1"] === "completed" && "completed"}`}
+                          onClick={() => goToSubStep4("4.1")}
                         >
-                        <span>4.1</span> Procurement Categories & Purchasing Rules
+                          <span className="counter-number-sub">4.1</span>
+                          <span className="text-details-sub">
+                            Procurement Categories & Purchasing Rules
+                          </span>
                         </Nav.Link>
 
                         <Nav.Link
-                        className={`${activeSubStep === "4.2" ? "active" : ""} ${subStatus4["4.2"] === "completed" ? "completed" : ""}`}
-                        onClick={() => setActiveSubStep("4.2")}
+                          className={`tab-custom-title d-flex align-items-center gap-2 ${activeSubStep === "4.2" ? "active" : ""} ${subStatus4["4.2"] === "completed" && "completed"}`}
+                          onClick={() => goToSubStep4("4.2")}
                         >
-                        <span>4.2</span> Vendor Segmentation – Kraljic Matrix
+                          <span className="counter-number-sub">4.2</span>
+                          <span className="text-details-sub">
+                            Vendor Segmentation – Kraljic Matrix
+                          </span>
                         </Nav.Link>
 
                         <Nav.Link
-                        className={`${activeSubStep === "4.3" ? "active" : ""} ${subStatus4["4.3"] === "completed" ? "completed" : ""}`}
-                        onClick={() => setActiveSubStep("4.3")}
+                          className={`tab-custom-title d-flex align-items-center gap-2 ${activeSubStep === "4.3" ? "active" : ""} ${subStatus4["4.3"] === "completed" && "completed"}`}
+                          onClick={() => goToSubStep4("4.3")}
                         >
-                        <span>4.3</span>Procurement Organization & Roles
+                          <span className="counter-number-sub">4.3</span>
+                          <span className="text-details-sub">
+                            Procurement Organization & Roles
+                          </span>
                         </Nav.Link>
-                    </Nav>
+                      </Nav>
                     )}
-                </Nav.Item>
+                  </Nav.Item>
 
-                <Nav.Item>
+                  <Nav.Item>
                     <Nav.Link eventKey="fifth">
-                    <TabTitle
+                      <TabTitle
                         number="5"
                         title="Financial & Accounting Information"
                         status={status.fifth}
-                    />
+                      />
                     </Nav.Link>
-                </Nav.Item>
+                  </Nav.Item>
 
-                <Nav.Item>
+                  <Nav.Item>
                     <Nav.Link eventKey="sixth">
-                    <TabTitle
+                      <TabTitle
                         number="6"
                         title="Prequalification & capabilities PQQ"
                         status={status.sixth}
-                    />
+                      />
                     </Nav.Link>
 
                     {activeKey === "sixth" && (
-                    <Nav className="flex-column sub-steps">
+                      <Nav className="flex-column sub-steps">
                         <Nav.Link
-                        className={`${activeSubStep6 === "6.1" ? "active" : ""} ${subStatus6["6.1"] === "completed" ? "completed" : ""}`}
-    onClick={() => setActiveSubStep6("6.1")}
+                          className={`tab-custom-title d-flex align-items-center gap-2 ${activeSubStep6 === "6.1" ? "active" : ""} ${subStatus6["6.1"] === "completed" ? "completed" : ""}`}
+                          onClick={() => goToSubStep6("6.1")}
                         >
-                        <span>6.1</span> Human Resources Capabilities
+                          <span className="counter-number-sub">6.1</span>
+                          <span className="text-details-sub">
+                            {" "}
+                            Human Resources Capabilities
+                          </span>
                         </Nav.Link>
 
                         <Nav.Link
-                        className={`${activeSubStep6 === "6.2" ? "active" : ""} ${subStatus6["6.2"] === "completed" ? "completed" : ""}`}
-    onClick={() => setActiveSubStep6("6.2")}
+                          className={`tab-custom-title d-flex align-items-center gap-2 ${activeSubStep6 === "6.2" ? "active" : ""} ${subStatus6["6.2"] === "completed" ? "completed" : ""}`}
+                          onClick={() => goToSubStep6("6.2")}
                         >
-                        <span>6.2</span> Operational, Logistics & Technical
-                        Capabilities
+                          <span className="counter-number-sub">6.2</span>
+                          <span className="text-details-sub">
+                            Operational, Logistics & Technical Capabilities
+                          </span>
                         </Nav.Link>
 
                         <Nav.Link
-                        className={`${activeSubStep6 === "6.3" ? "active" : ""} ${subStatus6["6.3"] === "completed" ? "completed" : ""}`}
-    onClick={() => setActiveSubStep6("6.3")}
+                          className={`tab-custom-title d-flex align-items-center gap-2 ${activeSubStep6 === "6.3" ? "active" : ""} ${subStatus6["6.3"] === "completed" ? "completed" : ""}`}
+                          onClick={() => goToSubStep6("6.3")}
                         >
-                        <span>6.3</span> Procurement Maturity & Operations
+                          <span className="counter-number-sub">6.3</span>
+                          <span className="text-details-sub">
+                            Procurement Maturity & Operations
+                          </span>
                         </Nav.Link>
 
                         <Nav.Link
-                        className={`${activeSubStep6 === "6.4" ? "active" : ""} ${subStatus6["6.4"] === "completed" ? "completed" : ""}`}
-    onClick={() => setActiveSubStep6("6.4")}
+                          className={`tab-custom-title d-flex align-items-center gap-2 ${activeSubStep6 === "6.4" ? "active" : ""} ${subStatus6["6.4"] === "completed" ? "completed" : ""}`}
+                          onClick={() => goToSubStep6("6.4")}
                         >
-                        <span>6.4</span> Compliance, Legal & Risk Profile
+                          <span className="counter-number-sub">6.4</span>
+                          <span className="text-details-sub">
+                            Compliance, Legal & Risk Profile
+                          </span>
                         </Nav.Link>
 
                         <Nav.Link
-                        className={`${activeSubStep6 === "6.5" ? "active" : ""} ${subStatus6["6.5"] === "completed" ? "completed" : ""}`}
-    onClick={() => setActiveSubStep6("6.5")}
+                          className={`tab-custom-title d-flex align-items-center gap-2 ${activeSubStep6 === "6.5" ? "active" : ""} ${subStatus6["6.5"] === "completed" ? "completed" : ""}`}
+                          onClick={() => goToSubStep6("6.5")}
                         >
-                        <span>6.5</span> Sustainability & ESG
+                          <span className="counter-number-sub">6.5</span>
+                          <span className="text-details-sub">
+                            Sustainability & ESG
+                          </span>
                         </Nav.Link>
 
                         <Nav.Link
-                        className={`${activeSubStep6 === "6.6" ? "active" : ""} ${subStatus6["6.6"] === "completed" ? "completed" : ""}`}
-    onClick={() => setActiveSubStep6("6.6")}
+                          className={`tab-custom-title d-flex align-items-center gap-2 ${activeSubStep6 === "6.6" ? "active" : ""} ${subStatus6["6.6"] === "completed" ? "completed" : ""}`}
+                          onClick={() => goToSubStep6("6.6")}
                         >
-                        <span>6.6</span> Past Performance & References
+                          <span className="counter-number-sub">6.6</span>
+                          <span className="text-details-sub">
+                            Past Performance & References
+                          </span>
                         </Nav.Link>
 
                         <Nav.Link
-                        className={`${activeSubStep6 === "6.7" ? "active" : ""} ${subStatus6["6.7"] === "completed" ? "completed" : ""}`}
-    onClick={() => setActiveSubStep6("6.7")}
+                          className={`tab-custom-title d-flex align-items-center gap-2 ${activeSubStep6 === "6.7" ? "active" : ""} ${subStatus6["6.7"] === "completed" ? "completed" : ""}`}
+                          onClick={() => goToSubStep6("6.7")}
                         >
-                        <span>6.7</span> Documents Upload Repository
+                          <span className="counter-number-sub">6.7</span>
+                          <span className="text-details-sub">
+                            Documents Upload Repository
+                          </span>
                         </Nav.Link>
-                    </Nav>
+                      </Nav>
                     )}
-                </Nav.Item>
+                  </Nav.Item>
                 </Nav>
-                </div>
+              </div>
             </Collapse>
             <div className="see-toggle text-center">
               <button
                 onClick={() => setOpen(!open)}
                 aria-controls="example-collapse-text"
                 aria-expanded={open}
-            >
+              >
                 <span className="see-all">See All</span>
                 <span className="see-less">See Less</span>
-            </button>
+              </button>
             </div>
           </div>
 
-          <Tab.Content>
+          <Tab.Content className="position-relative">
             <div className="step-indicator position-absolute top-0 end-0">
               {progress === 100 ? (
                 <span className="completed-text">Completed 🎉</span>
@@ -403,7 +503,7 @@ const CompanyProfileTabs = () => {
             </div>
             <Tab.Pane eventKey="First">
               <div className="tabs-content-box">
-                <LegalandcorPorateidentity/>
+                <LegalandcorPorateidentity />
                 <div className="text-end mt-4">
                   <Link
                     className="btn-outline fill-btn"
