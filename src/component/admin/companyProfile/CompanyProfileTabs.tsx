@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Tab, Nav } from "react-bootstrap";
 import { Link } from "rsuite";
+import LegalandcorPorateidentity from "./LegalandcorPorateidentity";
 
 interface TabTitleProps {
   number: string | number;
@@ -226,7 +227,7 @@ const handleConfirm = () => {
               </div>
               <Tab.Pane eventKey="First">
                 <div className="tabs-content-box">
-                    first
+                    <LegalandcorPorateidentity />
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="second">
