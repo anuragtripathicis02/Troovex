@@ -97,7 +97,7 @@ const Sidebar = () => {
                   <Link href="">Link 1</Link>
                 </li>
                 <li>
-                  <Link href="">Link 3</Link>
+                  <Link href="">Link 2</Link>
                 </li>
                 <li>
                   <Link href="">Link 3</Link>

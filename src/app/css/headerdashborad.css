@@ -45,6 +45,29 @@
     display: none;
 }
 
+.button-add {
+    height: 40px;
+    color: var(--dark-5);
+    border: 1px solid;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 0px 12px;
+    gap: 8px;
+    transition: all .5s ease-in-out;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.button-add:hover{ background-color: var(--primary-500); color: var(--bs-white);}
+
+.page-title {
+    z-index: 3;
+    position: fixed;
+    top: 10px;
+    left: 300px;
+}
 
 @media only screen and (max-width: 991px) {
 
