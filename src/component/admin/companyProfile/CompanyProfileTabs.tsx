@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Tab, Nav } from "react-bootstrap";
 import { Link } from "rsuite";
 import Collapse from 'react-bootstrap/Collapse';
+import LegalandcorPorateidentity from "./LegalandcorPorateidentity";
 
 
 interface TabTitleProps {
@@ -402,7 +403,7 @@ const CompanyProfileTabs = () => {
             </div>
             <Tab.Pane eventKey="First">
               <div className="tabs-content-box">
-                tabs details 1
+                <LegalandcorPorateidentity/>
                 <div className="text-end mt-4">
                   <Link
                     className="btn-outline fill-btn"
