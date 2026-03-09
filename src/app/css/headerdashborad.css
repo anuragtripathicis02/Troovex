@@ -99,6 +99,14 @@
         border-radius: 5px;
     }
 
+    .button-add {
+    height: 30px;
+    gap: 4px;
+    padding: 0 7px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
     .icon-bordred {
         width: 30px;
         height: 30px;

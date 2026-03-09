@@ -87,6 +87,15 @@
 }
 
 
+.fs-14{
+    font-size: 14px !important;
+}
+
+.nav-link:focus-visible, a:focus-visible, button:focus-visible {
+    outline: 0;
+    box-shadow: none !important;
+}
+
 
 @media only screen  and (max-width:991px) {
 
