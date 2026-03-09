@@ -6,6 +6,8 @@ import Arrowaccordion from "@/component/common/Arrowaccordion";
 import OrganizationIdentificationDetails from "./legalandcorporateidentity/OrganizationIdentificationDetails";
 import IncorporationAndAddressDetails from "./legalandcorporateidentity/IncorporationAndAddressDetails";
 import TaxandStatutoryIdentifiers from "./legalandcorporateidentity/TaxandStatutoryIdentifiers";
+import SocialAndEmploymentIdentifiers from "./legalandcorporateidentity/SocialAndEmploymentIdentifiers";
+import DigitalPresenceAndContactInformation from "./legalandcorporateidentity/DigitalPresenceAndContactInformation";
 
 const LegalandcorPorateidentity = () => {
     const [activeKey, setActiveKey] = useState<string | null>("0");
@@ -81,6 +83,34 @@ const LegalandcorPorateidentity = () => {
                             </div>
                         </Accordion.Body>
                     </Accordion.Item>
+
+                     <Accordion.Item eventKey="3">
+                        <Accordion.Header className=" position-relative">
+                            <div className="me-auto d-flex align-items-center gap-2">
+                                <span className="radio"></span>
+                                <span>Social & Employment Identifiers</span>
+                            </div>
+                            <Arrowaccordion />
+                        </Accordion.Header>
+                        <Accordion.Body>
+                            <SocialAndEmploymentIdentifiers/>
+                        </Accordion.Body>
+                    </Accordion.Item>
+
+                    <Accordion.Item eventKey="4">
+                        <Accordion.Header className=" position-relative">
+                            <div className="me-auto d-flex align-items-center gap-2">
+                                <span className="radio"></span>
+                                <span>Digital Presence & Contact Information</span>
+                            </div>
+                            <Arrowaccordion />
+                        </Accordion.Header>
+                        <Accordion.Body>
+                            <DigitalPresenceAndContactInformation/>
+                        </Accordion.Body>
+                    </Accordion.Item>
+
+                    
                 </Accordion>
             </div>
         </div>
