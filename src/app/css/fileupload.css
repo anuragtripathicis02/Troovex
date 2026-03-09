@@ -1,10 +1,37 @@
-.upload-wrapper{width: 100%;}
+.upload-wrapper {
+    width: 100%;
+}
 
-.upload-card{border: dashed 1px var(--dark-6);border-radius:14px;padding:16px;background: var(--dark-2);text-align: center;min-height: 220px;display: flex;flex-direction: column;justify-content: center; position: relative;}
+.upload-card {
+    border: dashed 1px var(--dark-6);
+    border-radius: 14px;
+    padding: 16px;
+    background: var(--dark-2);
+    text-align: center;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 220px;
+}
 
-.upload-card .title{font-weight: 400;font-size: 14px;line-height: 130%;margin-bottom: 2px;}
+.upload-card img {
+    height: 146px;
+}
 
-.upload-card .sub{font-size:13px;color: var(--dark-7);margin-bottom: 16px;}
+.upload-card .title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    margin-bottom: 2px;
+}
+
+.upload-card .sub {
+    font-size: 13px;
+    color: var(--dark-7);
+    margin-bottom: 16px;
+}
 
 .upload-card .upload-btn {
     background: var(--dark-3);
@@ -21,8 +48,6 @@
 }
 
 .pdf-icon {
-    color: var(--red-500);
-    background: var(--red-50);
     border-radius: 50%;
     flex: none;
     justify-content: center;
@@ -36,33 +61,36 @@
 }
 
 .small {
+    color: var(--red-500);
+    background: var(--red-50);
     width: 34px;
     height: 34px;
     font-size: 12px;
     margin: 0;
+    padding: 7px;
 }
 
-.progress-bar{
-height:6px;
-background:var(--dark-4);
-border-radius:6px;
-margin:10px 0;
+.progress-bar {
+    height: 6px;
+    background: var(--dark-4);
+    border-radius: 6px;
+    margin: 10px 0;
 }
 
-.progress{
-height:6px;
-background:var(--green-500);
-border-radius:6px;
+.progress {
+    height: 6px;
+    background: var(--green-500);
+    border-radius: 6px;
 }
 
-.uploaded{
-display:flex;
-align-items:center;
-gap:10px;
+.uploaded {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.file-info{
-flex:1;
+.file-info {
+    flex: 1;
 }
 
 .file-name {
@@ -77,21 +105,21 @@ flex:1;
     overflow: hidden;
 }
 
-.file-size{
-font-size:12px;
-color:#777;
-margin:0;
+.file-size {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
 }
 
-.menu-wrapper{
-position:relative;
+.menu-wrapper {
+    position: relative;
 }
 
-.menu{
-background:none;
-border:none;
-font-size:20px;
-cursor:pointer;
+.menu {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .menu-wrapper .dropdown-menu {
@@ -100,6 +128,7 @@ cursor:pointer;
     position: absolute;
     right: 0;
 }
+
 .menu-wrapper .dropdown-menu button {
     cursor: pointer;
     text-align: left;
@@ -109,8 +138,8 @@ cursor:pointer;
     font-size: 13px;
 }
 
-.menu-wrapper .dropdown-menu button:hover{
-background:var(--dark-3);
+.menu-wrapper .dropdown-menu button:hover {
+    background: var(--dark-3);
 }
 
 
@@ -119,8 +148,13 @@ background:var(--dark-3);
     margin-bottom: 15px;
 }
 
-.progress-text{ font-size: 14px;}
-.delete{ color:var(--red-500);}
+.progress-text {
+    font-size: 14px;
+}
+
+.delete {
+    color: var(--red-500);
+}
 
 
 .menu-wrapper {

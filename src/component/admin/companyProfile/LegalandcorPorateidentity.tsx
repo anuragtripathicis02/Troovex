@@ -8,6 +8,7 @@ import IncorporationAndAddressDetails from "./legalandcorporateidentity/Incorpor
 import TaxandStatutoryIdentifiers from "./legalandcorporateidentity/TaxandStatutoryIdentifiers";
 import SocialAndEmploymentIdentifiers from "./legalandcorporateidentity/SocialAndEmploymentIdentifiers";
 import DigitalPresenceAndContactInformation from "./legalandcorporateidentity/DigitalPresenceAndContactInformation";
+import BrandingMediaAssets from "./legalandcorporateidentity/BrandingMediaAssets";
 
 const LegalandcorPorateidentity = () => {
     const [activeKey, setActiveKey] = useState<string | null>("0");
@@ -110,7 +111,7 @@ const LegalandcorPorateidentity = () => {
                             <Arrowaccordion />
                         </Accordion.Header>
                         <Accordion.Body>
-                               <DigitalPresenceAndContactInformation/> 
+                            <DigitalPresenceAndContactInformation/> 
                             <div className="card-foot">
                                 <hr></hr>
                                 <div className="d-flex align-items-center justify-content-end">
@@ -146,7 +147,7 @@ const LegalandcorPorateidentity = () => {
                             <Arrowaccordion />
                         </Accordion.Header>
                         <Accordion.Body>
-                            fifth component
+                           <BrandingMediaAssets />
                             <div className="card-foot">
                                 <hr></hr>
                                 <div className="d-flex align-items-center justify-content-end">
