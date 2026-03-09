@@ -85,6 +85,8 @@ export default function Home() {
 
         <FloatingLabel controlId="floatingInput" label="Official Company Email Domain" className="mb-3 floating-grey-color filled-box filled-bg">
           <Form.Control type="text" placeholder="xyz@gmai.com" />
+        <FloatingLabel controlId="floatingInput" label={<>Legal Organization Name <span className="text-danger">*</span></>} className="mb-3 floating-grey-color">
+            <Form.Control type="text" placeholder="name@example.com" />
         </FloatingLabel>
 
         <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3 floating-grey-color">

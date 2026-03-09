@@ -11,12 +11,12 @@ const OrganizationIdentificationDetails = () => {
     return (
         <>
             <div className='row'>
-                <div className='col-md-8'>
+                <div className='col-xxl-8 col-lg-6 col-md-12'>
                     <FloatingLabel controlId="floatingInput" label={<>Legal Organization Name <span className="text-danger">*</span></>} className="mb-4">
                         <Form.Control type="text" placeholder="Algeria Infra & Argo Co." />
                     </FloatingLabel>
                 </div>
-                <div className='col-md-4'>
+                <div className='col-xxl-4 col-lg-6 col-md-12'>
                     <FloatingLabel controlId="floatingSelect" label="Domain" className="mb-4">
                         <Form.Select aria-label="Floating label select example">
                             <option>Public Sector</option>
@@ -28,7 +28,7 @@ const OrganizationIdentificationDetails = () => {
                 </div>
             </div>
             <div className="row">
-                <div className="col-md-8">
+                <div className="col-xxl-8 col-lg-12 col-md-8">
                     <div className="row">
                         <div className='col-md-12'>
                             <FloatingLabel controlId="floatingInput" label={<>Trade Name / Brand Name <span className="text-danger">*</span></>} className="mb-4">
@@ -67,20 +67,13 @@ const OrganizationIdentificationDetails = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-xxl-4 col-lg-12 col-md-4">
                     <PdfUpload title="Upload Trade Licence" />
                 </div>
                 <div className='col-md-12'>
                     <FloatingLabel controlId="floatingInput" label="Trade License Number" className="mb-4">
                         <Form.Control type="text" placeholder="Holding Organization Name (if applicable)" />
                     </FloatingLabel>
-                </div>
-            </div>
-            
-            <div className="card-foot">
-                <hr></hr>
-                <div className="d-flex align-items-center justify-content-end">
-                    <button className="btn-outline fill-btn rs-link">Save</button>
                 </div>
             </div>
         </>
