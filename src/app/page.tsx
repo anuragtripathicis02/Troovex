@@ -79,9 +79,9 @@ export default function Home() {
 
         {/* form with floting  */}
 
-                <FloatingLabel controlId="floatingInput" label={<>Legal Organization Name <span className="text-danger">*</span></>} className="mb-3 floating-grey-color">
-                    <Form.Control type="text" placeholder="name@example.com" />
-                </FloatingLabel>
+        <FloatingLabel controlId="floatingInput" label={<>Legal Organization Name <span className="text-danger">*</span></>} className="mb-3 floating-grey-color">
+            <Form.Control type="text" placeholder="name@example.com" />
+        </FloatingLabel>
 
         <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3 floating-grey-color">
           <Form.Control type="text" placeholder="name@example.com" />

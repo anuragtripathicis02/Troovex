@@ -18,5 +18,8 @@
 @import './css/table.css';
 @import './css/accordion.css';
 @import './css/fileupload.css';
-
+/******third party start css******/
+@import "maplibre-gl/dist/maplibre-gl.css";
+/******third party end css******/
+@import "./css/LocationMap.css"
 
