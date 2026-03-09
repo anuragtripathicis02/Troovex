@@ -41,29 +41,151 @@ interface TabStatus {
 }
 
 const CompanyProfileTabs = () => {
+  // ========================
+  // CONSTANTS & CONFIG
+  // ========================
+  const TAB_ORDER: (keyof TabStatus)[] = [
+    "First",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth",
+  ];
+  const TOTAL_STEPS = 6;
+  const STEP_MAP: Record<string, number> = {
+    First: 1,
+    second: 2,
+    third: 3,
+    fourth: 4,
+    fifth: 5,
+    sixth: 6,
+  };
+  const STEP_COLORS: Record<number, string> = {
+    1: "#FFB020",
+    2: "#FFB020",
+    3: "#FFB020",
+    4: "#0B5FD7",
+    5: "#6933FF",
+    6: "#00A65A",
+  };
+
+  const SUB4_STEPS = ["4.1", "4.2", "4.3"];
+  const SUB6_STEPS = ["6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7"];
+
+  // ========================
+  // STATE - Main Navigation
+  // ========================
+  const [activeKey, setActiveKey] = useState<string>("First");
+  const [status, setStatus] = useState<TabStatus>({
+    First: null,
+    second: null,
+    third: null,
+    fourth: null,
+    fifth: null,
+    sixth: null,
+  });
+  const [open, setOpen] = useState(false);
+
+  // ========================
+  // STATE - Sub-Step Tab 4
+  // ========================
+  const [activeSubStep, setActiveSubStep] = useState<string>("4.1");
   const [subStatus4, setSubStatus4] = useState({
     "4.1": null,
     "4.2": null,
     "4.3": null,
   });
-  const [activeSubStep, setActiveSubStep] = useState<string>("4.1");
 
-  const sub4Steps = ["4.1", "4.2", "4.3"];
+  // ========================
+  // STATE - Sub-Step Tab 6
+  // ========================
+  const [activeSubStep6, setActiveSubStep6] = useState<string>("6.1");
+  const [subStatus6, setSubStatus6] = useState({
+    "6.1": null,
+    "6.2": null,
+    "6.3": null,
+    "6.4": null,
+    "6.5": null,
+    "6.6": null,
+    "6.7": null,
+  });
+
+  // ========================
+  // COMPUTED VALUES
+  // ========================
+  const completedSteps = Object.values(status).filter(
+    (s) => s === "completed",
+  ).length;
+  const progress = Math.round((completedSteps / TOTAL_STEPS) * 100);
+  const currentStep = STEP_MAP[activeKey] || 1;
+  const progressColor = STEP_COLORS[currentStep] || "#f9a825";
+
+  // ========================
+  // HANDLERS - Main Tab Navigation
+  // ========================
+  const goNext = (current: string, next: string) => {
+    setStatus((prev) => ({
+      ...prev,
+      [current as keyof TabStatus]: "completed",
+    }));
+    setActiveKey(next);
+  };
+
+  const handleTabClick = (key: string | null) => {
+    if (!key) return;
+
+    const clickedIndex = TAB_ORDER.indexOf(key as keyof TabStatus);
+
+    setStatus((prev) => {
+      const updated = { ...prev };
+
+      TAB_ORDER.forEach((item, idx) => {
+        if (idx < clickedIndex) {
+          updated[item] = "completed";
+        } else {
+          updated[item] = null;
+        }
+      });
+
+      return updated;
+    });
+
+    setActiveKey(key);
+  };
+
+  const handleConfirm = () => {
+    setStatus({
+      First: "completed",
+      second: "completed",
+      third: "completed",
+      fourth: "completed",
+      fifth: "completed",
+      sixth: "completed",
+    });
+  };
+
+  // ========================
+  // HANDLERS - Sub-Step Tab 4
+  // ========================
   const goToSubStep4 = (step: string) => {
-    const currentIndex = sub4Steps.indexOf(activeSubStep);
-    const newIndex = sub4Steps.indexOf(step);
+    const currentIndex = SUB4_STEPS.indexOf(activeSubStep);
+    const newIndex = SUB4_STEPS.indexOf(step);
+
     if (newIndex > currentIndex) {
-      // moving forward, mark previous as completed
-      setSubStatus4((prev) => ({
-        ...prev,
-        [activeSubStep]: "completed",
-      }));
+      setSubStatus4((prev) => {
+        const updated = { ...prev } as Record<string, string | null>;
+        for (let i = currentIndex; i < newIndex; i++) {
+          updated[SUB4_STEPS[i]] = "completed";
+        }
+        return updated as typeof prev;
+      });
     }
+
     setActiveSubStep(step);
   };
 
   const handleSubNext = () => {
-    // mark current substep as completed before moving ahead
     setSubStatus4((prev) => ({
       ...prev,
       [activeSubStep]: "completed",
@@ -74,42 +196,35 @@ const CompanyProfileTabs = () => {
     } else if (activeSubStep === "4.2") {
       setActiveSubStep("4.3");
     } else if (activeSubStep === "4.3") {
-      // finished all substeps of section 4, mark whole tab as completed
       setStatus((prev) => ({
         ...prev,
         fourth: "completed",
       }));
-
       setActiveKey("fifth");
     }
   };
 
-  const [subStatus6, setSubStatus6] = useState({
-    "6.1": null,
-    "6.2": null,
-    "6.3": null,
-    "6.4": null,
-    "6.5": null,
-    "6.6": null,
-    "6.7": null,
-  });
-  const [activeSubStep6, setActiveSubStep6] = useState<string>("6.1");
-
-  const sub6Steps = ["6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7"];
+  // ========================
+  // HANDLERS - Sub-Step Tab 6
+  // ========================
   const goToSubStep6 = (step: string) => {
-    const currentIndex = sub6Steps.indexOf(activeSubStep6);
-    const newIndex = sub6Steps.indexOf(step);
+    const currentIndex = SUB6_STEPS.indexOf(activeSubStep6);
+    const newIndex = SUB6_STEPS.indexOf(step);
+
     if (newIndex > currentIndex) {
-      setSubStatus6((prev) => ({
-        ...prev,
-        [activeSubStep6]: "completed",
-      }));
+      setSubStatus6((prev) => {
+        const updated = { ...prev } as Record<string, string | null>;
+        for (let i = currentIndex; i < newIndex; i++) {
+          updated[SUB6_STEPS[i]] = "completed";
+        }
+        return updated as typeof prev;
+      });
     }
+
     setActiveSubStep6(step);
   };
 
   const handleSubNext6 = () => {
-    // mark current substep as completed before advancing
     setSubStatus6((prev) => ({
       ...prev,
       [activeSubStep6]: "completed",
@@ -130,88 +245,9 @@ const CompanyProfileTabs = () => {
     }
   };
 
-  const [activeKey, setActiveKey] = useState<string>("First");
-  const [status, setStatus] = useState<TabStatus>({
-    First: null,
-    second: null,
-    third: null,
-    fourth: null,
-    fifth: null,
-    sixth: null,
-  });
-
-  const goNext = (current: string, next: string) => {
-    setStatus((prev) => ({
-      ...prev,
-      [current as keyof TabStatus]: "completed",
-    }));
-
-    setActiveKey(next);
-  };
-
-  const handleTabClick = (key: string | null) => {
-    if (!key) return;
-
-    const order: (keyof TabStatus)[] = [
-      "First",
-      "second",
-      "third",
-      "fourth",
-      "fifth",
-      "sixth",
-    ];
-
-    const clickedIndex = order.indexOf(key as keyof TabStatus);
-
-    setStatus((prev) => {
-      const updated = { ...prev };
-
-      order.forEach((item, idx) => {
-        if (idx < clickedIndex) {
-          updated[item] = "completed";
-        } else if (idx === clickedIndex) {
-          updated[item] = null;
-        } else {
-          updated[item] = null;
-        }
-      });
-
-      return updated;
-    });
-
-    setActiveKey(key);
-  };
-
-  const totalSteps = 6;
-  const completedSteps = Object.values(status).filter(
-    (s) => s === "completed",
-  ).length;
-  const progress = Math.round((completedSteps / totalSteps) * 100);
-
-  const stepMap: Record<string, number> = {
-    First: 1,
-    second: 2,
-    third: 3,
-    fourth: 4,
-    fifth: 5,
-    sixth: 6,
-  };
-
-  const currentStep = stepMap[activeKey] || 1;
-
-  const handleConfirm = () => {
-    setStatus({
-      First: "completed",
-      second: "completed",
-      third: "completed",
-      fourth: "completed",
-      fifth: "completed",
-      sixth: "completed",
-    });
-  };
-
-  const [open, setOpen] = useState(false);
-
+  // ========================
+  // COMPONENT - Sub Step Title
+  // ========================
   interface SubStepTitleProps {
     number: string;
     title: string;
@@ -237,17 +273,6 @@ const CompanyProfileTabs = () => {
       <span className="sub-step-title">{title}</span>
     </Nav.Link>
   );
-
-  const stepColors: Record<number, string> = {
-    1: "#FFB020",
-    2: "#FFB020",
-    3: "#FFB020",
-    4: "#0B5FD7",
-    5: "#6933FF",
-    6: "#00A65A",
-  };
-
-  const progressColor = stepColors[currentStep] || "#f9a825";
 
   return (
     <div className="tabs-com-box ">
@@ -336,7 +361,7 @@ const CompanyProfileTabs = () => {
                       />
                     </Nav.Link>
 
-                    {/* Sub Tabs */}
+                    {/* Sub Tabs - Step 4 */}
                     {activeKey === "fourth" && (
                       <Nav className="flex-column sub-steps">
                         <Nav.Link
@@ -392,6 +417,7 @@ const CompanyProfileTabs = () => {
                       />
                     </Nav.Link>
 
+                    {/* Sub Tabs - Step 6 */}
                     {activeKey === "sixth" && (
                       <Nav className="flex-column sub-steps">
                         <Nav.Link
@@ -497,7 +523,7 @@ const CompanyProfileTabs = () => {
                         : currentStep}
                   </span>
 
-                  <span className="total-step"> of {totalSteps}</span>
+                  <span className="total-step"> of {TOTAL_STEPS}</span>
                 </>
               )}
             </div>
