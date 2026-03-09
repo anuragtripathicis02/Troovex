@@ -9,6 +9,7 @@ import { DatePicker, TagInput } from 'rsuite';
 import CountryName from "@/component/common/CountryName";
 const IncorporationAndAddressDetails = () => {
     return (
+        <>
         <div className="row">
             <div className='col-md-4'>
                 <div className="calendar-box floating-calendar-box mb-4 position-relative">
@@ -33,6 +34,13 @@ const IncorporationAndAddressDetails = () => {
                     </FloatingLabel>
             </div>
         </div>
+        <div className="card-foot">
+                <hr></hr>
+                <div className="d-flex align-items-center justify-content-end">
+                    <button className="btn-outline fill-btn rs-link">Save</button>
+                </div>
+            </div>
+        </>
     )
 }
 

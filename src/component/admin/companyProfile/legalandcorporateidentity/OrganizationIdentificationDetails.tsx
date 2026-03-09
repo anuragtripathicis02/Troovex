@@ -76,8 +76,9 @@ const OrganizationIdentificationDetails = () => {
                     </FloatingLabel>
                 </div>
             </div>
-            <hr></hr>
+            
             <div className="card-foot">
+                <hr></hr>
                 <div className="d-flex align-items-center justify-content-end">
                     <button className="btn-outline fill-btn rs-link">Save</button>
                 </div>
