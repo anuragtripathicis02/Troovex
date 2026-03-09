@@ -252,7 +252,7 @@
     font-weight: 600;
 }
 
-.tabs-com-box .tabs-main-box .nav-item a:has(.completed), .sub-steps .completed {
+.tabs-com-box .tabs-main-box .nav-item a:has(.completed), .sub-steps .completed, .tabs-com-box .tabs-main-box .nav-item a.active {
     pointer-events: none;
 }
 
@@ -328,6 +328,10 @@
 
 .details-box p {
     font-size: 12px;
+}
+
+.sub-steps {
+    margin: 0;
 }
 
 
