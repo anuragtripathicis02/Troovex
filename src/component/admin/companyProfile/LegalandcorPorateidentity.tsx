@@ -78,41 +78,92 @@ const LegalandcorPorateidentity = () => {
                             <div className="card-foot">
                                 <hr></hr>
                                 <div className="d-flex align-items-center justify-content-end">
-                                    <button className="btn-outline fill-btn rs-link" onClick={() => handleSave("2", "")}>Save</button>
+                                    <button className="btn-outline fill-btn rs-link" onClick={() => handleSave("2", "3")}>Save</button>
                                 </div>
                             </div>
                         </Accordion.Body>
                     </Accordion.Item>
-
-                     <Accordion.Item eventKey="3">
-                        <Accordion.Header className=" position-relative">
+                    <Accordion.Item eventKey="3" className={completed.includes("3") ? "completed" : ""}>
+                        <Accordion.Header className="position-relative">
                             <div className="me-auto d-flex align-items-center gap-2">
-                                <span className="radio"></span>
+                                <span className={`radio ${completed.includes("3") ? "completed" : ""}`}></span>
                                 <span>Social & Employment Identifiers</span>
                             </div>
                             <Arrowaccordion />
                         </Accordion.Header>
                         <Accordion.Body>
                             <SocialAndEmploymentIdentifiers/>
+                            <div className="card-foot">
+                                <hr></hr>
+                                <div className="d-flex align-items-center justify-content-end">
+                                    <button className="btn-outline fill-btn rs-link" onClick={() => handleSave("3", "4")}>Save</button>
+                                </div>
+                            </div>
                         </Accordion.Body>
                     </Accordion.Item>
-
-                    <Accordion.Item eventKey="4">
-                        <Accordion.Header className=" position-relative">
+                    <Accordion.Item eventKey="4" className={completed.includes("4") ? "completed" : ""}>
+                        <Accordion.Header className="position-relative">
                             <div className="me-auto d-flex align-items-center gap-2">
-                                <span className="radio"></span>
+                                <span className={`radio ${completed.includes("4") ? "completed" : ""}`}></span>
                                 <span>Digital Presence & Contact Information</span>
                             </div>
                             <Arrowaccordion />
                         </Accordion.Header>
                         <Accordion.Body>
-                            <DigitalPresenceAndContactInformation/>
+                               <DigitalPresenceAndContactInformation/> 
+                            <div className="card-foot">
+                                <hr></hr>
+                                <div className="d-flex align-items-center justify-content-end">
+                                    <button className="btn-outline fill-btn rs-link" onClick={() => handleSave("4", "5")}>Save</button>
+                                </div>
+                            </div>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="5" className={completed.includes("5") ? "completed" : ""}>
+                        <Accordion.Header className="position-relative">
+                            <div className="me-auto d-flex align-items-center gap-2">
+                                <span className={`radio ${completed.includes("5") ? "completed" : ""}`}></span>
+                                <span>Contact & Communication Details</span>
+                            </div>
+                            <Arrowaccordion />
+                        </Accordion.Header>
+                        <Accordion.Body>
+                            fifth component
+                            <div className="card-foot">
+                                <hr></hr>
+                                <div className="d-flex align-items-center justify-content-end">
+                                    <button className="btn-outline fill-btn rs-link" onClick={() => handleSave("5", "6")}>Save</button>
+                                </div>
+                            </div>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="6" className={completed.includes("6") ? "completed" : ""}>
+                        <Accordion.Header className="position-relative">
+                            <div className="me-auto d-flex align-items-center gap-2">
+                                <span className={`radio ${completed.includes("6") ? "completed" : ""}`}></span>
+                                <span>Branding & Media Assets</span>
+                            </div>
+                            <Arrowaccordion />
+                        </Accordion.Header>
+                        <Accordion.Body>
+                            fifth component
+                            <div className="card-foot">
+                                <hr></hr>
+                                <div className="d-flex align-items-center justify-content-end">
+                                    <button className="btn-outline fill-btn rs-link" onClick={() => handleSave("6", "")}>Save</button>
+                                </div>
+                            </div>
                         </Accordion.Body>
                     </Accordion.Item>
 
+                     
+
                     
                 </Accordion>
+
+
             </div>
+          
         </div>
     );
 };
