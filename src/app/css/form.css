@@ -777,6 +777,33 @@ input:-webkit-autofill {
 
 
 
+.filled-box.form-floating label {
+    height: auto;
+    line-height: 100%;
+    padding: 2px;
+    transform: scale(.85)translateY(-11px)translateX(.15rem);
+}
+
+.floating-grey-color.filled-box.form-floating label{
+background: linear-gradient(to bottom, var(--dark-3) 50%, var(--dark-1) 50%);
+box-shadow: none;
+border: none;
+}
+
+.floating-white-color.filled-box.form-floating label{
+    background-color: var(--dark-1);
+}
+
+
+.form-floating.show-placeholder-text > .form-control::placeholder {
+  opacity: 1;
+  color: var(--dark-12);
+}
+
+.form-floating.show-placeholder-text > .form-control:focus::placeholder {
+  opacity: 1;
+}
+
 @media only screen and (max-width: 1400px) {
 
 .form-control, .form-select{

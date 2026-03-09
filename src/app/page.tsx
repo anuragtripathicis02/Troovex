@@ -79,9 +79,13 @@ export default function Home() {
 
         {/* form with floting  */}
 
-                <FloatingLabel controlId="floatingInput" label={<>Legal Organization Name <span className="text-danger">*</span></>} className="mb-3 floating-grey-color">
-                    <Form.Control type="text" placeholder="name@example.com" />
-                </FloatingLabel>
+        <FloatingLabel controlId="floatingInput" label={<>Legal Organization Name <span className="text-danger">*</span></>} className="mb-4 floating-grey-color">
+          <Form.Control type="text" placeholder="name@example.com" />
+        </FloatingLabel>
+
+        <FloatingLabel controlId="floatingInput" label="Official Company Email Domain" className="mb-3 floating-grey-color filled-box filled-bg">
+          <Form.Control type="text" placeholder="xyz@gmai.com" />
+        </FloatingLabel>
 
         <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3 floating-grey-color">
           <Form.Control type="text" placeholder="name@example.com" />
@@ -296,11 +300,15 @@ export default function Home() {
         <OnlyFlagPhoneInput />
       </div>
 
+<hr></hr>
+
       {/* cuntry with fleag only */}
 
       <div className="flag-code-sec mb-3 mt-4 position-relative">
         <CountryName />
       </div>
+
+      
 
       {/* Floting cuntry with fleag only */}
 
@@ -469,7 +477,7 @@ export default function Home() {
                 <span className="radio"></span>
                 <span>Tax & Statutory Identifiers</span>
               </div>
-              <Arrowaccordion/>
+              <Arrowaccordion />
             </Accordion.Header>
             <Accordion.Body>
               <div className="accordion-detail-box">
@@ -483,7 +491,7 @@ export default function Home() {
                 <span className="radio"></span>
                 <span>Tax & Statutory Identifiers</span>
               </div>
-              <Arrowaccordion/>
+              <Arrowaccordion />
             </Accordion.Header>
             <Accordion.Body>
               <div className="accordion-detail-box">
@@ -497,7 +505,7 @@ export default function Home() {
                 <span className="radio completed"></span>
                 <span>Tax & Statutory Identifiers</span>
               </div>
-              <Arrowaccordion/>
+              <Arrowaccordion />
             </Accordion.Header>
             <Accordion.Body>
               <div className="accordion-detail-box">
@@ -509,22 +517,22 @@ export default function Home() {
       </div>
 
       <div className="row">
-        
-          <div className="col-md-4">
-            <PdfUpload title="Upload NIF Document" />
-          </div>
-          <div className="col-md-4">
-            <PdfUpload title="Upload Tax Roll" />
-          </div>
-          <div className="col-md-4">
-            <PdfUpload title="Upload NIS Document" />
-          </div>
 
-          
+        <div className="col-md-4">
+          <PdfUpload title="Upload NIF Document" />
+        </div>
+        <div className="col-md-4">
+          <PdfUpload title="Upload Tax Roll" />
+        </div>
+        <div className="col-md-4">
+          <PdfUpload title="Upload NIS Document" />
+        </div>
+
+
 
       </div>
-        
-        
+
+
 
 
     </div>
