@@ -3,7 +3,7 @@ import { useState, useRef, ChangeEvent, useEffect, ReactNode } from "react";
 
 type Props = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   type: "pdf" | "image" | "video";
   icon?: ReactNode;
 };
@@ -76,19 +76,22 @@ export default function FileUpload({ title, subtitle, type, icon }: Props) {
     openFileDialog();
   };
 
-  const getIcon = () => {
+  const getIcon = (): ReactNode => {
     if (icon) return icon;
 
     if (type === "pdf") return "PDF";
     if (type === "image") return "IMG";
     if (type === "video") return "VID";
+
+    return null;
   };
 
-  const getAcceptType = () => {
-    if (type === "pdf") return "application/pdf";
-    if (type === "image") return "image/*";
-    if (type === "video") return "video/*";
-  };
+const getAcceptType = (): string => {
+  if (type === "pdf") return "application/pdf";
+  if (type === "image") return "image/*";
+  if (type === "video") return "video/*";
+  return "";
+};
 
   return (
     <div className="upload-wrapper">
