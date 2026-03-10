@@ -566,7 +566,7 @@ const CompanyProfileTabs = () => {
                       <h5 className='mb-0'>Complete Profile</h5>
                       <Breadcrumb className='m-0'>
                         <Breadcrumb.Item href="">Organization Profile</Breadcrumb.Item>
-                        <Breadcrumb.Item active>Legal & Corporate Identity</Breadcrumb.Item>
+                        <Breadcrumb.Item active>Business Profile & Strategy</Breadcrumb.Item>
                       </Breadcrumb>
                     </div>
                   </div>
