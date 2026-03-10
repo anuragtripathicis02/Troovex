@@ -5,6 +5,8 @@ import { Link } from "rsuite";
 import Collapse from "react-bootstrap/Collapse";
 import LegalandcorPorateidentity from "./LegalandcorPorateidentity";
 import BackArrow from "@/component/common/BackArrow";
+import BusinessProfileStrategy from "./BusinessProfileStrategy";
+import OwnershipGovernance from "./OwnershipGovernance";
 
 interface TabTitleProps {
   number: string | number;
@@ -571,7 +573,7 @@ const CompanyProfileTabs = () => {
                     </div>
                   </div>
                 </div>
-                tabs details 2
+                <BusinessProfileStrategy />
                 <div className="text-end mt-4">
                   <Link
                     className="btn-outline fill-btn"
@@ -599,7 +601,7 @@ const CompanyProfileTabs = () => {
                     </div>
                   </div>
                 </div>
-                tabs details 3
+                <OwnershipGovernance />
                 <div className="text-end mt-4">
                   <Link
                     className="btn-outline fill-btn"
