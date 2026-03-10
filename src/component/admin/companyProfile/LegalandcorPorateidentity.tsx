@@ -9,6 +9,7 @@ import SocialAndEmploymentIdentifiers from "./legalandcorporateidentity/SocialAn
 import DigitalPresenceAndContactInformation from "./legalandcorporateidentity/DigitalPresenceAndContactInformation";
 import ContactAndCommunicationDetails from "./legalandcorporateidentity/ContactAndCommunicationDetails";
 import BrandingMediaAssets from "./legalandcorporateidentity/BrandingMediaAssets";
+import OrganizationIdentificationDetails from "./legalandcorporateidentity/OrganizationIdentificationDetails";
 
 const LegalandcorPorateidentity = () => {
     const [activeKey, setActiveKey] = useState<string | null>("0");
@@ -37,6 +38,7 @@ const LegalandcorPorateidentity = () => {
                             <Arrowaccordion />
                         </Accordion.Header>
                         <Accordion.Body>
+                            <OrganizationIdentificationDetails />
                             <div className="accordion-detail-box">
                                 <div className="card-foot">
                                     <hr></hr>
