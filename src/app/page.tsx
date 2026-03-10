@@ -134,6 +134,8 @@ export default function Home() {
           {/* default btn fill  */}
           <Link href="" className="btn-outline fill-btn"> Submit fill</Link>
 
+          <Link href="" className="btn-outline fill-btn"> Submit fill</Link>
+
           <div className="mt-3">
 
             {/* checkbox btn  */}

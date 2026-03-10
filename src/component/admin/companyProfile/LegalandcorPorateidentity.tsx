@@ -3,7 +3,6 @@ import { useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Arrowaccordion from "@/component/common/Arrowaccordion";
 
-import OrganizationIdentificationDetails from "./legalandcorporateidentity/OrganizationIdentificationDetails";
 import IncorporationAndAddressDetails from "./legalandcorporateidentity/IncorporationAndAddressDetails";
 import TaxandStatutoryIdentifiers from "./legalandcorporateidentity/TaxandStatutoryIdentifiers";
 import SocialAndEmploymentIdentifiers from "./legalandcorporateidentity/SocialAndEmploymentIdentifiers";
@@ -39,7 +38,6 @@ const LegalandcorPorateidentity = () => {
                         </Accordion.Header>
                         <Accordion.Body>
                             <div className="accordion-detail-box">
-                                <OrganizationIdentificationDetails />
                                 <div className="card-foot">
                                     <hr></hr>
                                     <div className="d-flex align-items-center justify-content-end">

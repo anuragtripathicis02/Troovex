@@ -1,12 +1,14 @@
 .table-default table tr th {
-    background: var(--primary-50);
-    border-top: 1px solid var(--primary-100);
-    border-bottom: 1px solid var(--primary-100);
+    /* background: var(--primary-50); */
+    background: var(--secondary-50);
+    border-top: 1px solid var(--secondary-50);
+    border-bottom: 1px solid var(--secondary-50);
     padding: 15px 10px;
     font-weight: 500;
     font-size: 14px;
     line-height: 140%;
     letter-spacing: 0;
+    white-space: nowrap;
     color: var(--dark-12);
 }
 
@@ -16,16 +18,16 @@
 }
 
 .table-default table thead {
-    border: 1px solid var(--primary-100);
+    border: 1px solid var(--secondary-50);
 }
 
 .table-default table thead tr th:first-child {
-    border-left: 1px solid var(--primary-100);
+    border-left: 1px solid var(--secondary-50);
     border-top-left-radius: 16px;
 }
 
 .table-default table thead tr th:last-child {
-    border-right: 1px solid var(--primary-100);
+    border-right: 1px solid var(--secondary-50);
     border-top-right-radius: 16px;
 }
 
@@ -116,4 +118,10 @@
 
 .table-default table tr:last-child td:last-child {
     border-bottom-right-radius: 16px;
+}
+
+.table-default table tr td .btn-primary{
+    background-color: transparent !important;
+    border: 0;
+    color: var(--dark-9) !important;
 }

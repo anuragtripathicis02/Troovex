@@ -27,7 +27,7 @@ const Header = () => {
       <div className="container-fluid">
         <div className="inner-header d-flex align-items-center justify-content-between gap-md-3 gap-2">
 
-          <Link href="" className="header-logo">
+          <Link href="/admin/companyProfile" className="header-logo">
             <Image src={HeaderLogo} alt="" />
           </Link>
 
