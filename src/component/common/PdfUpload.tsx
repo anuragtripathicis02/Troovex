@@ -3,7 +3,7 @@ import { useState, useRef, ChangeEvent, useEffect, ReactNode } from "react";
 
 type Props = {
   title: string;
-  subtitle?: string;
+  subtitle: string;
   type: "pdf" | "image" | "video";
   icon?: ReactNode;
 };
