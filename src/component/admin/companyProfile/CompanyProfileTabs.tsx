@@ -587,6 +587,18 @@ const CompanyProfileTabs = () => {
             </Tab.Pane>
             <Tab.Pane eventKey="third">
               <div className="tabs-content-box">
+                <div className='page-title'>
+                  <div className='d-flex align-items-center gap-2'>
+                    <BackArrow />
+                    <div className='page-title-right'>
+                      <h5 className='mb-0'>Complete Profile</h5>
+                      <Breadcrumb className='m-0'>
+                        <Breadcrumb.Item href="">Organization Profile</Breadcrumb.Item>
+                        <Breadcrumb.Item active>Ownership & Governance</Breadcrumb.Item>
+                      </Breadcrumb>
+                    </div>
+                  </div>
+                </div>
                 tabs details 3
                 <div className="text-end mt-4">
                   <Link
@@ -603,6 +615,19 @@ const CompanyProfileTabs = () => {
             </Tab.Pane>
             <Tab.Pane eventKey="fourth">
               <div className="tabs-content-box">
+                <div className='page-title'>
+                  <div className='d-flex align-items-center gap-2'>
+                    <BackArrow />
+                    <div className='page-title-right'>
+                      <h5 className='mb-0'>Complete Profile</h5>
+                      <Breadcrumb className='m-0'>
+                        <Breadcrumb.Item href="">Organization Profile</Breadcrumb.Item>
+                        <Breadcrumb.Item active>Procurement Organization, Human  Resources capabilities & Contacts</Breadcrumb.Item>
+                      </Breadcrumb>
+                    </div>
+                  </div>
+                </div>
+
                 {activeSubStep === "4.1" && <div>tabs details 4.1</div>}
 
                 {activeSubStep === "4.2" && <div>tabs details 4.2</div>}
@@ -624,6 +649,18 @@ const CompanyProfileTabs = () => {
             </Tab.Pane>
             <Tab.Pane eventKey="fifth">
               <div className="tabs-content-box">
+                <div className='page-title'>
+                  <div className='d-flex align-items-center gap-2'>
+                    <BackArrow />
+                    <div className='page-title-right'>
+                      <h5 className='mb-0'>Complete Profile</h5>
+                      <Breadcrumb className='m-0'>
+                        <Breadcrumb.Item href="">Organization Profile</Breadcrumb.Item>
+                        <Breadcrumb.Item active>Financial & Accounting Information</Breadcrumb.Item>
+                      </Breadcrumb>
+                    </div>
+                  </div>
+                </div>
                 tabs details 5
                 <div className="text-end mt-4">
                   <Link
@@ -640,6 +677,19 @@ const CompanyProfileTabs = () => {
             </Tab.Pane>
             <Tab.Pane eventKey="sixth">
               <div className="tabs-content-box">
+                <div className='page-title'>
+                  <div className='d-flex align-items-center gap-2'>
+                    <BackArrow />
+                    <div className='page-title-right'>
+                      <h5 className='mb-0'>Complete Profile</h5>
+                      <Breadcrumb className='m-0'>
+                        <Breadcrumb.Item href="">Organization Profile</Breadcrumb.Item>
+                        <Breadcrumb.Item active>Prequalification & Capabilities (PQQ)</Breadcrumb.Item>
+                      </Breadcrumb>
+                    </div>
+                  </div>
+                </div>
+
                 {activeSubStep6 === "6.1" && <div>tabs details 6.1</div>}
 
                 {activeSubStep6 === "6.2" && <div>tabs details 6.2</div>}
