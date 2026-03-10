@@ -98,6 +98,7 @@ export default function Home() {
         <FloatingLabel controlId="floatingTextarea2" label="Comments" className="mb-3">
           <Form.Control as="textarea" placeholder="Leave a comment here" style={{ height: '100px' }} />
         </FloatingLabel>
+        
         <FloatingLabel controlId="floatingSelect" label="Works with selects">
           <Form.Select aria-label="Floating label select example">
             <option>Open this select menu</option>
