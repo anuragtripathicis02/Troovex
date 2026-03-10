@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
-import { Tab, Nav } from "react-bootstrap";
+import { Tab, Nav, Breadcrumb } from "react-bootstrap";
 import { Link } from "rsuite";
 import Collapse from "react-bootstrap/Collapse";
 import LegalandcorPorateidentity from "./LegalandcorPorateidentity";
+import BackArrow from "@/component/common/BackArrow";
 
 interface TabTitleProps {
   number: string | number;
@@ -529,6 +530,19 @@ const CompanyProfileTabs = () => {
             </div>
             <Tab.Pane eventKey="First">
               <div className="tabs-content-box">
+                <div className='page-title'>
+                  <div className='d-flex align-items-center gap-2'>
+                    <BackArrow />
+                    <div className='page-title-right'>
+                      <h5 className='mb-0'>Complete Profile</h5>
+                      <Breadcrumb className='m-0'>
+                        <Breadcrumb.Item href="">Organization Profile</Breadcrumb.Item>
+                        <Breadcrumb.Item active>Legal & Corporate Identity</Breadcrumb.Item>
+                      </Breadcrumb>
+                    </div>
+                  </div>
+                </div>
+
                 <LegalandcorPorateidentity />
                 <div className="text-end mt-4">
                   <Link
@@ -545,6 +559,18 @@ const CompanyProfileTabs = () => {
             </Tab.Pane>
             <Tab.Pane eventKey="second">
               <div className="tabs-content-box">
+                <div className='page-title'>
+                  <div className='d-flex align-items-center gap-2'>
+                    <BackArrow />
+                    <div className='page-title-right'>
+                      <h5 className='mb-0'>Complete Profile</h5>
+                      <Breadcrumb className='m-0'>
+                        <Breadcrumb.Item href="">Organization Profile</Breadcrumb.Item>
+                        <Breadcrumb.Item active>Legal & Corporate Identity</Breadcrumb.Item>
+                      </Breadcrumb>
+                    </div>
+                  </div>
+                </div>
                 tabs details 2
                 <div className="text-end mt-4">
                   <Link
