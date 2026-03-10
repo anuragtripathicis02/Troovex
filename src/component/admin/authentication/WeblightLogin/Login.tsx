@@ -48,11 +48,11 @@ const Login = () => {
                 </span>
               </div>
               <div className="forgot-link text-center">
-                <Link href="" className='link-underline-text'>Forgot Password</Link>
+                <Link href="/admin/resettingpassword/forgetpassword" className='link-underline-text'>Forgot Password</Link>
               </div>
-              <button className='btn-outline fill-btn w-100 mb-44'>Login to Acoount</button>
+              <Link href='/admin/companyProfile' className='btn-outline fill-btn w-100 mb-44'>Login to Acoount</Link>
               <div className='create-account'>
-                <p className='m-0'>Don't have an account? <Link href="javascript:void(0)"
+                <p className='m-0'>Don't have an account? <Link href="/companySupplierBothScreen"
                 > Register Yourself </Link></p>
               </div>
             </div>

@@ -31,7 +31,7 @@ const ForgetPassword = () => {
                             <p className='mb-0'>Lost  your password? No stress. Just drop your email below and we’ll send you a link to reset your password and get you back in.</p>
                         </div>
                         <div className='col-md-6 mx-auto'>
-                            <FloatingLabel controlId="floatingInput" label="Email address" className="mb-48 label-gray">
+                            <FloatingLabel controlId="floatingInput" label="Email address" className="mb-48 floating-grey-color">
                                 <Form.Control type="text" placeholder="name@example.com" />
                             </FloatingLabel>
                         </div>

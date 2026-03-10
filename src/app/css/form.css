@@ -804,6 +804,29 @@ border: none;
   opacity: 1;
 }
 
+.search-area .icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-area .form-control {
+    padding-left: 48px;
+    height: 50px;
+}
+
+.btn-gray{
+    background-color: var(--dark-3);
+    border-color: var(--dark-3);
+    color: var(--dark-8);
+}
+.btn-light-blue{
+    background-color: var(--primary-50);
+    border-color: var(--primary-50);
+    color: var(--primary-500);
+}
 /******************/
 
 .text-btn {

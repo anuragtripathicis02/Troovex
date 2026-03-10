@@ -45,7 +45,7 @@ const CompanyBothScreen = () => {
   return (
     <div className="both-screen-sec ">
       <div className="container position-relative">
-        <Link href="" className="back-link">
+        <Link href="/admin/authentication/loginV1" className="back-link">
           <BackArrow />
         </Link>
 
