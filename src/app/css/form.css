@@ -827,6 +827,49 @@ border: none;
     border-color: var(--primary-50);
     color: var(--primary-500);
 }
+/******************/
+
+.text-btn {
+    bottom: 13px;
+    right: 13px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: var(--primary-500);
+}
+
+.form-control.padding-bottom-5 {
+    padding-bottom: 40px !important;
+}
+
+/************************/
+
+.radion-box {
+    border: 1px solid var(--dark-5);
+    padding: 16px 35px 16px 16px;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.radion-box .form-check-input[type="radio"] {
+    position: absolute;
+    right: 13px;
+    top: 11px;
+    z-index: 2;
+}
+.radion-box:has(.form-check-input[type="radio"]:checked) {
+    border-color: #000;
+}
+.radion-box:has(.form-check-input[type="radio"]:checked) label {
+    color: var(--dark-12);
+}
+
+
+
+
+
 
 @media only screen and (max-width: 1400px) {
 
