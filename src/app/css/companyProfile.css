@@ -308,6 +308,10 @@
     font-size: 13px;
 }
 
+.step-indicator.position-absolute.top-0.end-0 {
+    text-align: right;
+}
+
 
 }
 

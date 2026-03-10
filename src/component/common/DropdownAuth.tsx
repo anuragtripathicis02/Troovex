@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import Help from './Help'
-import Bell from './Bell'
+import Help from './Icons/Help'
+import Bell from './Icons/Bell'
 import Link from 'next/link'
 import Dropdown from 'react-bootstrap/Dropdown';
 import Image from "next/image";
