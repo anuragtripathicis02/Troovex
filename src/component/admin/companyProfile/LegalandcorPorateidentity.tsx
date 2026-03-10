@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
-import Arrowaccordion from "@/component/common/Arrowaccordion";
+import Arrowaccordion from "@/component/common/Icons/Arrowaccordion";
 
 import IncorporationAndAddressDetails from "./legalandcorporateidentity/IncorporationAndAddressDetails";
 import TaxandStatutoryIdentifiers from "./legalandcorporateidentity/TaxandStatutoryIdentifiers";

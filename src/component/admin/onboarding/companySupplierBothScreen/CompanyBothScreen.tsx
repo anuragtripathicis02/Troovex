@@ -12,7 +12,7 @@ import OnlyFlagPhoneInput from "@/component/common/OnlyFlagPhoneInput";
 import CountryName from "@/component/common/CountryName";
 
 
-import BackArrow from "@/component/common/BackArrow";
+import BackArrow from "@/component/common/Icons/BackArrow";
 import Link from "next/link";
 import { TagInput } from "rsuite";
 import EmailVerificationModal from "../../modalComponent/EmailVerificationModal";

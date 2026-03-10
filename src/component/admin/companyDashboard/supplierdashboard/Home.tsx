@@ -1,5 +1,5 @@
 'use client'
-import BackArrow from '@/component/common/BackArrow';
+import BackArrow from '@/component/common/Icons/BackArrow';
 import DashboardHeader from '@/component/common/DashboardHeader'
 import Sidebar from '@/component/common/Sidebar'
 import React from 'react'

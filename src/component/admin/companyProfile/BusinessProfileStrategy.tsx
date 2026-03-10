@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
-import Arrowaccordion from "@/component/common/Arrowaccordion";
+import Arrowaccordion from "@/component/common/Icons/Arrowaccordion";
 import CompanyOverview from "./businessProfileStrategy/CompanyOverview";
 import IndustryClassification from "./businessProfileStrategy/IndustryClassification";
 import BusinessActivities from "./businessProfileStrategy/BusinessActivities";
