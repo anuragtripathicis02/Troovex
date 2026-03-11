@@ -1,0 +1,200 @@
+
+.ownership-sec .tab-content {
+    width: 100%;
+    padding: 0;
+}
+
+.heading-box:before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    background: var(--black);
+}
+
+.heading-box {    
+    width: calc(100% - 181px);
+}
+
+
+.ownership-sec .heading-box h2 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0;
+    width: max-content;
+}
+
+.ownership-sec .card-tabs {
+    border: none;
+    padding: 3px;
+    margin: 0;
+    box-shadow: none !important;
+    background: var(--dark-4);
+    border-radius: 4px;
+}
+.ownership-sec .card-tabs .nav-item {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+.ownership-sec .card-tabs .nav-item a {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
+    color: var(--dark-8);
+    padding: 6px 16px;
+    border-radius: 4px;
+    border: 1px solid transparent !important;
+    display: block;
+    outline: none;
+}
+.ownership-sec .card-tabs .nav-item a.active {
+    background: var(--dark-11);
+    border: 1px solid var(--dark-11) !important;
+    color: var(--dark-1);
+}
+
+.card-member-box {
+    border: 1px solid var(--dark-4);
+    padding: 12px;
+    border-radius: 8px;
+    background: var(--dark-2);
+}
+
+.card-member-box p {
+    margin: 0;
+    font-size: 14px;
+    width: 24%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.card-member-box .name {
+    font-weight: 500;
+}
+
+.btn-grey-text {
+    color: var(--primary-500);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.btn-blue-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+    color: var(--dark-12);
+}
+
+
+/*****************list view********/
+
+.list-card-member-box {
+    border: 1px solid var(--dark-4);
+    background: var(--dark-2);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.list-card-member-box .author-img {
+    width: 40px;
+}
+
+.list-card-member-box  .author-text {
+    width: calc(100% - 48px);
+}
+
+.list-card-member-box  p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.list-card-member-box .name {
+    font-weight: 500;
+}
+
+.list-card-member-box .author-img img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+
+
+
+/* .card-member-box p {
+    width: 115px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+} */
+
+@media only screen and (max-width: 767px) {
+    .card-member-box p {
+        width: 100%;
+    }
+
+    .card-member-box {
+        position: relative;
+        padding-right: 111px;
+    }
+
+    .card-member-box ul {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+    }
+
+
+
+/*****************/
+
+.list-card-member-box {
+    border: 1px solid var(--dark-4);
+    background: var(--dark-2);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.list-card-member-box .author-img {
+    width: 40px;
+}
+
+.list-card-member-box  .author-text {
+    width: calc(100% - 48px);
+}
+
+.list-card-member-box  p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.list-card-member-box .name {
+    font-weight: 500;
+}
+
+.list-card-member-box .author-img img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.list-card-box .upload-row-list .upload-left {
+    width: 100%;
+}
+
+
+}

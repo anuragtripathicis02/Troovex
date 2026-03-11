@@ -21,5 +21,7 @@
 /******third party start css******/
 @import "maplibre-gl/dist/maplibre-gl.css";
 /******third party end css******/
-@import "./css/LocationMap.css"
+@import "./css/LocationMap.css";
+@import './css/ownshipProfile.css';
+@import './css/fileUploadList.css';
 
