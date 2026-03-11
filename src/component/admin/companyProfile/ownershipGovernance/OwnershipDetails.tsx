@@ -18,8 +18,8 @@ const OwnershipDetails = () => {
                     <span className="text">Grid</span>
                 </span>
                 }>
-            <div className="p-3 border rounded">
-                Grid View Content
+            <div className="document-upload-sec">
+                
             </div>
             </Tab>
 
