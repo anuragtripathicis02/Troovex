@@ -1,5 +1,5 @@
 "use client";
-import BackArrow from '@/component/common/BackArrow';
+import BackArrow from '@/component/common/Icons/BackArrow';
 import Link from 'next/link';
 import React, { useState } from 'react'
 import FloatingLabel from 'react-bootstrap/FloatingLabel';

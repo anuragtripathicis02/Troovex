@@ -4,7 +4,7 @@ import { Tab, Nav, Breadcrumb } from "react-bootstrap";
 import { Link } from "rsuite";
 import Collapse from "react-bootstrap/Collapse";
 import LegalandcorPorateidentity from "./LegalandcorPorateidentity";
-import BackArrow from "@/component/common/BackArrow";
+import BackArrow from "@/component/common/Icons/BackArrow";
 import BusinessProfileStrategy from "./BusinessProfileStrategy";
 import OwnershipGovernance from "./OwnershipGovernance";
 

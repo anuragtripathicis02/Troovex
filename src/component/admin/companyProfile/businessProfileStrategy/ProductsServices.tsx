@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
-import AttachmentIcon from "@/component/common/AttachmentIcon";
+import AttachmentIcon from "@/component/common/Icons/AttachmentIcon";
 import Dropdown from 'react-bootstrap/Dropdown';
 
 
