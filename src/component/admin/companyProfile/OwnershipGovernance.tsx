@@ -9,6 +9,7 @@ import BusinessModelMarketFocus from "./businessProfileStrategy/BusinessModelMar
 import CapacityCompetitiveness from "./businessProfileStrategy/CapacityCompetitiveness";
 import FinancialBusinessScale from "./businessProfileStrategy/FinancialBusinessScale";
 import OwnershipDetails from "./ownershipGovernance/OwnershipDetails";
+import OrganizationalStructur from "./ownershipGovernance/OrganizationalStructur";
 
 const OwnershipGovernance = () => {
   const [activeKey, setActiveKey] = useState<string | null>("0");
@@ -75,7 +76,7 @@ const OwnershipGovernance = () => {
                             <Arrowaccordion />
                         </Accordion.Header>
                         <Accordion.Body>
-                            Third
+                            <OrganizationalStructur/>
                             <div className="card-foot">
                                 <hr></hr>
                                 <div className="d-flex align-items-center justify-content-end">
