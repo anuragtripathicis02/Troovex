@@ -195,13 +195,12 @@ export default function Home() {
 
       </div>
 
-      {/* <!-----modal md----> */}
+      {/* <!-----modal sm----> */}
 
       <div className="w-100">
         <button type="button" className="btn-outline mt-2" onClick={handleFilterDefaultSM}> Modal sm </button>
         <DefaultSMModal show={showFilterDefaultSM} handleClose={handleCloseAll} />
       </div>
-
 
       {/* //floting password */}
 
@@ -257,7 +256,6 @@ export default function Home() {
         <DatePicker className="w-100" />
       </div>
 
-
       {/* timepicker simple label  */}
 
       <div className="timepicker-box mb-3 mt-4 position-relative">
@@ -274,7 +272,6 @@ export default function Home() {
 
       {/* upload file simple label  */}
 
-
       <Form.Group controlId="formFile" className="mb-3 mt-4 position-relative upload-input-box form-group">
         <Form.Label>Upload File</Form.Label>
         <Form.Control type="file" className={fileSelected ? "file-selected" : "w-100 position-relative"} onChange={(e: React.ChangeEvent<HTMLInputElement>) => { const input = e.target as HTMLInputElement; if (input.files && input.files.length > 0) { setFileSelected(true); } }} />
@@ -283,9 +280,7 @@ export default function Home() {
         </span>
       </Form.Group>
 
-
       {/* Floting upload file simple label  */}
-
 
       <Form.Group controlId="formFile" className="mb-3 mt-4 position-relative upload-input-box floating-upload-input-box form-group">
         <Form.Label>Upload File</Form.Label>
@@ -295,13 +290,11 @@ export default function Home() {
         </span>
       </Form.Group>
 
-
       {/* cuntry code with flag */}
 
       <div className="fleg-box mb-3 mt-4 position-relative">
         <OnlyFlagPhoneInput />
       </div>
-
 
       {/* floting cuntry code with flag */}
 
@@ -316,8 +309,6 @@ export default function Home() {
       <div className="flag-code-sec mb-3 mt-4 position-relative">
         <CountryName />
       </div>
-
-
 
       {/* Floting cuntry with fleag only */}
 

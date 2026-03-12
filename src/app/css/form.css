@@ -860,7 +860,7 @@ border: none;
     z-index: 2;
 }
 .radion-box:has(.form-check-input[type="radio"]:checked) {
-    border-color: #000;
+    border-color: var(--primary-500);
 }
 .radion-box:has(.form-check-input[type="radio"]:checked) label {
     color: var(--dark-12);
@@ -895,7 +895,12 @@ border: none;
     padding-top: 20px;
 }
 
-
+.radion-box:has(.form-check-input[type="radio"]) label span {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    letter-spacing: 0;
+}
 
 
 @media only screen and (max-width: 1400px) {

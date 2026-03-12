@@ -10,6 +10,10 @@ import CapacityCompetitiveness from "./businessProfileStrategy/CapacityCompetiti
 import FinancialBusinessScale from "./businessProfileStrategy/FinancialBusinessScale";
 import OwnershipDetails from "./ownershipGovernance/OwnershipDetails";
 import OrganizationalStructur from "./ownershipGovernance/OrganizationalStructur";
+import CompanySizeClassification from "./ownershipGovernance/CompanySizeClassification";
+import AuthorityLegalPowers from "./ownershipGovernance/AuthorityLegalPowers";
+import GroupCorporateRelationships from "./ownershipGovernance/GroupCorporateRelationships";
+import LocationsPhysicalPresence from "./ownershipGovernance/LocationsPhysicalPresence";
 
 const OwnershipGovernance = () => {
   const [activeKey, setActiveKey] = useState<string | null>("0");
@@ -58,7 +62,7 @@ const OwnershipGovernance = () => {
                             <Arrowaccordion />
                         </Accordion.Header>
                         <Accordion.Body>
-                            Second
+                            <CompanySizeClassification />
                             <div className="card-foot">
                                 <hr></hr>
                                 <div className="d-flex align-items-center justify-content-end">
@@ -94,7 +98,7 @@ const OwnershipGovernance = () => {
                             <Arrowaccordion />
                         </Accordion.Header>
                         <Accordion.Body>
-                            fourth
+                            <AuthorityLegalPowers />
                             <div className="card-foot">
                                 <hr></hr>
                                 <div className="d-flex align-items-center justify-content-end">
@@ -112,7 +116,7 @@ const OwnershipGovernance = () => {
                             <Arrowaccordion />
                         </Accordion.Header>
                         <Accordion.Body>
-                            Fifth
+                            <GroupCorporateRelationships />
                             <div className="card-foot">
                                 <hr></hr>
                                 <div className="d-flex align-items-center justify-content-end">
@@ -130,7 +134,7 @@ const OwnershipGovernance = () => {
                             <Arrowaccordion />
                         </Accordion.Header>
                         <Accordion.Body>
-                            Sixth
+                            <LocationsPhysicalPresence />
                             <div className="card-foot">
                                 <hr></hr>
                                 <div className="d-flex align-items-center justify-content-end">

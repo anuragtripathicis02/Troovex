@@ -92,6 +92,7 @@
     text-align: center;
     color: var(--dark-12);
     border: 1px solid var(--dark-1);
+    z-index: 1;
 }
 
 .tabs-com-box .tabs-main-box .main-title {
@@ -161,7 +162,7 @@
     border-style: dashed;
     top: 11px;
     left: 26px;
-    z-index: -1;
+    z-index: 0;
     border-radius: 14px;
 }
 

@@ -8,7 +8,6 @@ const FinancialBusinessScale = () => {
 
   return (
     <div className="row">
-
       <div className="col-xxxl-3 col-md-6 mb-md-4 mb-3">
         <div className={`radion-box ${selected === "1" ? "active" : ""}`} onClick={() => setSelected("1")}>
           <Form.Group className="form-group">
