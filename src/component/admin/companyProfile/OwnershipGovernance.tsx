@@ -139,10 +139,7 @@ const OwnershipGovernance = () => {
                             </div>
                         </Accordion.Body>
                     </Accordion.Item>
-                    
                 </Accordion>
-
-
             </div>
           
         </div>
