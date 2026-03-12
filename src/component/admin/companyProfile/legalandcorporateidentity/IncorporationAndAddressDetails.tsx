@@ -9,6 +9,7 @@ import { DatePicker, TagInput } from 'rsuite';
 import CountryName from "@/component/common/CountryName";
 import LocationMap from "@/component/common/LocationMap";
 const IncorporationAndAddressDetails = () => {
+    
     return (
         <>
         <div className="row">
@@ -21,7 +22,7 @@ const IncorporationAndAddressDetails = () => {
             </div>
             <div className='col-xxl-4 col-lg-12'>
                 <div className="flag-code-sec mb-4 position-relative floting-box">
-                    <CountryName />
+                    <CountryName label={<>Country of Incorporation {" "} <span className="text-danger">*</span></>}/>
                 </div>
             </div> 
             <div className='col-xxl-4 col-lg-12'>

@@ -307,13 +307,13 @@ export default function Home() {
       {/* cuntry with fleag only */}
 
       <div className="flag-code-sec mb-3 mt-4 position-relative">
-        <CountryName />
+        <CountryName label="Country"/>
       </div>
 
       {/* Floting cuntry with fleag only */}
 
       <div className="flag-code-sec mb-3 mt-4 position-relative floting-box">
-        <CountryName />
+        <CountryName label="Country" />
       </div>
 
       {/* multipal tags select  */}

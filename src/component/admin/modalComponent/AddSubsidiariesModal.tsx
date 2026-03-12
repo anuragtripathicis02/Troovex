@@ -60,7 +60,7 @@ const AddSubsidiariesModal = ({ show, handleClose }: any) => {
                     </div>
                     <div className='col'> 
                         <div className="flag-code-sec mb-3 position-relative floting-box">
-                            <CountryName label='County'/>
+                            <CountryName label='Country'/>
                         </div>
                     </div>
                     <div className='col'>

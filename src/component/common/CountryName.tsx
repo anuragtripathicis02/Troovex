@@ -3,8 +3,11 @@
 import React from "react";
 import { Form } from "react-bootstrap";
 import ReactFlagsSelect from "react-flags-select";
+type Props = {
+  label: React.ReactNode;
+};
 
-const CountryName = ({ label = "Contact Number" }) => {
+const CountryName = ({ label }: Props) => {
   const [selected, setSelected] = React.useState("IN");
 
   return (
