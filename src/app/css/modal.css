@@ -1,9 +1,11 @@
 .lg-modal .modal-dialog {
   max-width: 1100px;
+  padding: 15px;
 }
 
 .md-modal .modal-dialog {
   max-width: 800px;
+  padding: 15px;
 }
 
 .sm-modal .modal-dialog {
@@ -50,7 +52,7 @@ button.btn-close-btn:active:focus-visible, button.btn-close-btn:focus-visible, b
   background: var(--primary-50);
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  padding: 24px 24px;
+  padding: 16px 24px;
   border-bottom: 1px solid var(--dark-6);
 }
 
@@ -60,4 +62,18 @@ button.btn-close-btn:active:focus-visible, button.btn-close-btn:focus-visible, b
 
 @media screen and (max-width: 767px) {
   .common-modal .modal-content .modal-header {padding: 15px;}
+  .common-modal .modal-content .common-modal-body {
+    padding: 24px 16px;
+  }
+
+  .lg-modal .modal-dialog {
+    padding: 0;
+  }
+
+  .md-modal .modal-dialog {
+    padding: 0;
+  }
+
+
+
 }

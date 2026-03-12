@@ -1,0 +1,99 @@
+
+.member-list-add-card .col {
+    flex: none;
+    width: 33%;
+}
+
+.pe-60 {
+    padding-right: 60px;
+}
+
+.member-list-add-card .btn-delete-modal {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    width: auto;
+}
+
+.member-list-add-card .percent-static {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 20px;
+    color: var(--dark-7);
+}
+
+.member-list-add-card .form-floating > .form-control.pe-5 {
+    padding-right: 44px !important;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+.text-modal-bottom p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0;
+    color: var(--dark-10);
+}
+
+.text-link {
+    color: var(--blue-500);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-style: dotted;
+}
+
+
+.member-list-add-card.Legal-list-add-card .col {
+    width: 25%;
+}
+
+.member-list-add-card.Legal-list-add-card .btn-delete-modal {
+    width: auto;
+}
+
+@media only screen and (max-width: 992px) {
+
+    .member-list-add-card.Legal-list-add-card .col {
+        width: 50%;
+        flex: 50%;
+    }
+
+    .member-list-add-card.Legal-list-add-card .btn-delete-modal {
+        width: auto;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .member-list-add-card .col {
+        flex: 100%;
+        width: 100%;
+    }
+
+    .member-list-add-card .btn-delete-modal {
+        width: auto;
+    }
+
+    .member-list-add-card.Legal-list-add-card .col {
+        width: 100%;
+        flex: 100%;
+    }
+
+    .member-list-add-card.Legal-list-add-card .btn-delete-modal {
+        width: auto;
+    }
+
+
+}

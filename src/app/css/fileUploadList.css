@@ -44,3 +44,7 @@
     text-align: center;
     color: var(--dark-11) !important;
 }
+
+.list-card-box.padding-card-box {
+    padding: 8px;
+}
