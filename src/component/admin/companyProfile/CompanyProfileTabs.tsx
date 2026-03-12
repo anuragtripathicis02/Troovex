@@ -7,6 +7,7 @@ import LegalandcorPorateidentity from "./LegalandcorPorateidentity";
 import BackArrow from "@/component/common/Icons/BackArrow";
 import BusinessProfileStrategy from "./BusinessProfileStrategy";
 import OwnershipGovernance from "./OwnershipGovernance";
+import ProcurementCategoriesPurchasing from "./procurementOrganization/ProcurementCategoriesPurchasing";
 
 interface TabTitleProps {
   number: string | number;
@@ -630,7 +631,11 @@ const CompanyProfileTabs = () => {
                   </div>
                 </div>
 
-                {activeSubStep === "4.1" && <div>tabs details 4.1</div>}
+                {activeSubStep === "4.1" && 
+                  <div>
+                    <ProcurementCategoriesPurchasing />
+                  </div>
+                }
 
                 {activeSubStep === "4.2" && <div>tabs details 4.2</div>}
 
