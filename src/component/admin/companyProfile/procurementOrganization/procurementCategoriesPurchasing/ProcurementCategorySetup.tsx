@@ -8,7 +8,7 @@ const ProcurementCategorySetup = () => {
     return (
         <>
             <div className='row'>
-                <div className='col-12 mb-3'>
+                <div className='col-12 mb-2'>
                     <div className="d-flex gap-3 align-items-center mb-4">
                         <span className="fs-14 d-flex gap-2 align-items-center">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -23,7 +23,7 @@ const ProcurementCategorySetup = () => {
                         <TagInput trigger={['Enter', 'Space', 'Comma']} placeholder="Core Activities" onCreate={(value, item) => { console.log(value, item); }} className="w-100 form-group" />
                     </div>
                 </div>
-                <div className='col-12 mb-3'>
+                <div className='col-12 mb-2'>
                     <div className="d-flex gap-3 align-items-center mb-4">
                         <span className="fs-14 d-flex gap-2 align-items-center">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -38,7 +38,7 @@ const ProcurementCategorySetup = () => {
                         <TagInput trigger={['Enter', 'Space', 'Comma']} placeholder="Core Activities" onCreate={(value, item) => { console.log(value, item); }} className="w-100 form-group" />
                     </div>
                 </div>
-                <div className='col-12 mb-3'>
+                <div className='col-12 mb-2'>
                     <div className="d-flex gap-3 align-items-center mb-4">
                         <span className="fs-14 d-flex gap-2 align-items-center">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

@@ -125,3 +125,9 @@
     border: 0;
     color: var(--dark-9) !important;
 }
+
+
+.table-hover > tbody > tr:hover > * {
+    --bs-table-color-state:var(--yellow-50);
+    --bs-table-bg-state:var(--yellow-50);
+}
