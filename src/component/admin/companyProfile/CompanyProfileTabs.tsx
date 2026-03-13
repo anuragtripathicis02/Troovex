@@ -8,6 +8,8 @@ import BackArrow from "@/component/common/Icons/BackArrow";
 import BusinessProfileStrategy from "./BusinessProfileStrategy";
 import OwnershipGovernance from "./OwnershipGovernance";
 import ProcurementCategoriesPurchasing from "./procurementOrganization/ProcurementCategoriesPurchasing";
+import VendorSegmentationKraljicMatrix from "./procurementOrganization/VendorSegmentationKraljicMatrix";
+import ProcurementOrganizationRoles from "./procurementOrganization/ProcurementOrganizationRoles";
 
 interface TabTitleProps {
   number: string | number;
@@ -268,9 +270,8 @@ const CompanyProfileTabs = () => {
     onClick,
   }: SubStepTitleProps) => (
     <Nav.Link
-      className={`sub-step-link ${active ? "active" : ""} ${
-        status === "completed" ? "completed" : ""
-      }`}
+      className={`sub-step-link ${active ? "active" : ""} ${status === "completed" ? "completed" : ""
+        }`}
       onClick={onClick}
     >
       <span className="sub-step-number">{number}</span>
@@ -631,15 +632,22 @@ const CompanyProfileTabs = () => {
                   </div>
                 </div>
 
-                {activeSubStep === "4.1" && 
+                {activeSubStep === "4.1" &&
                   <div>
                     <ProcurementCategoriesPurchasing />
                   </div>
                 }
 
-                {activeSubStep === "4.2" && <div>tabs details 4.2</div>}
-
-                {activeSubStep === "4.3" && <div>tabs details 4.3</div>}
+                {activeSubStep === "4.2" &&
+                  <div>
+                    <VendorSegmentationKraljicMatrix />
+                  </div>
+                }
+                {activeSubStep === "4.3" && 
+                  <div>
+                    <ProcurementOrganizationRoles />
+                  </div>
+                }
 
                 <div className="text-end mt-4">
                   <Link
