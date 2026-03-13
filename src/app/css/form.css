@@ -880,12 +880,22 @@ border: none;
 .icon-pencil{
     background-color: var(--secondary-50);
     color: var(--secondary-500);
-
 }
+.icon-pencil:hover{
+    background-color: var(--secondary-500);
+    color: var(--bs-white);
+}
+
 .icon-delete{
     background-color: var(--red-50);
     color: var(--red-600);
 }
+
+.icon-delete:hover{
+    background-color: var(--red-500);
+    color: var(--bs-white);
+}
+
 
 .box-border {
     border: 1px solid var(--dark-4);
@@ -904,6 +914,12 @@ border: none;
 
 .radion-box .form-group label {
     cursor: pointer;
+}
+
+.footer-file-upload .form-control {
+    border: 0 !important;
+    width: auto !important;
+    padding: 0 10px;
 }
 
 @media only screen and (max-width: 1400px) {

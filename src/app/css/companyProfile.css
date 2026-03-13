@@ -257,11 +257,9 @@
     font-weight: 600;
 }
 
-.tabs-com-box .tabs-main-box .nav-item a:has(.completed),
-.sub-steps .completed,
-.tabs-com-box .tabs-main-box .nav-item a.active {
+/* .tabs-com-box .tabs-main-box .nav-item a:has(.completed), .sub-steps .completed, .tabs-com-box .tabs-main-box .nav-item a.active {
     pointer-events: none;
-}
+} */
 
 .step-indicator .total-step {
     font-weight: 400;

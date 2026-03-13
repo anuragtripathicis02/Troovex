@@ -45,7 +45,7 @@ const ProductsServices = () => {
                     </div>
                 </div>
                 <div className="table-default min-w-1000">
-                    <Table className="text-center align-middle mb-2 p-0 hover" responsive>
+                    <Table className="text-center align-middle mb-2 p-0 " responsive hover>
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -271,7 +271,7 @@ const ProductsServices = () => {
                     </div>
                 </div>
                 <div className="table-default min-w-1000">
-                    <Table className="text-center align-middle mb-2 p-0 hover" responsive>
+                    <Table className="text-center align-middle mb-2 p-0 hover" responsive hover>
                         <thead>
                             <tr>
                                 <th>#</th>

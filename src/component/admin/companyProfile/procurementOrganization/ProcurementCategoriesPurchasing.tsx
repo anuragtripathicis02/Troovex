@@ -4,6 +4,7 @@ import Accordion from "react-bootstrap/Accordion";
 import Arrowaccordion from "@/component/common/Icons/Arrowaccordion";
 import ProcurementCategorySetup from "./procurementCategoriesPurchasing/ProcurementCategorySetup";
 import ProcurementRulesandControls from "./procurementCategoriesPurchasing/ProcurementRulesandControls";
+import MethodsofAwardingContractsTenders from "./procurementCategoriesPurchasing/MethodsofAwardingContractsTenders";
 
 const ProcurementCategoriesPurchasing = () => {
   const [activeKey, setActiveKey] = useState<string | null>("0");
@@ -33,7 +34,7 @@ const ProcurementCategoriesPurchasing = () => {
             </Accordion.Header>
             <Accordion.Body>
               <div className="accordion-detail-box">
-                <ProcurementCategorySetup/>
+                <ProcurementCategorySetup />
                 <div className="card-foot">
                   <hr></hr>
                   <div className="d-flex align-items-center justify-content-end">
@@ -52,7 +53,7 @@ const ProcurementCategoriesPurchasing = () => {
               <Arrowaccordion />
             </Accordion.Header>
             <Accordion.Body>
-              <ProcurementRulesandControls/>
+              <ProcurementRulesandControls />
               <div className="card-foot">
                 <hr></hr>
                 <div className="d-flex align-items-center justify-content-end">
@@ -70,7 +71,8 @@ const ProcurementCategoriesPurchasing = () => {
               <Arrowaccordion />
             </Accordion.Header>
             <Accordion.Body>
-              2                            <div className="card-foot">
+              <MethodsofAwardingContractsTenders/>
+              <div className="card-foot">
                 <hr></hr>
                 <div className="d-flex align-items-center justify-content-end">
                   <button className="btn-outline fill-btn rs-link" onClick={() => handleSave("2", "3")}>Save</button>
