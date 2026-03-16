@@ -1,4 +1,5 @@
-.form-control, .form-select{
+.form-control,
+.form-select {
     box-shadow: none !important;
     padding: 17px 12px;
     border-radius: 10px;
@@ -13,36 +14,39 @@
 }
 
 
- 
-.form-control::placeholder, .calendar-box input::placeholder {
+
+.form-control::placeholder,
+.calendar-box input::placeholder {
     color: var(--dark-7);
     font-family: var(--font-primary);
 }
- 
-.form-floating > .form-select {
+
+.form-floating>.form-select {
     padding: 17px 12px;
 }
- 
+
 .form-select {
     background: var(--dark-1) url(../images/downArrow.svg);
     background-repeat: no-repeat;
     background-position: right 15px center;
-    transition: none; 
+    transition: none;
 }
 
-.form-control:focus, .form-select:focus{
+.form-control:focus,
+.form-select:focus {
     background-color: var(--dark-1);
     border-color: var(--primary-500) !important;
 }
- 
-.form-floating > .form-control:focus ~ label,
-.form-floating > .form-select:focus ~ label,
+
+.form-floating>.form-control:focus~label,
+.form-floating>.form-select:focus~label,
 .form-group:has(.form-control:focus) label,
 .form-group:has(.form-select:focus) label {
     color: var(--primary-500);
 }
- 
-.form-floating > label, label{
+
+.form-floating>label,
+label {
     color: var(--dark-7);
     opacity: 1;
     font-size: 16px;
@@ -53,12 +57,12 @@
     letter-spacing: 0;
     font-family: var(--font-primary);
 }
- 
 
-.form-floating > .form-control-plaintext ~ label,
-.form-floating > .form-control:focus ~ label,
-.form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > .form-select ~ label {
+
+.form-floating>.form-control-plaintext~label,
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-select~label {
     height: auto;
     background: var(--dark-1);
     padding: 2px;
@@ -66,17 +70,18 @@
     line-height: 100%;
     font-family: var(--font-primary);
 }
- 
-.form-floating > textarea:focus ~ label:after,
-.form-floating > textarea:not(:placeholder-shown) ~ label:after{
+
+.form-floating>textarea:focus~label:after,
+.form-floating>textarea:not(:placeholder-shown)~label:after {
     opacity: 0;
 }
- 
-.form-floating > .form-control,
-.form-floating > .form-control-plaintext {
+
+.form-floating>.form-control,
+.form-floating>.form-control-plaintext {
     padding: 17px 12px !important;
     font-family: var(--font-primary);
 }
+
 .btn-outline {
     border: 1px solid var(--primary-500);
     padding: 12px 24px;
@@ -104,24 +109,28 @@
     background-color: var(--primary-500);
     color: var(--dark-1);
 }
+
 .btn-outline.fill-btn {
     background: var(--primary-500);
     color: var(--dark-1);
 }
+
 .btn-outline.fill-btn:hover {
     border-color: var(--primary-500);
     background-color: transparent;
     color: var(--primary-500);
 }
+
 .btn-outline.grey-btn {
     background: var(--dark-3);
     border-color: var(--dark-3);
     color: var(--dark-8);
 }
+
 .btn-outline.grey-btn:hover {
     background: var(--dark-1);
 }
- 
+
 
 .btn-outline.gray-btn {
     background: var(--dark-3);
@@ -138,6 +147,7 @@
     background: var(--primary-50);
     border-color: var(--primary-50);
 }
+
 .fill-light-purple:hover {
     color: var(--dark-1);
 }
@@ -147,9 +157,9 @@
     height: 24px;
 }
 
- 
+
 /**********checkbox radio swich btn design***************/
- 
+
 .form-check-input[type="checkbox"] {
     border: 1px solid var(--dark-8);
     width: 24px;
@@ -158,31 +168,31 @@
     box-shadow: none;
     cursor: pointer;
 }
- 
+
 .form-check-input:checked[type="checkbox"] {
     background: var(--primary-500) url(../images/check-box.svg);
     border: 2px solid var(--dark-1) !important;
-    box-shadow: 0 0 0 1px var(--primary-500);    
+    box-shadow: 0 0 0 1px var(--primary-500);
     background-repeat: no-repeat;
     background-position: center;
 }
- 
+
 .form-check-input:checked[type="checkbox"]:disabled {
     background: var(--dark-8) url(../images/check-box.svg);
     border: 2px solid var(--dark-1) !important;
     box-shadow: 0 0 0 1px var(--dark-8);
-    opacity: 1;  
+    opacity: 1;
     background-repeat: no-repeat;
     background-position: center;
 }
- 
+
 .form-switch label {
     padding-left: 12px;
     line-height: 30px;
 }
 
 /*************radio*************/
- 
+
 .form-check-input[type="radio"] {
     border: 1px solid var(--dark-8);
     width: 24px;
@@ -191,60 +201,60 @@
     box-shadow: none;
     cursor: pointer;
 }
- 
+
 .form-check-input:checked[type="radio"] {
     border: 2px solid var(--dark-1) !important;
     box-shadow: 0 0 0 1px var(--primary-500);
     background: var(--primary-500);
 }
- 
+
 .form-check-input:checked[type="radio"]:disabled {
     border: 2px solid var(--dark-1) !important;
     box-shadow: 0 0 0 1px var(--dark-8);
     background: var(--dark-8);
     opacity: 1;
 }
- 
+
 /*****switch*********/
- 
+
 .form-switch {
     padding-left: 44px;
     margin: 0;
     min-height: 30px;
     cursor: pointer;
 }
- 
+
 .form-switch .form-check-input[type="checkbox"] {
     width: 44px;
     border-radius: 100px;
     border: none;
     background: var(--dark-6) url(../images/switch-btn.svg);
     box-shadow: none;
-    background-size: 16px;  
+    background-size: 16px;
     background-repeat: no-repeat;
     background-position: 14%;
 }
- 
+
 .form-switch .form-check-input:checked[type="checkbox"] {
     background: var(--primary-500) url(../images/switch-btn.svg);
-    box-shadow: none;  
-    background-repeat: no-repeat;  
-     border: none !important;
+    box-shadow: none;
+    background-repeat: no-repeat;
+    border: none !important;
     background-position: 87%;
     background-size: 16px;
 }
- 
- 
+
+
 /*************password css*********/
- 
- 
+
+
 .password-eye {
     cursor: pointer;
     position: absolute;
     right: 16px;
     top: 15px;
 }
- 
+
 .simple-password-wrapper .password-eye {
     cursor: pointer;
     position: absolute;
@@ -252,7 +262,7 @@
     bottom: 17px;
     top: auto;
 }
- 
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -264,30 +274,30 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     -webkit-text-fill-color: var(--dark-13) !important;
     -webkit-box-shadow: 0 0 0px 1000px var(--dark-1) inset !important;
-  transition: background-color 9999s ease-in-out 0s;
+    transition: background-color 9999s ease-in-out 0s;
 }
- 
+
 input:-internal-autofill-selected {
-  appearance: menulist-button;
-  background-image: none !important;
+    appearance: menulist-button;
+    background-image: none !important;
     background-color: var(--dark-1) !important;
-  color: fieldtext !important;
+    color: fieldtext !important;
 }
- 
+
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px var(--dark-1) inset !important;
 }
- 
+
 .floating-password-wrapper:has(input:focus) .password-eye svg path {
     fill: var(--primary-500);
 }
- 
-.simple-password-wrapper .form-control:focus + .password-eye svg path{
- fill: var(--primary-500);
+
+.simple-password-wrapper .form-control:focus+.password-eye svg path {
+    fill: var(--primary-500);
 }
- 
+
 /**************calendar css whiout floting whiout floting**************/
- 
+
 .calendar-box input {
     letter-spacing: 0;
     color: var(--dark-12);
@@ -302,24 +312,25 @@ input:-webkit-autofill {
     height: auto !important;
     width: 100% !important;
 }
- 
 
 
- 
- 
+
+
+
 .rs-input-group:focus-within {
     box-shadow: none !important;
     outline: none !important;
 }
- 
-.calendar-box input:focus, .calendar-box input:focus-within{
+
+.calendar-box input:focus,
+.calendar-box input:focus-within {
     background-color: var(--dark-1);
     border-color: var(--primary-500) !important;
     box-shadow: none !important;
     outline: none !important;
 }
- 
-.calendar-box  .rs-input-group-addon {
+
+.calendar-box .rs-input-group-addon {
     position: absolute;
     right: 0;
     background: url(../images/calendar.svg) !important;
@@ -328,27 +339,27 @@ input:-webkit-autofill {
     padding: 0;
     background-repeat: no-repeat !important;
 }
- 
- 
-.calendar-box  input:focus + .rs-input-group-addon {
+
+
+.calendar-box input:focus+.rs-input-group-addon {
     background: url(../images/calendarFocus.svg) !important;
     background-repeat: no-repeat !important;
 }
- 
- 
+
+
 .calendar-box .rs-picker-input-group {
     border: none;
 }
- 
+
 .calendar-box .rs-input-group-addon svg {
     display: none;
 }
- 
- 
+
+
 .calendar-box:has(.rs-picker-input-group[data-focus="true"]) label {
-    color:  var(--primary-500);
+    color: var(--primary-500);
 }
- 
+
 .calendar-box.floating-calendar-box label {
     background: var(--dark-1);
     height: auto;
@@ -359,11 +370,11 @@ input:-webkit-autofill {
     transform: scale(.85) translateY(-11px) translateX(-.15rem);
     margin: 0;
 }
- 
- 
- 
+
+
+
 /**************Time picker css whiout floting whiout floting**************/
- 
+
 .timepicker-box input {
     letter-spacing: 0;
     color: var(--dark-12);
@@ -381,19 +392,20 @@ input:-webkit-autofill {
 
 
 
- 
+
 .rs-input-group:focus-within {
     box-shadow: none !important;
     outline: none !important;
 }
- 
-.timepicker-box input:focus, .timepicker-box input:focus-within{
+
+.timepicker-box input:focus,
+.timepicker-box input:focus-within {
     background-color: var(--dark-1);
     border-color: var(--primary-500) !important;
     box-shadow: none !important;
     outline: none !important;
 }
- 
+
 .timepicker-box .rs-input-group-addon {
     position: absolute;
     right: 0;
@@ -403,26 +415,26 @@ input:-webkit-autofill {
     padding: 0;
     background-repeat: no-repeat !important;
 }
- 
-.timepicker-box input:focus + .rs-input-group-addon {
+
+.timepicker-box input:focus+.rs-input-group-addon {
     background: url(../images/timePickerFocus.svg) !important;
     background-repeat: no-repeat !important;
 }
- 
- 
+
+
 .timepicker-box .rs-picker-input-group {
     border: none;
 }
- 
+
 .timepicker-box .rs-input-group-addon svg {
     display: none;
 }
- 
- 
+
+
 .timepicker-box:has(.rs-picker-input-group[data-focus="true"]) label {
-    color:  var(--primary-500);
+    color: var(--primary-500);
 }
- 
+
 .timepicker-box.floating-timepicker-box label {
     background: var(--dark-1);
     height: auto;
@@ -433,43 +445,43 @@ input:-webkit-autofill {
     transform: scale(.85) translateY(-11px) translateX(-.15rem);
     margin: 0;
 }
- 
- 
+
+
 /**************file upload***********/
- 
+
 .upload-input-box input[type="file"] {
-  cursor: pointer;
+    cursor: pointer;
 }
- 
+
 .upload-input-box .link-icon {
-  position: absolute;
-  right: 10px;
-  bottom: 17px;
-  pointer-events: none;
+    position: absolute;
+    right: 10px;
+    bottom: 17px;
+    pointer-events: none;
 }
- 
+
 .upload-input-box {
-  position: relative;
+    position: relative;
 }
- 
+
 .upload-input-box input[type="file"]::-webkit-file-upload-button {
-  visibility: hidden;
-  width: 0;
-  padding: 0;
-  margin: 0;
+    visibility: hidden;
+    width: 0;
+    padding: 0;
+    margin: 0;
 }
- 
+
 .upload-input-box input[type="file"]::file-selector-button {
-  visibility: hidden;
-  width: 0;
-  padding: 0;
-  margin: 0;
+    visibility: hidden;
+    width: 0;
+    padding: 0;
+    margin: 0;
 }
- 
-.upload-input-box input[type="file"]:focus + .link-icon svg path {
+
+.upload-input-box input[type="file"]:focus+.link-icon svg path {
     fill: var(--primary-500);
 }
- 
+
 .upload-input-box.floating-upload-input-box label {
     background: var(--dark-1);
     height: auto;
@@ -480,15 +492,15 @@ input:-webkit-autofill {
     transform: scale(.85) translateY(-11px) translateX(-.15rem);
     margin: 0;
 }
- 
-.upload-input-box  .form-control[type="file"] {
+
+.upload-input-box .form-control[type="file"] {
     color: var(--dark-7);
 }
- 
-.upload-input-box  .form-control[type="file"].file-selected {
+
+.upload-input-box .form-control[type="file"].file-selected {
     color: var(--dark-12);
 }
- 
+
 
 /**********cuntry code *************/
 
@@ -534,13 +546,13 @@ input:-webkit-autofill {
 .flag-phone-sec:has(input:focus) label {
     color: var(--primary-500) !important;
 }
- 
+
 .flag-phone-sec .react-international-phone-country-selector {
     position: absolute;
     left: 0;
     top: 0;
 }
- 
+
 .flag-phone-sec button {
     padding: 17px 12px;
     margin: 0;
@@ -549,9 +561,9 @@ input:-webkit-autofill {
     min-height: auto;
     background: transparent !important;
 }
- 
+
 .flag-phone-sec button .react-international-phone-country-selector-button__dropdown-arrow {
-    background: transparent url(../images/downArrow.svg);    
+    background: transparent url(../images/downArrow.svg);
     border: none;
     width: 17px;
     height: 10px;
@@ -562,9 +574,9 @@ input:-webkit-autofill {
     margin: 0 7px;
     background-position: center;
 }
- 
+
 .flag-phone-sec ul {
-    border: 1px solid var(--dark-5) ;    
+    border: 1px solid var(--dark-5);
     border-radius: 0;
     outline: none;
     padding: 10px;
@@ -572,11 +584,11 @@ input:-webkit-autofill {
     margin-top: 18px;
     z-index: 3;
 }
- 
+
 .flag-phone-sec ul li {
     padding: 6px 0;
 }
- 
+
 .flag-name-sec button {
     letter-spacing: 0;
     color: var(--dark-12);
@@ -596,12 +608,12 @@ input:-webkit-autofill {
     background-position: right 15px center;
     transition: none;
 }
- 
+
 
 .flag-name-sec button:after {
     display: none !important;
 }
- 
+
 .flag-name-sec ul {
     box-shadow: none !important;
     outline: none;
@@ -609,16 +621,16 @@ input:-webkit-autofill {
     padding: 10px;
     border-radius: 0px;
 }
- 
+
 .flag-name-sec ul div {
     background: var(--dark-1);
     top: -11px;
 }
- 
+
 .flag-name-sec ul li {
     padding: 4px 0;
 }
- 
+
 .flag-name-sec ul div input[type="text"] {
     width: 100%;
     margin: 0;
@@ -632,16 +644,16 @@ input:-webkit-autofill {
     border: 1px solid var(--dark-5) !important;
     line-height: 140% !important;
 }
- 
- 
+
+
 .flag-name-sec button span[data-testid="rfs-selected-flag"] {
     font-size: 25px;
 }
- 
+
 .flag-name-sec button span {
     padding: 0 10px 0 0;
 }
- 
+
 .flag-name-sec button:focus {
     background-color: var(--dark-1);
     border-color: var(--primary-500) !important;
@@ -651,14 +663,16 @@ input:-webkit-autofill {
     color: var(--primary-500) !important;
 }
 
-.label-gray > .form-control-plaintext ~ label, 
-.label-gray > .form-control:focus ~ label, 
-.label-gray > .form-control:not(:placeholder-shown) ~ label, 
-.label-gray > .form-select ~ label{
+.label-gray>.form-control-plaintext~label,
+.label-gray>.form-control:focus~label,
+.label-gray>.form-control:not(:placeholder-shown)~label,
+.label-gray>.form-select~label {
     background: linear-gradient(to top, var(--dark-1), var(--dark-3));
 }
 
-.floting-box.label-gray label{ background: linear-gradient(to top, var(--dark-1), var(--dark-3));}
+.floting-box.label-gray label {
+    background: linear-gradient(to top, var(--dark-1), var(--dark-3));
+}
 
 .floting-box label {
     background: var(--dark-1);
@@ -669,9 +683,10 @@ input:-webkit-autofill {
     line-height: 100%;
     position: absolute;
     transform: scale(.85) translateY(-11px) translateX(-.15rem);
+    left: 0;
 }
 
-.flag-code-sec  .ReactFlagsSelect-module_flagsSelect__2pfa2 {
+.flag-code-sec .ReactFlagsSelect-module_flagsSelect__2pfa2 {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
 }
@@ -689,8 +704,8 @@ input:-webkit-autofill {
     outline: none !important;
 }
 
-.multipal-select-sec .rs-picker  .rs-picker-tag-list {
-    padding: 16px !important;   
+.multipal-select-sec .rs-picker .rs-picker-tag-list {
+    padding: 16px !important;
     margin: 0;
 }
 
@@ -728,7 +743,7 @@ input:-webkit-autofill {
     box-shadow: none !important;
 }
 
-.multipal-select-sec .rs-picker[data-picker="tag"] .rs-picker-search-input > input {
+.multipal-select-sec .rs-picker[data-picker="tag"] .rs-picker-search-input>input {
     outline: none;
     border: none;
     padding: 0 !important;
@@ -741,13 +756,13 @@ input:-webkit-autofill {
 
 
 
-.form-floating.floating-grey-color > .form-control-plaintext ~ label,
-.form-floating.floating-grey-color > .form-control:focus ~ label,
-.form-floating.floating-grey-color > .form-control:not(:placeholder-shown) ~ label,
-.form-floating.floating-grey-color > .form-select ~ label, 
+.form-floating.floating-grey-color>.form-control-plaintext~label,
+.form-floating.floating-grey-color>.form-control:focus~label,
+.form-floating.floating-grey-color>.form-control:not(:placeholder-shown)~label,
+.form-floating.floating-grey-color>.form-select~label,
 .calendar-box.floating-calendar-box.floating-grey-color label,
 .timepicker-box.floating-timepicker-box.floating-grey-color label,
-.upload-input-box.floating-upload-input-box.floating-grey-color label, 
+.upload-input-box.floating-upload-input-box.floating-grey-color label,
 .floting-box.floating-grey-color label {
     background: linear-gradient(to bottom, var(--dark-3) 50%, var(--dark-1) 50%);
     border: none;
@@ -784,24 +799,24 @@ input:-webkit-autofill {
     transform: scale(.85)translateY(-11px)translateX(.15rem);
 }
 
-.floating-grey-color.filled-box.form-floating label{
-background: linear-gradient(to bottom, var(--dark-3) 50%, var(--dark-1) 50%);
-box-shadow: none;
-border: none;
+.floating-grey-color.filled-box.form-floating label {
+    background: linear-gradient(to bottom, var(--dark-3) 50%, var(--dark-1) 50%);
+    box-shadow: none;
+    border: none;
 }
 
-.floating-white-color.filled-box.form-floating label{
+.floating-white-color.filled-box.form-floating label {
     background-color: var(--dark-1);
 }
 
 
-.form-floating.show-placeholder-text > .form-control::placeholder {
-  opacity: 1;
-  color: var(--dark-12);
+.form-floating.show-placeholder-text>.form-control::placeholder {
+    opacity: 1;
+    color: var(--dark-12);
 }
 
-.form-floating.show-placeholder-text > .form-control:focus::placeholder {
-  opacity: 1;
+.form-floating.show-placeholder-text>.form-control:focus::placeholder {
+    opacity: 1;
 }
 
 .search-area .icon {
@@ -817,16 +832,18 @@ border: none;
     height: 50px;
 }
 
-.btn-gray{
+.btn-gray {
     background-color: var(--dark-3);
     border-color: var(--dark-3);
     color: var(--dark-8);
 }
-.btn-light-blue{
+
+.btn-light-blue {
     background-color: var(--primary-50);
     border-color: var(--primary-50);
     color: var(--primary-500);
 }
+
 /******************/
 
 .text-btn {
@@ -859,9 +876,11 @@ border: none;
     top: 11px;
     z-index: 2;
 }
+
 .radion-box:has(.form-check-input[type="radio"]:checked) {
     border-color: var(--primary-500);
 }
+
 .radion-box:has(.form-check-input[type="radio"]:checked) label {
     color: var(--dark-12);
 }
@@ -877,21 +896,22 @@ border: none;
     justify-content: center;
 }
 
-.icon-pencil{
+.icon-pencil {
     background-color: var(--secondary-50);
     color: var(--secondary-500);
 }
-.icon-pencil:hover{
+
+.icon-pencil:hover {
     background-color: var(--secondary-500);
     color: var(--bs-white);
 }
 
-.icon-delete{
+.icon-delete {
     background-color: var(--red-50);
     color: var(--red-600);
 }
 
-.icon-delete:hover{
+.icon-delete:hover {
     background-color: var(--red-500);
     color: var(--bs-white);
 }
@@ -922,39 +942,48 @@ border: none;
     padding: 0 10px;
 }
 
+
+.blue-text-file label {
+    color: var(--primary-500);
+}
+
+
+
 @media only screen and (max-width: 1400px) {
 
-.form-control, .form-select{
-    font-size: 14px;
-}
+    .form-control,
+    .form-select {
+        font-size: 14px;
+    }
 
-.form-floating > label, label{
-    font-size: 14px;
-}
+    .form-floating>label,
+    label {
+        font-size: 14px;
+    }
 
-.btn-outline {
-    font-size: 14px;
-}
+    .btn-outline {
+        font-size: 14px;
+    }
 
-.calendar-box input { 
-    font-size: 14px;
-}
+    .calendar-box input {
+        font-size: 14px;
+    }
 
-.timepicker-box input {
-    font-size : 14px;
-}
+    .timepicker-box input {
+        font-size: 14px;
+    }
 
-.flag-phone-sec .react-international-phone-input-container .react-international-phone-input {
-    font-size: 14px;
-}
+    .flag-phone-sec .react-international-phone-input-container .react-international-phone-input {
+        font-size: 14px;
+    }
 
-.flag-name-sec button {
-    font-size : 14px !important
-}
+    .flag-name-sec button {
+        font-size: 14px !important
+    }
 
-.multipal-select-sec .rs-picker .rs-btn {
-    font-size: 14px;
-}
+    .multipal-select-sec .rs-picker .rs-btn {
+        font-size: 14px;
+    }
 
 }
 
@@ -966,4 +995,3 @@ border: none;
         font-size: 14px;
     }
 }
-

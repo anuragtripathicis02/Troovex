@@ -10,6 +10,7 @@ import OwnershipGovernance from "./OwnershipGovernance";
 import ProcurementCategoriesPurchasing from "./procurementOrganization/ProcurementCategoriesPurchasing";
 import VendorSegmentationKraljicMatrix from "./procurementOrganization/VendorSegmentationKraljicMatrix";
 import ProcurementOrganizationRoles from "./procurementOrganization/ProcurementOrganizationRoles";
+import FinancialAccountingInformation from "./FinancialAccountingInformation";
 
 interface TabTitleProps {
   number: string | number;
@@ -643,7 +644,7 @@ const CompanyProfileTabs = () => {
                     <VendorSegmentationKraljicMatrix />
                   </div>
                 }
-                {activeSubStep === "4.3" && 
+                {activeSubStep === "4.3" &&
                   <div>
                     <ProcurementOrganizationRoles />
                   </div>
@@ -676,7 +677,7 @@ const CompanyProfileTabs = () => {
                     </div>
                   </div>
                 </div>
-                tabs details 5
+                <FinancialAccountingInformation />
                 <div className="text-end mt-4">
                   <Link
                     className="btn-outline fill-btn"
