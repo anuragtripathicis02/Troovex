@@ -1,8 +1,167 @@
-import React from 'react'
+"use client";
+import { useState } from "react";
+import Accordion from "react-bootstrap/Accordion";
+import Arrowaccordion from "@/component/common/Icons/Arrowaccordion";
+import FiscalAccountingDetails from "./financialAccountingInformation/FiscalAccountingDetails";
+import BankPaymentDetails from "./financialAccountingInformation/BankPaymentDetails";
+import InternationalPaymentDetails from "./financialAccountingInformation/InternationalPaymentDetails";
+import PaymentTermsCommercialConditions from "./financialAccountingInformation/PaymentTermsCommercialConditions";
+import FinancialStrengthRiskIndicators from "./financialAccountingInformation/FinancialStrengthRiskIndicators";
+import CapitalFinancialSize from "./financialAccountingInformation/CapitalFinancialSize";
 
 const FinancialAccountingInformation = () => {
+  const [activeKey, setActiveKey] = useState<string | null>("0");
+  const [completed, setCompleted] = useState<string[]>([]);
+  const handleSave = (current: string, next: string) => {
+    if (!completed.includes(current)) {
+      setCompleted((prev) => [...prev, current]);
+    }
+    setActiveKey(next);
+  };
   return (
-    <div>FinancialAccountingInformation</div>
+    <div className='card-wrapper'>
+      <div className="card-head">
+        <h4 className='mb-0'>Financial & Accounting Information</h4>
+        <p>Required for supplier payments, risk control, and compliance.</p>
+      </div>
+
+      <div className='accordion-sec sec-company-main'>
+        <Accordion activeKey={activeKey} onSelect={(k) => { if (typeof k === "string" || k === null) { setActiveKey(k); } }}>
+          <Accordion.Item eventKey="0" className={completed.includes("0") ? "completed" : ""}>
+            <Accordion.Header className="position-relative">
+              <div className="me-auto d-flex align-items-center gap-2">
+                <span className={`radio ${completed.includes("0") ? "completed" : ""}`}></span>
+                <span>Fiscal & Accounting Details</span>
+              </div>
+              <Arrowaccordion />
+            </Accordion.Header>
+            <Accordion.Body>
+              <div className="accordion-detail-box">
+                <FiscalAccountingDetails />
+                <div className="card-foot">
+                  <hr></hr>
+                  <div className="d-flex align-items-center justify-content-end">
+                    <button className="btn-outline fill-btn rs-link" onClick={() => handleSave("0", "1")} >Save</button>
+                  </div>
+                </div>
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1" className={completed.includes("1") ? "completed" : ""}>
+            <Accordion.Header className="position-relative">
+              <div className="me-auto d-flex align-items-center gap-2">
+                <span className={`radio ${completed.includes("1") ? "completed" : ""}`}></span>
+                <span>Bank & Payment Details</span>
+              </div>
+              <Arrowaccordion />
+            </Accordion.Header>
+            <Accordion.Body>
+              <BankPaymentDetails />
+              <div className="card-foot">
+                <hr></hr>
+                <div className="d-flex align-items-center justify-content-end">
+                  <button className="btn-outline fill-btn rs-link" onClick={() => handleSave("1", "2")}>Save</button>
+                </div>
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="2" className={completed.includes("2") ? "completed" : ""}>
+            <Accordion.Header className="position-relative">
+              <div className="me-auto d-flex align-items-center gap-2">
+                <span className={`radio ${completed.includes("2") ? "completed" : ""}`}></span>
+                <span>International Payment Details</span>
+              </div>
+              <Arrowaccordion />
+            </Accordion.Header>
+            <Accordion.Body>
+              <InternationalPaymentDetails />
+              <div className="card-foot">
+                <hr></hr>
+                <div className="d-flex align-items-center justify-content-end">
+                  <button className="btn-outline fill-btn rs-link" onClick={() => handleSave("2", "3")}>Save</button>
+                </div>
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="3" className={completed.includes("3") ? "completed" : ""}>
+            <Accordion.Header className="position-relative">
+              <div className="me-auto d-flex align-items-center gap-2">
+                <span className={`radio ${completed.includes("3") ? "completed" : ""}`}></span>
+                <span>Payment Terms & Commercial Conditions</span>
+              </div>
+              <Arrowaccordion />
+            </Accordion.Header>
+            <Accordion.Body>
+              <PaymentTermsCommercialConditions />
+              <div className="card-foot">
+                <hr></hr>
+                <div className="d-flex align-items-center justify-content-end">
+                  <button className="btn-outline fill-btn rs-link" onClick={() => handleSave("3", "4")}>Save</button>
+                </div>
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="4" className={completed.includes("4") ? "completed" : ""}>
+            <Accordion.Header className="position-relative">
+              <div className="me-auto d-flex align-items-center gap-2">
+                <span className={`radio ${completed.includes("4") ? "completed" : ""}`}></span>
+                <span>Financial Strength & Risk Indicators</span>
+              </div>
+              <Arrowaccordion />
+            </Accordion.Header>
+            <Accordion.Body>
+              <FinancialStrengthRiskIndicators />
+              <div className="card-foot">
+                <hr></hr>
+                <div className="d-flex align-items-center justify-content-end">
+                  <button className="btn-outline fill-btn rs-link" onClick={() => handleSave("4", "5")}>Save</button>
+                </div>
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="5" className={completed.includes("5") ? "completed" : ""}>
+            <Accordion.Header className="position-relative">
+              <div className="me-auto d-flex align-items-center gap-2">
+                <span className={`radio ${completed.includes("5") ? "completed" : ""}`}></span>
+                <span>Capital & Financial Size</span>
+              </div>
+              <Arrowaccordion />
+            </Accordion.Header>
+            <Accordion.Body>
+              <CapitalFinancialSize />
+              <div className="card-foot">
+                <hr></hr>
+                <div className="d-flex align-items-center justify-content-end">
+                  <button className="btn-outline fill-btn rs-link" onClick={() => handleSave("5", "6")}>Save</button>
+                </div>
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="6" className={completed.includes("6") ? "completed" : ""}>
+            <Accordion.Header className="position-relative">
+              <div className="me-auto d-flex align-items-center gap-2">
+                <span className={`radio ${completed.includes("6") ? "completed" : ""}`}></span>
+                <span>Financial Documents & Attachments</span>
+              </div>
+              <Arrowaccordion />
+            </Accordion.Header>
+            <Accordion.Body>
+              Seventh
+              <div className="card-foot">
+                <hr></hr>
+                <div className="d-flex align-items-center justify-content-end">
+                  <button className="btn-outline fill-btn rs-link" onClick={() => handleSave("6", "")}>Save</button>
+                </div>
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
+
+        </Accordion>
+
+
+      </div>
+
+    </div>
   )
 }
 
