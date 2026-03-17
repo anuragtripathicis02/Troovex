@@ -4,10 +4,8 @@ import FileUploadItem from '@/component/common/FileUploadItem'
 
 const FinancialDocumentsAttachments = () => {
     return (
-        <div>
-            <div className="p-3">
-                <h5>Financial Documents & Attachments</h5>
-
+        <div className='pt-2 pb-2'>
+            <div className="upload-file-sec">
                 <FileUploadItem title="Balance Sheet" required />
                 <FileUploadItem title="Income Statement" />
                 <FileUploadItem title="Cash Flow Statement" />

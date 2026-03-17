@@ -70,14 +70,14 @@
     padding: 7px;
 }
 
-.progress-bar {
+.upload-card .progress-bar {
     height: 6px;
     background: var(--dark-4);
     border-radius: 6px;
     margin: 10px 0;
 }
 
-.progress {
+.upload-card .progress {
     height: 6px;
     background: var(--green-500);
     border-radius: 6px;
