@@ -8,6 +8,7 @@ import InternationalPaymentDetails from "./financialAccountingInformation/Intern
 import PaymentTermsCommercialConditions from "./financialAccountingInformation/PaymentTermsCommercialConditions";
 import FinancialStrengthRiskIndicators from "./financialAccountingInformation/FinancialStrengthRiskIndicators";
 import CapitalFinancialSize from "./financialAccountingInformation/CapitalFinancialSize";
+import FinancialDocumentsAttachments from "./financialAccountingInformation/FinancialDocumentsAttachments";
 
 const FinancialAccountingInformation = () => {
   const [activeKey, setActiveKey] = useState<string | null>("0");
@@ -146,7 +147,7 @@ const FinancialAccountingInformation = () => {
               <Arrowaccordion />
             </Accordion.Header>
             <Accordion.Body>
-              Seventh
+              <FinancialDocumentsAttachments />
               <div className="card-foot">
                 <hr></hr>
                 <div className="d-flex align-items-center justify-content-end">
