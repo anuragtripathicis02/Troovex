@@ -11,6 +11,7 @@ import ProcurementCategoriesPurchasing from "./procurementOrganization/Procureme
 import VendorSegmentationKraljicMatrix from "./procurementOrganization/VendorSegmentationKraljicMatrix";
 import ProcurementOrganizationRoles from "./procurementOrganization/ProcurementOrganizationRoles";
 import FinancialAccountingInformation from "./FinancialAccountingInformation";
+import HumanResourcesCapabilities from "./prequalificationcapabilities/HumanResourcesCapabilities";
 
 interface TabTitleProps {
   number: string | number;
@@ -706,7 +707,11 @@ const CompanyProfileTabs = () => {
                   </div>
                 </div>
 
-                {activeSubStep6 === "6.1" && <div>tabs details 6.1</div>}
+                {activeSubStep6 === "6.1" && 
+                  <div>
+                    <HumanResourcesCapabilities />
+                  </div>
+                  }
 
                 {activeSubStep6 === "6.2" && <div>tabs details 6.2</div>}
 

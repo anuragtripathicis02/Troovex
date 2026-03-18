@@ -13,8 +13,6 @@
     font-family: var(--font-primary);
 }
 
-
-
 .form-control::placeholder,
 .calendar-box input::placeholder {
     color: var(--dark-7);

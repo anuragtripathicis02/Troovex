@@ -166,7 +166,7 @@
 .menu-wrapper .menu {
     width: 36px;
     height: 36px;
-    background: #F6F6F6;
+    background: var(--dark-3);
     border-radius: 10px;
 }
 
