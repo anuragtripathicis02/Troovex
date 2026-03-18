@@ -946,6 +946,30 @@ input:-webkit-autofill {
 }
 
 
+/***********radio checkbox*******/
+
+.checkbox-box {
+    background-color: var(--dark-1);
+    letter-spacing: 0;
+    color: var(--dark-12);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-primary);
+    border-radius: 10px;
+    padding: 15px 12px;
+    box-shadow: none !important;
+    border: 1px solid var(--dark-5) !important;
+    line-height: 140% !important;
+}
+
+.checkbox-box .form-check {display: flex;align-items: center;gap: 10px;margin: 0;padding-left: 25px;}
+
+.checkbox-box:has([type="checkbox"]:checked) {
+    border-color: var(--primary-500) !important;
+}
+
+
+
 
 @media only screen and (max-width: 1400px) {
 

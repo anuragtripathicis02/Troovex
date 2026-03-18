@@ -10,6 +10,7 @@
     letter-spacing: 0;
     white-space: nowrap;
     color: var(--dark-12);
+    text-align: left;
 }
 
 .table-default table {
@@ -39,6 +40,7 @@
     letter-spacing: 0;
     color: var(--dark-12);
     border-bottom: 1px solid var(--dark-4);
+    text-align: left;
 }
 
 .table-profile-box .img-box {
@@ -124,6 +126,7 @@
     background-color: transparent !important;
     border: 0;
     color: var(--dark-9) !important;
+    padding: 0;
 }
 
 
