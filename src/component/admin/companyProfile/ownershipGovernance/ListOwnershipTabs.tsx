@@ -8,6 +8,7 @@ import FileUploadList from "@/component/common/FileUploadList";
 import AuthorImg from "../../../../app/images/author-icons.png"
 import AddBoardMembersModal from "../../modalComponent/AddBoardMembersModal";
 import AddBoardMembersModalCSV from "../../modalComponent/AddBoardMembersModalCSV";
+import FileUploadItem from "@/component/common/FileUploadItem";
 
 
 const ListOwnershipTabs = () => {
@@ -32,7 +33,12 @@ const ListOwnershipTabs = () => {
         <div className="list-upload-box">
             <div className="row mb-4">
                 <div className='col-md-12 mb-2'>
-                    <div className="list-card-box d-flex align-items-center gap-0 justify-content-between flex-wrap">
+                    <div className="upload-file-sec">
+                        <FileUploadItem title="Articles of Association" required />
+                        <FileUploadItem title="Company Bylaws" required/>
+                        <FileUploadItem title="Statut de l'entreprise" required/>
+                    </div>
+                    {/* <div className="list-card-box d-flex align-items-center gap-0 justify-content-between flex-wrap">
                         <FileUploadList title="Articles of Association" required/>
                     </div>
                 </div>
@@ -45,6 +51,7 @@ const ListOwnershipTabs = () => {
                     <div className="list-card-box d-flex align-items-center gap-0 justify-content-between flex-wrap">
                         <FileUploadList title="Statut de l'entreprise" required/>
                     </div>
+                </div> */}
                 </div>
             </div>
         </div>

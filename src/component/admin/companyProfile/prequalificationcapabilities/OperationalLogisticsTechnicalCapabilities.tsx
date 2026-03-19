@@ -5,6 +5,7 @@ import Arrowaccordion from "@/component/common/Icons/Arrowaccordion";
 import WarehousingStorage from "./operationalLogisticsTechnicalCapabilities/WarehousingStorage";
 import DeliveryLogistics from "./operationalLogisticsTechnicalCapabilities/DeliveryLogistics";
 import EquipmentTechnologyTools from "./operationalLogisticsTechnicalCapabilities/EquipmentTechnologyTools";
+import QualityProductionControls from "./operationalLogisticsTechnicalCapabilities/QualityProductionControls";
 
 
 const OperationalLogisticsTechnicalCapabilities = () => {
@@ -101,7 +102,7 @@ const OperationalLogisticsTechnicalCapabilities = () => {
             </Accordion.Header>
             <Accordion.Body>
               <div className="accordion-detail-box">
-                Fourth
+                <QualityProductionControls />
                 <div className="card-foot">
                   <hr></hr>
                   <div className="d-flex align-items-center justify-content-end">

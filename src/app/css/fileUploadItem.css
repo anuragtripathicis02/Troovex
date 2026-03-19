@@ -32,6 +32,17 @@
   text-align: right;
   margin-left: auto;
 }
+.upload-container .optional {
+color: var(--dark-8);
+  font-weight: 400;
+  font-style: Italic;
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  width: 100%;
+  text-align: right;
+  margin-left: auto;
+}
 
 .upload-container .file-name {font-weight: 400;word-break: break-all;font-size: 12px;line-height: 140%;letter-spacing: 0%;color: var(--dark-8);}
 
