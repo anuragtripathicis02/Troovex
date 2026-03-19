@@ -13,6 +13,10 @@ import ProcurementOrganizationRoles from "./procurementOrganization/ProcurementO
 import FinancialAccountingInformation from "./FinancialAccountingInformation";
 import HumanResourcesCapabilities from "./prequalificationcapabilities/HumanResourcesCapabilities";
 import OperationalLogisticsTechnicalCapabilities from "./prequalificationcapabilities/OperationalLogisticsTechnicalCapabilities";
+import ProcurementMaturityOperations from "./prequalificationcapabilities/ProcurementMaturityOperations";
+import ComplianceLegalRiskProfile from "./prequalificationcapabilities/ComplianceLegalRiskProfile";
+import SustainabilityESG from "./prequalificationcapabilities/SustainabilityESG";
+import DocumentsUploadRepository from "./prequalificationcapabilities/DocumentsUploadRepository";
 
 interface TabTitleProps {
   number: string | number;
@@ -720,15 +724,29 @@ const CompanyProfileTabs = () => {
                   </div>
                   }
 
-                {activeSubStep6 === "6.3" && <div>tabs details 6.3</div>}
+                {activeSubStep6 === "6.3" && 
+                  <div>
+                    <ProcurementMaturityOperations />
+                  </div>}
 
-                {activeSubStep6 === "6.4" && <div>tabs details 6.4</div>}
+                {activeSubStep6 === "6.4" && 
+                  <div>
+                    <ComplianceLegalRiskProfile />
+                  </div>}
 
-                {activeSubStep6 === "6.5" && <div>tabs details 6.5</div>}
+                {activeSubStep6 === "6.5" && 
+                  <div>
+                    <SustainabilityESG />
+                  </div>
+                  }
 
                 {activeSubStep6 === "6.6" && <div>tabs details 6.6</div>}
 
-                {activeSubStep6 === "6.7" && <div>tabs details 6.7</div>}
+                {activeSubStep6 === "6.7" && 
+                  <div>
+                    <DocumentsUploadRepository />
+                  </div>
+                }
 
                 <div className="text-end mt-4">
                   {activeSubStep6 !== "6.7" ? (
