@@ -200,3 +200,8 @@
 .member-list-add-card .upload-card img {
     height: 70px;
 }
+
+.card-three-box .upload-card {
+    height: 190px;
+    min-height: 190px;
+}
