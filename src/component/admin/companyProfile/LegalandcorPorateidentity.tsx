@@ -157,10 +157,7 @@ const LegalandcorPorateidentity = () => {
                             </div>
                         </Accordion.Body>
                     </Accordion.Item>
-                    
                 </Accordion>
-
-
             </div>
           
         </div>

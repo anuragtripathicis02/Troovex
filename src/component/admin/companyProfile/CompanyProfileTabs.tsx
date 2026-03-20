@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Tab, Nav, Breadcrumb } from "react-bootstrap";
+import { Tab, Nav, Breadcrumb, Accordion } from "react-bootstrap";
 import { Link } from "rsuite";
 import Collapse from "react-bootstrap/Collapse";
 import LegalandcorPorateidentity from "./LegalandcorPorateidentity";
@@ -14,6 +14,11 @@ import FinancialAccountingInformation from "./FinancialAccountingInformation";
 import HumanResourcesCapabilities from "./prequalificationcapabilities/HumanResourcesCapabilities";
 import OperationalLogisticsTechnicalCapabilities from "./prequalificationcapabilities/OperationalLogisticsTechnicalCapabilities";
 import PastPerformanceandReferences from "./prequalificationcapabilities/PastPerformanceandReferences";
+import ProcurementMaturityOperations from "./prequalificationcapabilities/ProcurementMaturityOperations";
+import ComplianceLegalRiskProfile from "./prequalificationcapabilities/ComplianceLegalRiskProfile";
+import SustainabilityESG from "./prequalificationcapabilities/SustainabilityESG";
+import DocumentsUploadRepository from "./prequalificationcapabilities/DocumentsUploadRepository";
+import RelatedArticals from "@/component/common/RelatedArticals";
 
 interface TabTitleProps {
   number: string | number;
@@ -552,6 +557,7 @@ const CompanyProfileTabs = () => {
                 </div>
 
                 <LegalandcorPorateidentity />
+                <RelatedArticals />
                 <div className="text-end mt-4">
                   <Link
                     className="btn-outline fill-btn"
@@ -580,6 +586,7 @@ const CompanyProfileTabs = () => {
                   </div>
                 </div>
                 <BusinessProfileStrategy />
+                <RelatedArticals />
                 <div className="text-end mt-4">
                   <Link
                     className="btn-outline fill-btn"
@@ -608,6 +615,7 @@ const CompanyProfileTabs = () => {
                   </div>
                 </div>
                 <OwnershipGovernance />
+                <RelatedArticals />
                 <div className="text-end mt-4">
                   <Link
                     className="btn-outline fill-btn"
@@ -639,17 +647,20 @@ const CompanyProfileTabs = () => {
                 {activeSubStep === "4.1" &&
                   <div>
                     <ProcurementCategoriesPurchasing />
+                    <RelatedArticals />
                   </div>
                 }
 
                 {activeSubStep === "4.2" &&
                   <div>
                     <VendorSegmentationKraljicMatrix />
+                    <RelatedArticals />
                   </div>
                 }
                 {activeSubStep === "4.3" &&
                   <div>
                     <ProcurementOrganizationRoles />
+                    <RelatedArticals />
                   </div>
                 }
 
@@ -681,6 +692,7 @@ const CompanyProfileTabs = () => {
                   </div>
                 </div>
                 <FinancialAccountingInformation />
+                <RelatedArticals />
                 <div className="text-end mt-4">
                   <Link
                     className="btn-outline fill-btn"
@@ -712,26 +724,46 @@ const CompanyProfileTabs = () => {
                 {activeSubStep6 === "6.1" && 
                   <div>
                     <HumanResourcesCapabilities />
+                    <RelatedArticals />
                   </div>
                   }
 
                 {activeSubStep6 === "6.2" && 
                   <div>
                     <OperationalLogisticsTechnicalCapabilities />
+                    <RelatedArticals />
                   </div>
                   }
 
-                {activeSubStep6 === "6.3" && <div>tabs details 6.3</div>}
+                {activeSubStep6 === "6.3" && 
+                  <div>
+                    <ProcurementMaturityOperations />
+                    <RelatedArticals />
+                  </div>}
 
-                {activeSubStep6 === "6.4" && <div>tabs details 6.4</div>}
+                {activeSubStep6 === "6.4" && 
+                  <div>
+                    <ComplianceLegalRiskProfile />
+                    <RelatedArticals />
+                  </div>}
 
-                {activeSubStep6 === "6.5" && <div>tabs details 6.5</div>}
+                {activeSubStep6 === "6.5" && 
+                  <div>
+                    <SustainabilityESG />
+                    <RelatedArticals />
+                  </div>
+                  }
 
                 {activeSubStep6 === "6.6" && <div>
                   <PastPerformanceandReferences/>
                   </div>}
 
-                {activeSubStep6 === "6.7" && <div>tabs details 6.7</div>}
+                {activeSubStep6 === "6.7" && 
+                  <div>
+                    <DocumentsUploadRepository />
+                    <RelatedArticals />
+                  </div>
+                }
 
                 <div className="text-end mt-4">
                   {activeSubStep6 !== "6.7" ? (

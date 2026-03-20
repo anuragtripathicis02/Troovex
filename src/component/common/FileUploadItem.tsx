@@ -5,9 +5,10 @@ import { Dropdown, ProgressBar } from "react-bootstrap";
 type Props = {
   title: string;
   required?: boolean;
+  optional?: boolean;
 };
 
-export default function FileUploadItem({ title, required }: Props) {
+export default function FileUploadItem({ title, required, optional }: Props) {
   const [file, setFile] = useState<any>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const intervalRef = useRef<any>(null);
@@ -94,9 +95,11 @@ export default function FileUploadItem({ title, required }: Props) {
       {/* MIDDLE */}
       
       <div className="middle-section">
-          {required && !file && (
-            <div className="required">*Required</div>
-          )}
+        {!file && (required || optional) && (
+          <div className={required ? "required" : "optional"}>
+            {required ? "*Required" : "Optional"}
+          </div>
+        )}
 
         {file && <div className="file-size">{file.size}</div>}
 
