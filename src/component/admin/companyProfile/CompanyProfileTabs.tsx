@@ -13,6 +13,7 @@ import ProcurementOrganizationRoles from "./procurementOrganization/ProcurementO
 import FinancialAccountingInformation from "./FinancialAccountingInformation";
 import HumanResourcesCapabilities from "./prequalificationcapabilities/HumanResourcesCapabilities";
 import OperationalLogisticsTechnicalCapabilities from "./prequalificationcapabilities/OperationalLogisticsTechnicalCapabilities";
+import PastPerformanceandReferences from "./prequalificationcapabilities/PastPerformanceandReferences";
 
 interface TabTitleProps {
   number: string | number;
@@ -726,7 +727,9 @@ const CompanyProfileTabs = () => {
 
                 {activeSubStep6 === "6.5" && <div>tabs details 6.5</div>}
 
-                {activeSubStep6 === "6.6" && <div>tabs details 6.6</div>}
+                {activeSubStep6 === "6.6" && <div>
+                  <PastPerformanceandReferences/>
+                  </div>}
 
                 {activeSubStep6 === "6.7" && <div>tabs details 6.7</div>}
 
