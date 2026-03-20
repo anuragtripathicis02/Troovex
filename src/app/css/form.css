@@ -934,10 +934,19 @@ input:-webkit-autofill {
     cursor: pointer;
 }
 
+.footer-file-upload .d-flex.gap-2.flex-column {
+    position: relative;
+}
+
 .footer-file-upload .form-control {
+    width: 100%;
+    height: 50px;
+    padding: 28px 10px 0 23px;
+    font-size: 12px;
+    position: absolute !important;
+    top: -30px;
+    background: none !important;
     border: 0 !important;
-    width: auto !important;
-    padding: 0 10px;
 }
 
 

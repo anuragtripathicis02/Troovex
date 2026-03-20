@@ -293,6 +293,100 @@
 }
 
 
+/* Raju css */
+
+.author-text .text-dish {
+    color: var(--dark-8);
+    font-size: 13px;
+}
+
+.accordion-sec {
+    position: relative;
+    z-index: 1;
+}
+
+
+.card-simple-border .cardImg {
+    border: 1px solid var(--dark-5);
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-h-simple .card-h-left {
+    gap: 16px;
+}
+
+.card-h-simple .card-h-left h5 {
+    margin-bottom: 2px;
+    font-size: 16px;
+}
+
+.card-h-simple .card-h-left p {
+    margin-bottom: 0px;
+    font-size: 13px;
+    color: var(--dark-8);
+    display: inline-flex;
+    gap: 6px;
+}
+
+.card-h-right .text-gray {
+    color: var(--dark-8);
+}
+
+.card-h-right {
+    color: var(--dark-12);
+    font-size: 13px;
+}
+
+.card-b-simple .title { font-weight: 600; font-size: 13px;line-height: 150%;}
+.card-b-simple .desc {color: var(--dark-8); font-size: 13px;}
+
+.read-less-button {
+    font-size: 13px;
+    color: var(--dark-8);
+    text-underline-offset: 3px;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+
+.card-f-simple h4 {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.card-f-simple h4 span {
+    color: var(--dark-8);
+    font-weight: normal;
+}
+
+.list-info-detail li a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--dark-8);
+    font-size: 13px;
+}
+
+.list-info-detail li a:hover{ color: var(--primary-500);}
+
+.card-simple-border {
+    border: 1px solid var(--dark-4);
+    border-radius: 12px;
+    background: var(--dark-2);
+    padding: 16px;
+}
+
+.min-height-box .form-floating > .form-control {
+    min-height: 100px;
+}
+
+
+@media only screen and (max-width: 1199px) {
+.card-h-simple .card-h-left{ margin-bottom: 30px;}
+}
 
 @media only screen and (max-width: 991px) {
 
@@ -380,6 +474,7 @@
         width: 100%;
     }
 
+.list-info-detail li{ margin-bottom: 5px;}
 
 
 }
