@@ -92,6 +92,7 @@ const CreateNewModal  = ({ show, handleClose }: any) => {
                 </button>
             </div>
 
+
         </Modal.Footer>
 
     </Modal>
