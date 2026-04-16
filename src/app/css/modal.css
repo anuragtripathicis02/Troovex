@@ -36,6 +36,30 @@ button.btn-close-btn:active:focus-visible, button.btn-close-btn:focus-visible, b
 }
 
 
+/*********************/
+
+.icons-text-create-new svg {
+    width: 34px;
+    height: 34px;
+    display: block;
+    margin: 0 auto;
+}
+
+.icons-text-create-new {
+    color: var(--dark-8);
+}
+
+.icons-text-create-new .text-box {
+    margin-top: 7px;
+}
+
+.icons-text-create-new .text-box p {
+    margin: 0;
+    font-weight: 600;
+}
+
+
+
 
 @media screen and (max-width: 1199px) {
   .common-modal .btn-close-btn {

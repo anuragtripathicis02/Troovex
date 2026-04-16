@@ -9,6 +9,7 @@ import Image from "next/image";
 import LogoDashboard from './LogoDashboard'
 
 import CreateAddButton from './CreateAddButton'
+import CreateNewModal from './CreateNewModal'
 
 const DashboardHeader = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -28,6 +29,16 @@ const DashboardHeader = () => {
         setMenuOpen(false);
     };
 
+    const [showBranchSiteDetails, setShowBranchSiteDetails] = useState(false);
+    
+    const handleBranchSiteDetails = () => {
+        setShowBranchSiteDetails(true);
+    };
+
+    const handleCloseAll = () => {
+        setShowBranchSiteDetails(false);
+    };
+
     return (
         <div className='header-dashboard position-fixed top-0 w-100 z-3'>
             <div className='header-container'>
@@ -36,7 +47,7 @@ const DashboardHeader = () => {
                     <div className='flex-grow-1 d-flex align-items-center'>
                         <div className='ms-auto'>
                             <div className='d-flex align-items-center gap-2'>
-                                <Link href="" className='d-inline-block'>
+                                <Link href="" className='d-inline-block'  onClick={handleBranchSiteDetails} >
                                     <CreateAddButton />
                                 </Link>
                                 <Link href="" className='d-inline-block'>
@@ -60,6 +71,7 @@ const DashboardHeader = () => {
 
                 <div className={`overlay ${menuOpen ? "show" : ""}`} onClick={handleOverlayClick}></div>
             </div>
+            <CreateNewModal  show={showBranchSiteDetails} handleClose={handleCloseAll}/>
         </div>
     )
 }
