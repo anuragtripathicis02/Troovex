@@ -11,7 +11,7 @@ import FinancialBusinessScale from "./businessProfileStrategy/FinancialBusinessS
 import ProductsServices from "./businessProfileStrategy/ProductsServices";
 
 const BusinessProfileStrategy = () => {
-   const [activeKey, setActiveKey] = useState<string | null>("0");
+    const [activeKey, setActiveKey] = useState<string | null>("0");
     const [completed, setCompleted] = useState<string[]>([]);
     const handleSave = (current: string, next: string) => {
         if (!completed.includes(current)) {
@@ -25,7 +25,6 @@ const BusinessProfileStrategy = () => {
                 <h4 className='mb-0'>Business Profile & Strategy</h4>
                 <p>Used to categorize procurement behavior and business needs.</p>
             </div>
-
             <div className='accordion-sec sec-company-main'>
                 <Accordion activeKey={activeKey}  onSelect={(k) => {if (typeof k === "string" || k === null) {setActiveKey(k);}}}>
                     <Accordion.Item eventKey="0" className={completed.includes("0") ? "completed" : ""}>
@@ -156,12 +155,8 @@ const BusinessProfileStrategy = () => {
                             </div>
                         </Accordion.Body>
                     </Accordion.Item>
-                    
                 </Accordion>
-
-
             </div>
-          
         </div>
   )
 }
